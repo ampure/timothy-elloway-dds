@@ -1,40 +1,49 @@
 import React from 'react';
 import TopHeader from '../components/_App/TopHeader';
 import Navbar from '../components/_App/Navbar';
-import MainBanner from '../components/HomeThree/MainBanner';
-import AboutOurHospital from '../components/HomeThree/AboutOurHospital';
-import OurExpertise from '../components/HomeThree/OurExpertise';
-import Services from '../components/HomeThree/Services';
-import AboutUs from '../components/HomeThree/AboutUs';
+import HeroSlider from '../components/HomeOne/HeroSlider';
+import Stats from '../components/HomeOne/Stats';
+import AboutSection from '../components/HomeOne/AboutSection';
+import Services from '../components/HomeOne/Services';
+import OurExpertise from '../components/HomeOne/OurExpertise';
 import VideoIntro from '../components/Common/VideoIntro';
 import OurDoctors from '../components/Common/OurDoctors';
-import Stats from '../components/HomeThree/Stats';
-import FeedbackSlider from '../components/HomeThree/FeedbackSlider';
 import LatestBlogPost from '../components/Common/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 import Footer from '../components/_App/Footer';
 
-const Index3 = () => {
+// data
+import { getPage } from '../lib/api';
+
+const Index = ({ homepage }) => {
+    // console.warn(homepage);
     return (
         <React.Fragment>
             <TopHeader />
             <Navbar />
-            <MainBanner />
-            <AboutOurHospital />
-            <OurExpertise />
+            <HeroSlider />
+            <Stats />
+            <AboutSection />
             <Services />
-            <AboutUs />
+            <OurExpertise />
             <VideoIntro />
             <OurDoctors />
-            <div className="pb-100">
-                <Stats />
-            </div>
-            <FeedbackSlider />
             <LatestBlogPost />
             <NewsletterForm />
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
-export default Index3;
+export default Index;
+
+export const getStaticProps = async () => {
+    const data = await getPage('homepage');
+
+    console.warn(data);
+    return {
+        props: {
+            homepage: data?.page ? data.page : {},
+        },
+    };
+};
