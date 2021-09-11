@@ -15,17 +15,26 @@ const Footer = () => {
                                     <ul>
                                         <li>
                                             <i className="icofont-ui-message"></i>
-                                            <a href="mailto:info@disin.com">info@disin.com</a>
-                                            <a href="mailto:hello@disin.com">hello@disin.com</a>
+                                            <a href="mailto:info@TimothyElloway.com">
+                                                info@TimothyElloway.com
+                                            </a>
+                                            <a href="mailto:hello@TimothyElloway.com">
+                                                hello@TimothyElloway.com
+                                            </a>
                                         </li>
                                         <li>
                                             <i className="icofont-stock-mobile"></i>
-                                            <a href="tel:+07554332322">Call: +07 554 332 322</a>
-                                            <a href="tel:+236256256365">Call: +236 256 256 365</a>
+                                            <a href="tel:+07554332322">
+                                                Call: +07 554 332 322
+                                            </a>
+                                            <a href="tel:+236256256365">
+                                                Call: +236 256 256 365
+                                            </a>
                                         </li>
                                         <li>
                                             <i className="icofont-location-pin"></i>
-                                            210-27 Quadra, Market Street, Victoria Canada
+                                            210-27 Quadra, Market Street,
+                                            Victoria Canada
                                         </li>
                                     </ul>
                                 </div>
@@ -71,7 +80,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="col-sm-6 col-lg-3">
                             <div className="footer-item">
                                 <div className="footer-quick">
@@ -118,16 +127,34 @@ const Footer = () => {
                                     <h3>Feedback</h3>
                                     <form>
                                         <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Name" />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                placeholder="Name"
+                                            />
                                         </div>
                                         <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Phone" />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                placeholder="Phone"
+                                            />
                                         </div>
                                         <div className="form-group">
-                                            <textarea className="form-control" id="your_message" rows="3" placeholder="Message"></textarea>
+                                            <textarea
+                                                className="form-control"
+                                                id="your_message"
+                                                rows="3"
+                                                placeholder="Message"
+                                            ></textarea>
                                         </div>
                                         <div className="text-left">
-                                            <button type="submit" className="btn feedback-btn">SUBMIT</button>
+                                            <button
+                                                type="submit"
+                                                className="btn feedback-btn"
+                                            >
+                                                SUBMIT
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -140,12 +167,17 @@ const Footer = () => {
             <div className="copyright-area">
                 <div className="container">
                     <div className="copyright-item">
-                        <p>Copyright &copy; {currentYear} Design & Developed by <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+                        <p>
+                            Copyright &copy; {currentYear} Design & Developed by{' '}
+                            <a href="https://hibootstrap.com/" target="_blank">
+                                HiBootstrap
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
         </React.Fragment>
     );
-}
+};
 
 export default Footer;

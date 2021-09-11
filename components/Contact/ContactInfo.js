@@ -9,7 +9,10 @@ const ContactInfo = () => {
                         <div className="location-item">
                             <i className="icofont-location-pin"></i>
                             <h3>Location</h3>
-                            <p>2108-267 Road Quadra, Toronto, <br /> Victiria Canada</p>
+                            <p>
+                                2108-267 Road Quadra, Toronto, <br /> Victiria
+                                Canada
+                            </p>
                         </div>
                     </div>
 
@@ -17,7 +20,7 @@ const ContactInfo = () => {
                         <div className="location-item">
                             <i className="icofont-ui-message"></i>
                             <h3>Email</h3>
-                            <p>hello@disin.com</p>
+                            <p>hello@TimothyElloway.com</p>
                             <p>emailexample@name.com</p>
                         </div>
                     </div>
@@ -33,7 +36,7 @@ const ContactInfo = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ContactInfo;

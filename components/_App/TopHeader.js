@@ -16,14 +16,14 @@ const TopHeader = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="mailto:hello@disin.com">
+                                        <a href="mailto:hello@TimothyElloway.com">
                                             <i className="icofont-ui-message"></i>
-                                            hello@disin.com
+                                            hello@TimothyElloway.com
                                         </a>
                                     </li>
                                     <li>
                                         <i className="icofont-location-pin"></i>
-                                        210-27 Quadra, Canada 
+                                        210-27 Quadra, Canada
                                     </li>
                                 </ul>
                             </div>
@@ -35,22 +35,34 @@ const TopHeader = () => {
                             <div className="header-top-right">
                                 <ul>
                                     <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
+                                        <a
+                                            href="https://www.facebook.com/"
+                                            target="_blank"
+                                        >
                                             <i className="icofont-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/" target="_blank">
+                                        <a
+                                            href="https://twitter.com/"
+                                            target="_blank"
+                                        >
                                             <i className="icofont-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/" target="_blank">
+                                        <a
+                                            href="https://www.linkedin.com/"
+                                            target="_blank"
+                                        >
                                             <i className="icofont-linkedin"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
+                                        <a
+                                            href="https://www.instagram.com/"
+                                            target="_blank"
+                                        >
                                             <i className="icofont-instagram"></i>
                                         </a>
                                     </li>
@@ -61,7 +73,7 @@ const TopHeader = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default TopHeader;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MainBanner = (props) => {
     console.warn(props);
@@ -25,15 +26,33 @@ const MainBanner = (props) => {
 
                             <div className="banner-right">
                                 <img
-                                    src="/images/home-three/home-three-banner1.png"
+                                    src={props?.headerimage?.sourceUrl}
+                                    alt={
+                                        props?.headerimage?.mediaDetails
+                                            ?.altText
+                                    }
+                                />
+                                {/* <Image
+                                    className="banner-image"
+                                    src={props?.headerimage?.sourceUrl}
+                                    title={props?.headerimage?.title}
+                                    width={
+                                        props?.headerimage?.mediaDetails?.width
+                                    }
+                                    height={
+                                        props?.headerimage?.mediaDetails?.height
+                                    }
+                                    alt={
+                                        props?.headerimage?.mediaDetails
+                                            ?.altText
+                                    }
+                                /> */}
+                                <img
+                                    src="/images/home/home-three-banner-shape2.png"
                                     alt="Banner"
                                 />
                                 <img
-                                    src="/images/home-three/home-three-banner-shape2.png"
-                                    alt="Banner"
-                                />
-                                <img
-                                    src="/images/home-three/home-three-banner-shape2.png"
+                                    src="/images/home/home-three-banner-shape2.png"
                                     alt="Banner"
                                 />
                                 <img
