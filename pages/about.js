@@ -3,7 +3,7 @@ import TopHeader from '../components/_App/TopHeader';
 import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Footer from '../components/_App/Footer';
-import OurExpertise from '../components/HomeTwo/OurExpertise';
+import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/HomeOne/Services';
 import TestimonialSlider from '../components/Common/TestimonialSlider';
 import LatestBlogPost from '../components/Common/LatestBlogPost';
@@ -13,13 +13,13 @@ const About = () => {
         <React.Fragment>
             <TopHeader />
             <Navbar />
-            <PageBanner 
-                pageTitle="About" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="About" 
-                bgImage="page-title-one" 
-            /> 
+            <PageBanner
+                pageTitle="About"
+                homePageUrl="/"
+                homePageText="Home"
+                activePageText="About"
+                bgImage="page-title-one"
+            />
 
             <div className="about-area pt-100 pb-70">
                 <div className="container">
@@ -34,9 +34,19 @@ const About = () => {
 
                         <div className="col-lg-6">
                             <div className="about-item about-right">
-                                <img src="/images/about-shape1.png" alt="About" />
+                                <img
+                                    src="/images/about-shape1.png"
+                                    alt="About"
+                                />
                                 <h2>About Our Hospital</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Quis ipsum suspendisse ultrices gravida.
+                                    Risus commodo viverra maecenas accumsan
+                                    lacus vel facilisis.{' '}
+                                </p>
                                 <ul>
                                     <li>
                                         <i className="icofont-check-circled"></i>
@@ -70,7 +80,9 @@ const About = () => {
                         <div className="col-sm-6 col-lg-3">
                             <div className="counter-item">
                                 <i className="icofont-people"></i>
-                                <h3><span className="counter">25000</span>+</h3>
+                                <h3>
+                                    <span className="counter">25000</span>+
+                                </h3>
                                 <p>Happy Patients</p>
                             </div>
                         </div>
@@ -78,7 +90,7 @@ const About = () => {
                             <div className="counter-item">
                                 <i className="icofont-doctor-alt"></i>
                                 <h3 className="counter">750</h3>
-                                <p>Doctors  & Nurse</p>
+                                <p>Doctors & Nurse</p>
                             </div>
                         </div>
                         <div className="col-sm-6 col-lg-3">
@@ -92,17 +104,17 @@ const About = () => {
                 </div>
             </div>
 
-            <OurExpertise /> 
+            <OurExpertise />
 
-            <Services /> 
+            <Services />
 
-            <TestimonialSlider /> 
+            <TestimonialSlider />
 
             <LatestBlogPost />
-  
+
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default About;
