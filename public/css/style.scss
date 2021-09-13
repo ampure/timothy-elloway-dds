@@ -20,7 +20,7 @@ This files table contents are outlined below>>>>>
 ** - Services CSS
 ** - Expertise CSS
 ** - Video CSS
-** - Doctors CSS
+** - Dentists CSS
 ** - Blog CSS
 ** - Newsletter CSS
 ** - Footer CSS
@@ -32,9 +32,9 @@ This files table contents are outlined below>>>>>
 ** - Banner CSS
 ** - Review Slider CSS
 ** - Page Title CSS
-** - Doctor Search CSS
-** - Doctor CSS
-** - Doctor Details CSS
+** - Dentist Search CSS
+** - Dentist CSS
+** - Dentist Details CSS
 ** - Blog Details CSS
 ** - Location CSS
 ** - Drop CSS
@@ -60,7 +60,7 @@ $main-color: #0046c0;
 $white-color: #ffffff;
 $grey-color: #344c5d;
 $black-color: #111111;
-$transition: .5s all ease;
+$transition: 0.5s all ease;
 $all-size: 15px;
 
 :root {
@@ -74,7 +74,12 @@ body {
     background-color: $white-color;
     font-size: $all-size;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #232323;
 }
 p {
@@ -95,8 +100,8 @@ img {
     padding-right: 15px;
 }
 .d-table {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 .d-table-cell {
     vertical-align: middle;
@@ -115,11 +120,12 @@ img {
     padding-bottom: 100px;
 }
 button {
-    &:focus{
+    &:focus {
         outline: 0;
     }
 }
-.btn.focus, .btn:focus {
+.btn.focus,
+.btn:focus {
     box-shadow: none;
 }
 /*-- End Default CSS --*/
@@ -227,6 +233,12 @@ button {
         padding-left: 0;
         transition: $transition;
 
+        .navbar-brand {
+            img {
+                max-width: 500px;
+            }
+        }
+
         .navbar-nav {
             margin-right: auto;
             margin-left: auto;
@@ -248,8 +260,10 @@ button {
                         a {
                             color: #344c5d;
                             font-size: 14px;
-                            
-                            &:hover, &:focus, &.active {
+
+                            &:hover,
+                            &:focus,
+                            &.active {
                                 color: $main-color;
                             }
                         }
@@ -257,7 +271,9 @@ button {
                             a {
                                 color: $main-color;
 
-                                &:hover, &:focus, &.active {
+                                &:hover,
+                                &:focus,
+                                &.active {
                                     color: $main-color;
                                 }
                             }
@@ -270,7 +286,9 @@ button {
                     color: #344c5d;
                     text-transform: capitalize;
 
-                    &:hover, &:focus, &.active {
+                    &:hover,
+                    &:focus,
+                    &.active {
                         color: $main-color;
                     }
                 }
@@ -290,7 +308,7 @@ button {
     line-height: 40px;
     border-radius: 5px;
 
-    &:hover{
+    &:hover {
         background-color: $black-color;
         color: $white-color;
     }
@@ -332,8 +350,8 @@ button {
 /* Navbar toggler */
 .navbar-toggler {
     border: none;
-	border-radius: 0;
-	padding: 0;
+    border-radius: 0;
+    padding: 0;
     &:focus {
         outline: 0;
     }
@@ -346,8 +364,8 @@ button {
         transition: all 0.3s;
         background: #221638;
         height: 4px;
-		display: block;
-		border-radius: 3px;
+        display: block;
+        border-radius: 3px;
     }
     .top-bar {
         transform: rotate(45deg);
@@ -367,7 +385,7 @@ button {
     }
     &.collapsed {
         .top-bar {
-            transform: rotate(0);      
+            transform: rotate(0);
             left: 0;
         }
         .middle-bar {
@@ -424,7 +442,7 @@ button {
         left: 0;
         top: 0;
         background-color: $main-color;
-        opacity: .80;
+        opacity: 0.8;
     }
     .slider-text {
         position: relative;
@@ -487,7 +505,8 @@ button {
     &.owl-theme {
         .owl-nav {
             margin-top: 0;
-            .owl-prev, .owl-next {
+            .owl-prev,
+            .owl-next {
                 position: absolute;
                 top: 45%;
                 left: 15px;
@@ -501,7 +520,7 @@ button {
                 transition: $transition;
                 padding: 0;
                 margin: 0;
-        
+
                 &:hover {
                     color: $white-color;
                     background-color: $black-color;
@@ -526,7 +545,8 @@ button {
                     transition: $transition;
                 }
 
-                &.active span, &:hover span {
+                &.active span,
+                &:hover span {
                     background: $white-color;
                     width: 30px;
                 }
@@ -751,7 +771,7 @@ button {
         height: 100%;
         left: 0;
         top: 0;
-        opacity: .50;
+        opacity: 0.5;
         background-color: $main-color;
         opacity: 0;
         z-index: -1;
@@ -809,7 +829,7 @@ button {
             top: 10%;
             font-size: 170px;
             color: #fff;
-            opacity: .10;
+            opacity: 0.1;
             z-index: -1;
         }
         h3 {
@@ -870,7 +890,7 @@ button {
             background-color: $white-color;
             transition: $transition;
             position: relative;
-            top: 8px;        
+            top: 8px;
         }
         h3 {
             color: $white-color;
@@ -903,7 +923,7 @@ button {
             position: absolute;
             content: '';
             bottom: -10px;
-            right: -10px;        
+            right: -10px;
             width: 430px;
             height: 380px;
             z-index: -1;
@@ -997,7 +1017,7 @@ button {
         border: none;
 
         .react-tabs__tab {
-            display: inline-block;     
+            display: inline-block;
             color: $main-color;
             font-size: 16px;
             font-weight: 600;
@@ -1006,7 +1026,7 @@ button {
             border-radius: 0;
             border: none;
             bottom: 0;
-            
+
             &.react-tabs__tab--selected {
                 background-color: $main-color;
                 color: #fff;
@@ -1016,8 +1036,8 @@ button {
 }
 /*-- End Video --*/
 
-/*-- Doctors --*/
-.doctor-item {
+/*-- Dentists --*/
+.Dentist-item {
     margin-bottom: 30px;
     background-color: $white-color;
     text-align: center;
@@ -1025,9 +1045,9 @@ button {
     border-radius: 10px;
 
     &:hover {
-        .doctor-top {
+        .Dentist-top {
             &:before {
-                opacity: .60;
+                opacity: 0.6;
                 transform: scale(1);
             }
             a {
@@ -1036,7 +1056,7 @@ button {
             }
         }
     }
-    .doctor-top {
+    .Dentist-top {
         position: relative;
         border-radius: 10px;
 
@@ -1067,7 +1087,7 @@ button {
             border-radius: 10px;
         }
     }
-    .doctor-bottom {
+    .Dentist-bottom {
         padding-top: 25px;
         padding-bottom: 25px;
 
@@ -1091,7 +1111,7 @@ button {
         }
     }
 }
-.doctor-btn {
+.Dentist-btn {
     text-align: center;
 
     a {
@@ -1110,7 +1130,7 @@ button {
         }
     }
 }
-/*-- End Doctors --*/
+/*-- End Dentists --*/
 
 /*-- Blog --*/
 .blog-area {
@@ -1147,7 +1167,7 @@ button {
             left: 20px;
             right: 20px;
             bottom: 25px;
-        };
+        }
         h3 {
             margin-bottom: 0;
 
@@ -1212,7 +1232,7 @@ button {
                         font-size: 22px;
                         position: relative;
                         top: 4px;
-                        transition: .3s all ease;
+                        transition: 0.3s all ease;
                     }
                 }
             }
@@ -1460,7 +1480,8 @@ footer {
 
 /*----- Home Page Two -----*/
 /*-- Home Slider --*/
-.home-slider-two.owl-theme .owl-dots .owl-dot.active span, .home-slider-two.owl-theme .owl-dots .owl-dot:hover span {
+.home-slider-two.owl-theme .owl-dots .owl-dot.active span,
+.home-slider-two.owl-theme .owl-dots .owl-dot:hover span {
     background: #9dbdfc;
 }
 .slider-item-img-two {
@@ -1475,12 +1496,13 @@ footer {
 .home-slider-two {
     &.owl-theme {
         .owl-nav {
-            .owl-prev, .owl-next {
+            .owl-prev,
+            .owl-next {
                 background-color: #bdcce2;
             }
         }
     }
-    
+
     .slider-item {
         height: 830px;
 
@@ -1687,7 +1709,7 @@ footer {
         box-shadow: 0px 0px 20px 0px #dddddda6;
         padding: 35px;
         margin-bottom: 30px;
-        
+
         &:hover {
             i {
                 color: $white-color;
@@ -1735,7 +1757,7 @@ footer {
         bottom: 20px;
         left: -70px;
         background-color: $main-color;
-        padding: 30px 295px 25px 40px;;
+        padding: 30px 295px 25px 40px;
         border-radius: 10px;
 
         .speciality-icon {
@@ -1745,7 +1767,7 @@ footer {
             transform: rotate(45deg);
             display: inline-block;
             position: relative;
-    
+
             i {
                 display: inline-block;
                 line-height: 45px;
@@ -1800,10 +1822,12 @@ footer {
             color: $main-color;
         }
     }
-    .nav-pills .nav-link, .nav-pills .show>.nav-link {
+    .nav-pills .nav-link,
+    .nav-pills .show > .nav-link {
         border-top: 0;
     }
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
         border-top: 0;
         background-color: $main-color;
         color: $white-color;
@@ -1952,7 +1976,7 @@ footer {
             border-radius: 5px;
             margin-right: 20px;
             border: 2px solid transparent;
-    
+
             &:hover {
                 background-color: transparent;
                 border: 2px solid $main-color;
@@ -1968,7 +1992,7 @@ footer {
             border: 2px solid $main-color;
             padding-left: 25px;
             padding-right: 25px;
-    
+
             &:hover {
                 color: $white-color;
                 background-color: $main-color;
@@ -2243,7 +2267,7 @@ footer {
         content: '';
         width: 100%;
         height: 100%;
-        opacity: .8;
+        opacity: 0.8;
         top: 0;
         left: 0;
         background-color: $main-color;
@@ -2279,7 +2303,7 @@ footer {
     max-width: 440px;
     margin-left: auto;
     margin-right: auto;
-    
+
     .slick-dots {
         bottom: -145px;
 
@@ -2351,7 +2375,6 @@ footer {
         opacity: 1;
     }
     .review-img {
-
         img {
             transform: scale(1.3);
         }
@@ -2373,8 +2396,9 @@ footer {
 
 .feedback-slider {
     &.owl-theme {
-        .owl-nav  {
-            .owl-prev, .owl-next {
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
                 background-color: #fff;
                 color: $main-color;
 
@@ -2417,7 +2441,7 @@ footer {
 /*-- End Review Slider --*/
 /*----- End Home Page Three -----*/
 
-/*----- Doctor Page -----*/
+/*----- Dentist Page -----*/
 /*-- Page Title --*/
 .page-title-one {
     background-image: url('/images/page-banner1.jpg');
@@ -2437,7 +2461,7 @@ footer {
         top: 0;
         width: 100%;
         height: 100%;
-        opacity: .50;
+        opacity: 0.5;
         background-color: $main-color;
     }
 }
@@ -2476,7 +2500,7 @@ footer {
             }
 
             &::before {
-                content: ">";
+                content: '>';
                 position: absolute;
                 right: -17px;
                 top: 1px;
@@ -2490,8 +2514,8 @@ footer {
 }
 /*-- End Page Title --*/
 
-/*-- Doctor Search --*/
-.doctor-search-wrap {
+/*-- Dentist Search --*/
+.Dentist-search-wrap {
     padding-top: 45px;
     padding-bottom: 15px;
     border-radius: 10px;
@@ -2504,13 +2528,13 @@ footer {
     margin-right: auto;
     margin-left: auto;
 }
-.doctor-search-item {
+.Dentist-search-item {
     margin-bottom: 30px;
     position: relative;
     max-width: 340px;
     margin-right: auto;
     margin-left: auto;
-    
+
     .form-group {
         position: relative;
         padding-left: 60px;
@@ -2548,7 +2572,7 @@ footer {
             color: $grey-color;
         }
     }
-    .doctor-search-btn {
+    .Dentist-search-btn {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -2556,21 +2580,21 @@ footer {
         font-size: 18px;
     }
 }
-/*-- End Doctor Search --*/
+/*-- End Dentist Search --*/
 
-/*-- Doctor --*/
-.doctors-area-two {
+/*-- Dentist --*/
+.Dentists-area-two {
     position: relative;
 
-    .doctor-shape {
+    .Dentist-shape {
         position: absolute;
         top: 45%;
         left: 0;
         animation: a-six 5s infinite linear;
     }
 }
-/*-- End Doctor --*/
-/*----- End Doctor Page -----*/
+/*-- End Dentist --*/
+/*----- End Dentist Page -----*/
 
 /*----- Apoointment Page -----*/
 /*-- Page Title --*/
@@ -2638,7 +2662,7 @@ footer {
 /*-- End Appointment --*/
 /*----- End Apoointment Page -----*/
 
-/*----- Doctor Details Page -----*/
+/*----- Dentist Details Page -----*/
 /*-- Page Title --*/
 .page-title-three {
     background-image: url('/images/page-banner3.jpg');
@@ -2670,12 +2694,12 @@ footer {
 }
 /*-- End Page Title --*/
 
-/*-- Doctor Details --*/
-.doctor-details-left {
+/*-- Dentist Details --*/
+.Dentist-details-left {
     box-shadow: 0px 0px 10px 0px #ddd;
     border-radius: 10px;
 }
-.doctor-details-item {
+.Dentist-details-item {
     margin-bottom: 30px;
 
     img {
@@ -2683,7 +2707,7 @@ footer {
         border-radius: 10px;
         margin-bottom: 50px;
     }
-    .doctor-details-contact {
+    .Dentist-details-contact {
         padding: 0 40px;
         margin-bottom: 50px;
 
@@ -2719,7 +2743,7 @@ footer {
             }
         }
     }
-    .doctor-details-work {
+    .Dentist-details-work {
         padding: 0 40px;
         padding-bottom: 50px;
 
@@ -2752,14 +2776,14 @@ footer {
             }
         }
     }
-    .doctor-details-biography {
+    .Dentist-details-biography {
         padding-left: 30px;
         margin-bottom: 40px;
 
         &:last-child {
             margin-bottom: 0;
         }
-  
+
         h3 {
             font-weight: 600;
             font-size: 24px;
@@ -2787,7 +2811,7 @@ footer {
         }
     }
 }
-/*-- End Doctor Details --*/
+/*-- End Dentist Details --*/
 
 /*-- Appointment --*/
 .appointment-area-three {
@@ -2809,7 +2833,7 @@ footer {
     }
 }
 /*-- End Appointment --*/
-/*----- End Doctor Details Page -----*/
+/*----- End Dentist Details Page -----*/
 
 /*----- Blog Details Page -----*/
 /*-- Page Title --*/
@@ -3048,7 +3072,7 @@ footer {
                 padding-left: 20px;
                 padding-bottom: 15px;
                 margin-bottom: 15px;
-                
+
                 &:hover {
                     a {
                         color: $white-color;
@@ -3120,8 +3144,8 @@ footer {
         position: absolute;
         top: 130px;
         right: 0;
-        width: 360px;  
-        animation: a-six 5s infinite linear;  
+        width: 360px;
+        animation: a-six 5s infinite linear;
     }
     .blog-details-form-wrap {
         max-width: 770px;
@@ -3145,7 +3169,7 @@ footer {
                 padding-left: 20px;
                 border-radius: 6px;
                 border: 0;
-                background-color: #fafafa; 
+                background-color: #fafafa;
                 box-shadow: none;
             }
             ::placeholder {
@@ -3411,14 +3435,17 @@ footer {
         margin-right: auto;
         margin-bottom: 30px;
 
-        .coming-inner{
+        .coming-inner {
             text-align: center;
             background-color: #efefef;
             padding-top: 15px;
             padding-bottom: 12px;
             margin-bottom: 30px;
-        
-            #days, #hours, #minutes, #seconds {
+
+            #days,
+            #hours,
+            #minutes,
+            #seconds {
                 font-size: 40px;
                 font-weight: 600;
                 color: #232323;
@@ -3480,7 +3507,7 @@ footer {
         left: 0;
         top: 0;
         background-color: $main-color;
-        opacity: .50;
+        opacity: 0.5;
     }
     .owl-theme .owl-nav {
         margin-top: 25px;
@@ -3513,7 +3540,7 @@ footer {
                 &:hover {
                     background-color: $main-color !important;
                 }
-            } 
+            }
             .owl-next {
                 width: 40px;
                 height: 40px;
@@ -3527,7 +3554,7 @@ footer {
                 &:hover {
                     background-color: $main-color !important;
                 }
-            }  
+            }
             .testimonial-item {
                 img {
                     width: 120px;
@@ -3638,7 +3665,7 @@ footer {
                     a {
                         display: inline-block;
                         color: $main-color;
-    
+
                         &:hover {
                             color: $black-color;
                         }
@@ -3842,7 +3869,7 @@ footer {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    
+
     img {
         display: none;
     }
@@ -3875,10 +3902,10 @@ footer {
 
 /*-- Back To Top --*/
 #toTop {
-	position: fixed;
-	bottom: 30px;
+    position: fixed;
+    bottom: 30px;
     right: 0;
-	cursor: pointer;
+    cursor: pointer;
     display: none;
     z-index: 10;
 }
@@ -3887,7 +3914,7 @@ footer {
     right: 10px;
     bottom: 25px;
     transform: scale(0);
-    transition: .5s;
+    transition: 0.5s;
     cursor: pointer;
     &.active {
         transform: scale(1);
@@ -3905,7 +3932,7 @@ footer {
         transition: $transition;
         margin-right: 28px;
         box-shadow: 0px 0px 14px 0px $main-color;
-    
+
         &:hover {
             background-color: $black-color;
             color: $white-color;
@@ -4148,7 +4175,8 @@ footer {
         border: 1px solid #ffffff;
         border-radius: 8px 8px 0 0;
 
-        &:hover, &[aria-expanded="true"] {
+        &:hover,
+        &[aria-expanded='true'] {
             background-color: $main-color;
             color: #fff;
             border: 1px solid $main-color;
@@ -4194,16 +4222,18 @@ footer {
             z-index: 1;
         }
 
-        &[aria-expanded='true']::after, &[aria-selected='true']::after {
+        &[aria-expanded='true']::after,
+        &[aria-selected='true']::after {
             display: none;
         }
-        &[aria-expanded='true']::before, &[aria-selected='true']::before {
+        &[aria-expanded='true']::before,
+        &[aria-selected='true']::before {
             transform: rotate(0deg);
         }
     }
 
     .accordion__panel {
-        padding: 15px; 
+        padding: 15px;
         p {
             color: #fff;
             &:last-child {
@@ -4270,7 +4300,7 @@ footer {
             a {
                 color: #fff;
                 background-color: #0046c0;
-    
+
                 &:hover {
                     border: 2px solid #111111;
                     background-color: #111111;
@@ -4375,7 +4405,8 @@ footer {
             border: 1px solid #232323;
             color: #232323;
 
-            &:hover, &[aria-expanded="true"] {
+            &:hover,
+            &[aria-expanded='true'] {
                 background-color: $main-color;
                 color: #fff;
 
@@ -4402,4 +4433,3 @@ footer {
         }
     }
 }
- 

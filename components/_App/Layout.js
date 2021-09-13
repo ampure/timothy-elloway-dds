@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <>
             <Head>
                 <title>
-                    TimothyElloway - React Next Medical & Doctors Template
+                    TimothyElloway - React Next Medical & Dentists Template
                 </title>
                 <meta
                     name="viewport"
@@ -15,16 +15,16 @@ const Layout = ({ children }) => {
                 />
                 <meta
                     name="description"
-                    content="TimothyElloway - React Next Medical & Doctors Template"
+                    content="TimothyElloway - React Next Medical & Dentists Template"
                 />
                 <meta
                     name="og:title"
                     property="og:title"
-                    content="TimothyElloway - React Next Medical & Doctors Template"
+                    content="TimothyElloway - React Next Medical & Dentists Template"
                 ></meta>
                 <meta
                     name="twitter:card"
-                    content="TimothyElloway - React Next Medical & Doctors Template"
+                    content="TimothyElloway - React Next Medical & Dentists Template"
                 ></meta>
                 <link
                     rel="canonical"

@@ -3,8 +3,7 @@ $grey-color: #4a6f8a;
 $blue-color: #0046c0;
 $black-color: #111111;
 
-@media only screen and (max-width : 767px) {
-
+@media only screen and (max-width: 767px) {
     $all-size: 14px;
 
     body {
@@ -101,7 +100,7 @@ $black-color: #111111;
             left: 0;
             top: 0;
             background-color: $blue-color;
-            opacity: .80;
+            opacity: 0.8;
         }
         .slider-text {
             margin-top: 0px;
@@ -142,7 +141,8 @@ $black-color: #111111;
         margin: 5px 4px;
         background-color: $blue-color;
     }
-    .home-slider.owl-theme .owl-dots .owl-dot.active span, .home-slider.owl-theme .owl-dots .owl-dot:hover span {
+    .home-slider.owl-theme .owl-dots .owl-dot.active span,
+    .home-slider.owl-theme .owl-dots .owl-dot:hover span {
         background: $white-color;
         width: 30px;
     }
@@ -323,7 +323,7 @@ $black-color: #111111;
             line-height: 80px;
             font-size: 25px;
             position: relative;
-            top: -40px;        
+            top: -40px;
         }
         .video-content {
             margin-top: 30px;
@@ -340,13 +340,14 @@ $black-color: #111111;
             }
         }
     }
-    .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    .video-wrap .nav-pills .nav-link.active,
+    .video-wrap .nav-pills .show > .nav-link {
         border-top: 2px solid #4d93e9;
     }
     .video-wrap {
         .video-nav {
             .video-nav-item {
-                display: block;    
+                display: block;
 
                 a {
                     font-size: 15px;
@@ -360,15 +361,15 @@ $black-color: #111111;
     }
     /*-- End Video --*/
 
-    /*-- Doctors --*/
-    .doctor-item {
-        .doctor-top {
+    /*-- Dentists --*/
+    .Dentist-item {
+        .Dentist-top {
             a {
                 font-size: $all-size;
                 padding: 12px 0;
             }
         }
-        .doctor-bottom {
+        .Dentist-bottom {
             padding-top: 20px;
             padding-bottom: 20px;
 
@@ -384,14 +385,14 @@ $black-color: #111111;
             }
         }
     }
-    .doctor-btn {
+    .Dentist-btn {
         a {
             margin-top: 5px;
             font-size: 16px;
             padding: 12px 35px;
         }
     }
-    /*-- End Doctors --*/
+    /*-- End Dentists --*/
 
     /*-- Blog --*/
     .blog-item {
@@ -399,7 +400,7 @@ $black-color: #111111;
             h3 {
                 a {
                     font-size: 15px;
-                    margin-bottom: 14px;                
+                    margin-bottom: 14px;
                 }
             }
             p {
@@ -450,7 +451,6 @@ $black-color: #111111;
                     height: 60px;
                     padding-left: 15px;
                     font-size: 14px;
-
                 }
                 .newsletter-btn {
                     padding: 13px 30px;
@@ -559,7 +559,7 @@ $black-color: #111111;
             &::before {
                 background-color: #fff;
             }
- 
+
             .slider-text {
                 h1 {
                     font-size: 24px;
@@ -606,7 +606,7 @@ $black-color: #111111;
 
                 &:hover {
                     i {
-                        box-shadow: 0px 0px 0px 6px $black-color;;
+                        box-shadow: 0px 0px 0px 6px $black-color;
                     }
                 }
                 i {
@@ -660,7 +660,7 @@ $black-color: #111111;
             padding-left: 25px;
             padding-bottom: 25px;
             margin-bottom: 20px;
-            
+
             i {
                 margin-bottom: 15px;
             }
@@ -688,7 +688,7 @@ $black-color: #111111;
                 width: 40px;
                 height: 40px;
                 line-height: 40px;
-        
+
                 i {
                     font-size: 18px;
                 }
@@ -755,7 +755,7 @@ $black-color: #111111;
         padding-bottom: 150px;
     }
     .banner-item {
-        text-align: center; 
+        text-align: center;
 
         h1 {
             font-size: 26px;
@@ -877,8 +877,9 @@ $black-color: #111111;
     /*-- End Welcome --*/
 
     /*-- Video --*/
-    .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
-        border-top: 0
+    .video-wrap-two .nav-pills .nav-link.active,
+    .video-wrap .nav-pills .show > .nav-link {
+        border-top: 0;
     }
     .video-wrap-two {
         .video-nav {
@@ -907,7 +908,7 @@ $black-color: #111111;
         max-width: 440px;
         margin-left: auto;
         margin-right: auto;
-        
+
         .slick-dots {
             bottom: -180px;
         }
@@ -944,7 +945,7 @@ $black-color: #111111;
     /*-- End Review Slider --*/
     /*----- End Home Page Three -----*/
 
-    /*----- Doctor Page -----*/
+    /*----- Dentist Page -----*/
     /*-- Page Title --*/
     .page-title-item {
         h2 {
@@ -965,8 +966,8 @@ $black-color: #111111;
     }
     /*-- End Page Title --*/
 
-    /*-- Doctor Search --*/
-    .doctor-search-item {
+    /*-- Dentist Search --*/
+    .Dentist-search-item {
         .form-group {
             padding-left: 50px;
 
@@ -977,12 +978,12 @@ $black-color: #111111;
                 font-size: $all-size;
             }
         }
-        .doctor-search-btn {
+        .Dentist-search-btn {
             bottom: 5px;
         }
     }
-    /*-- End Doctor Search --*/
-    /*----- End Doctor Page -----*/
+    /*-- End Dentist Search --*/
+    /*----- End Dentist Page -----*/
 
     /*----- Apoointment Page -----*/
 
@@ -1006,7 +1007,7 @@ $black-color: #111111;
                 ul {
                     li {
                         font-size: 13px;
-        
+
                         &:before {
                             width: 20px;
                             left: 84px;
@@ -1028,7 +1029,7 @@ $black-color: #111111;
     /*-- End Appointment --*/
     /*----- End Apoointment Page -----*/
 
-    /*----- Doctor Details Page -----*/
+    /*----- Dentist Details Page -----*/
     /*-- Page Title --*/
     .page-title-three {
         text-align: center;
@@ -1051,12 +1052,12 @@ $black-color: #111111;
     }
     /*-- End Page Title --*/
 
-    /*-- Doctor Details --*/
-    .doctor-details-item {
+    /*-- Dentist Details --*/
+    .Dentist-details-item {
         img {
             margin-bottom: 30px;
         }
-        .doctor-details-contact {
+        .Dentist-details-contact {
             padding: 0 15px;
             margin-bottom: 30px;
 
@@ -1075,7 +1076,7 @@ $black-color: #111111;
                 }
             }
         }
-        .doctor-details-work {
+        .Dentist-details-work {
             padding: 0 15px;
             padding-bottom: 30px;
 
@@ -1084,14 +1085,14 @@ $black-color: #111111;
                 margin-bottom: 25px;
             }
         }
-        .doctor-details-biography {
+        .Dentist-details-biography {
             padding-left: 0;
             margin-bottom: 30px;
 
             &:last-child {
                 margin-bottom: 0;
             }
-    
+
             h3 {
                 font-size: 20px;
                 margin-bottom: 15px;
@@ -1103,7 +1104,7 @@ $black-color: #111111;
             }
         }
     }
-    /*-- End Doctor Details --*/
+    /*-- End Dentist Details --*/
 
     /*-- Appointment --*/
     .appointment-area-three {
@@ -1125,8 +1126,8 @@ $black-color: #111111;
         }
     }
     /*-- End Appointment --*/
-    /*----- End Doctor Details Page -----*/
-    
+    /*----- End Dentist Details Page -----*/
+
     /*----- Blog Details Page -----*/
 
     /*-- Blog Details --*/
@@ -1193,7 +1194,7 @@ $black-color: #111111;
 
             h3 {
                 font-size: 20px;
-                margin-bottom: 25px;            
+                margin-bottom: 25px;
             }
             ul {
                 li {
@@ -1251,7 +1252,7 @@ $black-color: #111111;
 
             h2 {
                 font-size: 20px;
-                margin-bottom: 25px;            
+                margin-bottom: 25px;
             }
             .form-group {
                 .form-control {
@@ -1306,7 +1307,7 @@ $black-color: #111111;
             max-width: 100%;
             padding-right: 15px;
             padding-left: 15px;
-            
+
             h2 {
                 font-size: 20px;
                 margin-bottom: 20px;
@@ -1360,7 +1361,7 @@ $black-color: #111111;
     .faq-wrap {
         margin-bottom: 35px;
     }
-    .accordion { 
+    .accordion {
         p {
             font-size: $all-size;
         }
@@ -1419,15 +1420,15 @@ $black-color: #111111;
         .coming-wrap {
             margin-bottom: 5px;
 
-            .coming-inner{
+            .coming-inner {
                 padding-top: 10px;
                 padding-bottom: 8px;
-        
-                h3{
+
+                h3 {
                     font-size: 28px;
                     margin-bottom: 2px;
                 }
-                p{
+                p {
                     font-size: 14px;
                 }
             }
@@ -1465,13 +1466,13 @@ $black-color: #111111;
                     height: 35px;
                     line-height: 35px !important;
                     font-size: 20px !important;
-                } 
+                }
                 .owl-next {
                     width: 35px;
                     height: 35px;
                     line-height: 35px !important;
                     font-size: 20px !important;
-                }  
+                }
                 .testimonial-item {
                     img {
                         width: 100px;
@@ -1480,7 +1481,7 @@ $black-color: #111111;
                     }
                     h3 {
                         font-size: 18px;
-                        margin-bottom: 8px;                    
+                        margin-bottom: 8px;
                     }
                     p {
                         padding-right: 15px;
@@ -1558,7 +1559,7 @@ $black-color: #111111;
 
         h2 {
             font-size: 20px;
-            margin-bottom: 10px;        
+            margin-bottom: 10px;
         }
         ul {
             li {
@@ -1644,12 +1645,16 @@ $black-color: #111111;
             margin-right: 10px;
         }
     }
-    .appointment-item-two-right .appointment-item-content .content-one ul li:before {
+    .appointment-item-two-right
+        .appointment-item-content
+        .content-one
+        ul
+        li:before {
         display: none;
     }
     .appointment-item-two-right .appointment-item-content .content-two {
         margin-left: 10px;
-    }    
+    }
     /*----- Home Four CSS -----*/
     .slider-item-two {
         .slider-shape {
@@ -1669,7 +1674,6 @@ $black-color: #111111;
     }
     .symptoms-content {
         ul {
-
             li {
                 flex: 0 0 100%;
                 max-width: 100%;
@@ -1751,13 +1755,13 @@ $black-color: #111111;
 
                 &::-webkit-scrollbar {
                     width: 12px;
-                } 
+                }
                 &::-webkit-scrollbar-track {
-                    background: #f5f5f5; 
-                } 
+                    background: #f5f5f5;
+                }
                 &::-webkit-scrollbar-thumb {
                     background: #0046c0;
-                } 
+                }
                 &::-webkit-scrollbar-thumb:hover {
                     background: #0046c0;
                 }
@@ -1837,8 +1841,7 @@ $black-color: #111111;
     }
 }
 
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     $all-size: 15px;
 
     body {
@@ -2147,7 +2150,7 @@ $black-color: #111111;
     }
     .video-wrap {
         .video-nav {
-            .video-nav-item {   
+            .video-nav-item {
                 display: block;
 
                 a {
@@ -2160,20 +2163,21 @@ $black-color: #111111;
             }
         }
     }
-    .video-wrap .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    .video-wrap .nav-pills .nav-link.active,
+    .video-wrap .nav-pills .show > .nav-link {
         border-top: 3px solid #4d93e9;
     }
     /*-- End Video --*/
 
-    /*-- Doctors --*/
-    .doctor-item {
-        .doctor-top {
+    /*-- Dentists --*/
+    .Dentist-item {
+        .Dentist-top {
             a {
                 font-size: $all-size;
                 padding: 14px 0;
             }
         }
-        .doctor-bottom {
+        .Dentist-bottom {
             padding-top: 20px;
             padding-bottom: 20px;
 
@@ -2186,14 +2190,14 @@ $black-color: #111111;
             }
         }
     }
-    .doctor-btn {
+    .Dentist-btn {
         a {
             margin-top: 20px;
             font-size: 16px;
             padding: 15px 50px;
         }
     }
-    /*-- End Doctors --*/
+    /*-- End Dentists --*/
 
     /*-- Blog --*/
     .blog-item {
@@ -2201,7 +2205,7 @@ $black-color: #111111;
             padding-top: 30px;
             padding-left: 15px;
             padding-right: 15px;
-            padding-bottom: 30px;        
+            padding-bottom: 30px;
 
             h3 {
                 a {
@@ -2231,7 +2235,7 @@ $black-color: #111111;
     .newsletter-item {
         h2 {
             font-size: 26px;
-            margin-bottom: 8px;        
+            margin-bottom: 8px;
         }
         p {
             font-size: 14px;
@@ -2449,7 +2453,7 @@ $black-color: #111111;
             padding-top: 25px;
             padding-left: 25px;
             padding-bottom: 25px;
-            
+
             i {
                 margin-bottom: 15px;
             }
@@ -2490,7 +2494,8 @@ $black-color: #111111;
     /*-- End Speciality --*/
 
     /*-- Video --*/
-    .video-wrap-two .nav-pills .nav-link.active, .video-wrap .nav-pills .show > .nav-link {
+    .video-wrap-two .nav-pills .nav-link.active,
+    .video-wrap .nav-pills .show > .nav-link {
         border-top: 0;
     }
     .video-wrap-two {
@@ -2548,7 +2553,7 @@ $black-color: #111111;
         padding-bottom: 150px;
     }
     .banner-item {
-        text-align: center; 
+        text-align: center;
 
         h1 {
             font-size: 26px;
@@ -2671,7 +2676,7 @@ $black-color: #111111;
     /*-- End Review Slider --*/
     /*----- End Home Page Three -----*/
 
-    /*----- Doctor Page -----*/
+    /*----- Dentist Page -----*/
     /*-- Page Title --*/
     .page-title-item {
         h2 {
@@ -2688,8 +2693,8 @@ $black-color: #111111;
     }
     /*-- End Page Title --*/
 
-    /*-- Doctor Search --*/
-    .doctor-search-wrap {
+    /*-- Dentist Search --*/
+    .Dentist-search-wrap {
         padding-top: 45px;
         padding-bottom: 15px;
         border-radius: 10px;
@@ -2702,13 +2707,13 @@ $black-color: #111111;
         margin-right: auto;
         margin-left: auto;
     }
-    .doctor-search-item {
+    .Dentist-search-item {
         margin-bottom: 30px;
         position: relative;
         max-width: 340px;
         margin-right: auto;
         margin-left: auto;
-        
+
         .form-group {
             position: relative;
             padding-left: 60px;
@@ -2746,7 +2751,7 @@ $black-color: #111111;
                 color: $grey-color;
             }
         }
-        .doctor-search-btn {
+        .Dentist-search-btn {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -2754,20 +2759,20 @@ $black-color: #111111;
             font-size: 18px;
         }
     }
-    /*-- End Doctor Search --*/
+    /*-- End Dentist Search --*/
 
-    /*-- Doctor --*/
-    .doctors-area-two {
+    /*-- Dentist --*/
+    .Dentists-area-two {
         position: relative;
 
-        .doctor-shape {
+        .Dentist-shape {
             position: absolute;
             top: 45%;
             left: 0;
         }
     }
-    /*-- End Doctor --*/
-    /*----- End Doctor Page -----*/
+    /*-- End Dentist --*/
+    /*----- End Dentist Page -----*/
 
     /*----- Apoointment Page -----*/
 
@@ -2780,7 +2785,7 @@ $black-color: #111111;
     /*-- End Appointment --*/
     /*----- End Apoointment Page -----*/
 
-    /*----- Doctor Details Page -----*/
+    /*----- Dentist Details Page -----*/
     /*-- Page Title --*/
     .page-title-item-two {
         text-align: center;
@@ -2800,12 +2805,12 @@ $black-color: #111111;
     }
     /*-- End Page Title --*/
 
-    /*-- Doctor Details --*/
-    .doctor-details-item {
+    /*-- Dentist Details --*/
+    .Dentist-details-item {
         img {
             margin-bottom: 40px;
         }
-        .doctor-details-contact {
+        .Dentist-details-contact {
             margin-bottom: 35px;
 
             h3 {
@@ -2822,14 +2827,14 @@ $black-color: #111111;
                 }
             }
         }
-        .doctor-details-work {
+        .Dentist-details-work {
             padding-bottom: 50px;
 
             h3 {
                 margin-bottom: 24px;
             }
         }
-        .doctor-details-biography {
+        .Dentist-details-biography {
             padding-left: 0;
 
             h3 {
@@ -2838,7 +2843,7 @@ $black-color: #111111;
             }
         }
     }
-    /*-- End Doctor Details --*/
+    /*-- End Dentist Details --*/
 
     /*-- Appointment --*/
     .appointment-area-three {
@@ -2860,7 +2865,7 @@ $black-color: #111111;
         }
     }
     /*-- End Appointment --*/
-    /*----- End Doctor Details Page -----*/
+    /*----- End Dentist Details Page -----*/
 
     /*----- Blog Details Page -----*/
 
@@ -2945,7 +2950,7 @@ $black-color: #111111;
             position: absolute;
             top: 130px;
             right: 0;
-            width: 360px;    
+            width: 360px;
         }
         .blog-details-form-wrap {
             h2 {
@@ -2998,7 +3003,7 @@ $black-color: #111111;
             padding-bottom: 30px;
             padding-right: 15px;
             padding-left: 15px;
-            
+
             h2 {
                 font-size: 22px;
                 margin-bottom: 20px;
@@ -3036,7 +3041,7 @@ $black-color: #111111;
     .faq-wrap {
         margin-bottom: 40px;
     }
-    .accordion { 
+    .accordion {
         p {
             font-size: $all-size;
         }
@@ -3077,7 +3082,7 @@ $black-color: #111111;
     .coming-item {
         height: 100%;
         padding-top: 75px;
-        padding-bottom: 80px;    
+        padding-bottom: 80px;
 
         h1 {
             font-size: 45px;
@@ -3089,15 +3094,15 @@ $black-color: #111111;
         .coming-wrap {
             margin-bottom: 10px;
 
-            .coming-inner{
+            .coming-inner {
                 padding-top: 12px;
                 padding-bottom: 10px;
-            
-                h3{
+
+                h3 {
                     font-size: 30px;
                     margin-bottom: 3px;
                 }
-                p{
+                p {
                     font-size: 14px;
                 }
             }
@@ -3160,7 +3165,7 @@ $black-color: #111111;
             h2 {
                 font-size: 26px;
                 padding-bottom: 13px;
-                margin-bottom: 13px;            
+                margin-bottom: 13px;
 
                 &:before {
                     width: 60px;
@@ -3194,7 +3199,6 @@ $black-color: #111111;
     /*-- End Login --*/
     /*----- END LOGIN PAGE -----*/
 
-    
     /*----- PRIVACY POLICY PAGE -----*/
     /*-- Privacy --*/
     .privacy-item {
@@ -3306,7 +3310,6 @@ $black-color: #111111;
     }
     .symptoms-content {
         ul {
-
             li {
                 flex: 0 0 50%;
                 max-width: 50%;
@@ -3338,7 +3341,7 @@ $black-color: #111111;
         line-height: 65px;
         position: absolute;
         top: 45%;
-        left: 65px;    
+        left: 65px;
         font-size: 25px;
     }
     /*----- End Home Four CSS -----*/
@@ -3382,7 +3385,7 @@ $black-color: #111111;
                 .nav-item {
                     a {
                         margin-left: 10px;
-                        margin-right: 10px;                    
+                        margin-right: 10px;
                     }
                     .dropdown-menu {
                         width: 175px;
@@ -3426,8 +3429,7 @@ $black-color: #111111;
     }
 }
 
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
-
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     /*-- Home Slider --*/
     .slider-item {
         .slider-shape {
@@ -3470,7 +3472,7 @@ $black-color: #111111;
     /*-- Video --*/
     .video-wrap {
         .video-nav {
-            .video-nav-item {      
+            .video-nav-item {
                 a {
                     font-size: 16px;
                     padding: 12px 55.4px 12px 56.3px;
@@ -3537,15 +3539,15 @@ $black-color: #111111;
     /*-- End Appointment --*/
 
     /*-- Appointment --*/
-    .doctor-details-item {
-        .doctor-details-contact {
+    .Dentist-details-item {
+        .Dentist-details-contact {
             ul {
                 li {
                     font-size: 16px;
                 }
             }
         }
-        .doctor-details-biography {
+        .Dentist-details-biography {
             padding-left: 0;
         }
     }
@@ -3585,7 +3587,7 @@ $black-color: #111111;
 
     .banner-item {
         .banner-right {
-            img{
+            img {
                 &:nth-child(1) {
                     top: -70px;
                     right: -20px;
@@ -3607,7 +3609,7 @@ $black-color: #111111;
     .speciality-item {
         .speciality-inner {
             padding: 15px;
-            
+
             h3 {
                 font-size: 20px;
             }
@@ -3626,10 +3628,11 @@ $black-color: #111111;
         max-width: 395px;
     }
 
-    .home-slider.owl-theme .owl-nav .owl-prev, .home-slider.owl-theme .owl-nav .owl-next {
+    .home-slider.owl-theme .owl-nav .owl-prev,
+    .home-slider.owl-theme .owl-nav .owl-next {
         width: 45px;
         bottom: 25%;
-        top: auto; 
+        top: auto;
         height: 45px;
         line-height: 45px;
         font-size: 20px;

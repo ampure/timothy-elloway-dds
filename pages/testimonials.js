@@ -2,9 +2,9 @@ import React from 'react';
 import TopHeader from '../components/_App/TopHeader';
 import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
-import OurExpertise from '../components/HomeOne/OurExpertise';
+import OurExpertise from '../components/Home/OurExpertise';
 import TestimonialSlider from '../components/Common/TestimonialSlider';
-import OurDoctors from '../components/Common/OurDoctors';
+import OurDentists from '../components/Common/OurDentists';
 import Footer from '../components/_App/Footer';
 
 const Testimonials = () => {
@@ -14,13 +14,13 @@ const Testimonials = () => {
 
             <Navbar />
 
-            <PageBanner 
-                pageTitle="Testimonials" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Testimonials" 
-                bgImage="page-title-one" 
-            /> 
+            <PageBanner
+                pageTitle="Testimonials"
+                homePageUrl="/"
+                homePageText="Home"
+                activePageText="Testimonials"
+                bgImage="page-title-one"
+            />
 
             <div className="pt-100">
                 <OurExpertise />
@@ -28,11 +28,11 @@ const Testimonials = () => {
 
             <TestimonialSlider />
 
-            <OurDoctors />
+            <OurDentists />
 
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default Testimonials;

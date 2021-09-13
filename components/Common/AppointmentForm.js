@@ -15,7 +15,11 @@ const AppointmentForm = () => {
                                     <div className="form-group">
                                         <i className="icofont-business-man-alt-1"></i>
                                         <label>Name</label>
-                                        <input type="text" className="form-control" placeholder="Enter Your Name" />
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Enter Your Name"
+                                        />
                                     </div>
                                 </div>
 
@@ -23,15 +27,23 @@ const AppointmentForm = () => {
                                     <div className="form-group">
                                         <i className="icofont-ui-message"></i>
                                         <label>Email</label>
-                                        <input type="email" className="form-control" placeholder="Enter Your Email" />
+                                        <input
+                                            type="email"
+                                            className="form-control"
+                                            placeholder="Enter Your Email"
+                                        />
                                     </div>
                                 </div>
-                                
+
                                 <div className="col-lg-6">
                                     <div className="form-group">
                                         <i className="icofont-ui-call"></i>
                                         <label>Phone</label>
-                                        <input type="text" className="form-control" placeholder="Enter Your Number" />
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Enter Your Number"
+                                        />
                                     </div>
                                 </div>
 
@@ -39,7 +51,10 @@ const AppointmentForm = () => {
                                     <div className="form-group">
                                         <i className="icofont-hospital"></i>
                                         <label>Services</label>
-                                        <select className="form-control" id="exampleFormControlSelect1">
+                                        <select
+                                            className="form-control"
+                                            id="exampleFormControlSelect1"
+                                        >
                                             <option>Dental Care</option>
                                             <option>Neurology</option>
                                             <option>Cardiology</option>
@@ -50,10 +65,13 @@ const AppointmentForm = () => {
 
                                 <div className="col-lg-6">
                                     <div className="form-group">
-                                        <i className="icofont-doctor"></i>
-                                        <label>Doctor</label>
-                                        <select className="form-control" id="exampleFormControlSelect2">
-                                            <option>Choose Your Doctor</option>
+                                        <i className="icofont-Dentist"></i>
+                                        <label>Dentist</label>
+                                        <select
+                                            className="form-control"
+                                            id="exampleFormControlSelect2"
+                                        >
+                                            <option>Choose Your Dentist</option>
                                             <option>John Smith</option>
                                             <option>Sarah Taylor</option>
                                             <option>Stevn King</option>
@@ -65,20 +83,29 @@ const AppointmentForm = () => {
                                     <div className="form-group">
                                         <i className="icofont-business-man"></i>
                                         <label>Age</label>
-                                        <input type="text" className="form-control" placeholder="Your Age" />
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Your Age"
+                                        />
                                     </div>
                                 </div>
                             </div>
 
                             <div className="text-center">
-                                <button type="submit" className="btn appointment-btn">Submit</button>
+                                <button
+                                    type="submit"
+                                    className="btn appointment-btn"
+                                >
+                                    Submit
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default AppointmentForm;

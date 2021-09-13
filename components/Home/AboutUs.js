@@ -19,24 +19,36 @@ const AboutUs = () => {
                             </div>
                             <ul>
                                 <li>
-                                    <i className="icofont-doctor-alt"></i>
+                                    <i className="icofont-Dentist-alt"></i>
                                     <div className="welcome-inner">
-                                        <h3>Certified Doctors</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.</p>
+                                        <h3>Certified Dentists</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing
+                                            elit.consectetur adipiscing elit.
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
                                     <i className="icofont-stretcher"></i>
                                     <div className="welcome-inner">
                                         <h3>Emergency 24 hours</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.</p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing
+                                            elit.consectetur adipiscing elit.
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
                                     <i className="icofont-network"></i>
                                     <div className="welcome-inner">
                                         <h3>Modern Technologey</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit.</p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing
+                                            elit.consectetur adipiscing elit.
+                                        </p>
                                     </div>
                                 </li>
                             </ul>
@@ -45,7 +57,7 @@ const AboutUs = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default AboutUs;

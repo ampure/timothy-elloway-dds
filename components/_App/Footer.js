@@ -67,8 +67,8 @@ const Footer = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/doctor">
-                                                <a>Doctors</a>
+                                            <Link href="/Dentist">
+                                                <a>Dentists</a>
                                             </Link>
                                         </li>
                                         <li>
@@ -168,9 +168,10 @@ const Footer = () => {
                 <div className="container">
                     <div className="copyright-item">
                         <p>
-                            Copyright &copy; {currentYear} Design & Developed by{' '}
-                            <a href="https://hibootstrap.com/" target="_blank">
-                                HiBootstrap
+                            Copyright &copy; {currentYear} Marketing for
+                            Dentists by{' '}
+                            <a href="https://www.ampure.site/" target="_blank">
+                                Ampure
                             </a>
                         </p>
                     </div>

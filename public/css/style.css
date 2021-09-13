@@ -20,7 +20,7 @@ This files table contents are outlined below>>>>>
 ** - Services CSS
 ** - Expertise CSS
 ** - Video CSS
-** - Doctors CSS
+** - Dentists CSS
 ** - Blog CSS
 ** - Newsletter CSS
 ** - Footer CSS
@@ -32,9 +32,9 @@ This files table contents are outlined below>>>>>
 ** - Banner CSS
 ** - Review Slider CSS
 ** - Page Title CSS
-** - Doctor Search CSS
-** - Doctor CSS
-** - Doctor Details CSS
+** - Dentist Search CSS
+** - Dentist CSS
+** - Dentist Details CSS
 ** - Blog Details CSS
 ** - Location CSS
 ** - Drop CSS
@@ -242,6 +242,9 @@ button:focus {
     transition: 0.5s all ease;
 }
 
+.main-nav nav .navbar-brand img {
+    max-width: 450px;
+}
 .main-nav nav .navbar-nav {
     margin-right: auto;
     margin-left: auto;
@@ -1181,8 +1184,8 @@ button:focus {
 }
 
 /*-- End Video --*/
-/*-- Doctors --*/
-.doctor-item {
+/*-- Dentists --*/
+.Dentist-item {
     margin-bottom: 30px;
     background-color: #ffffff;
     text-align: center;
@@ -1191,23 +1194,23 @@ button:focus {
     border-radius: 10px;
 }
 
-.doctor-item:hover .doctor-top:before {
+.Dentist-item:hover .Dentist-top:before {
     opacity: 0.6;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
-.doctor-item:hover .doctor-top a {
+.Dentist-item:hover .Dentist-top a {
     opacity: 1;
     bottom: 20px;
 }
 
-.doctor-item .doctor-top {
+.Dentist-item .Dentist-top {
     position: relative;
     border-radius: 10px;
 }
 
-.doctor-item .doctor-top a {
+.Dentist-item .Dentist-top a {
     display: inline-block;
     color: #0046c0;
     font-size: 14px;
@@ -1225,22 +1228,22 @@ button:focus {
     background-color: #ffffff;
 }
 
-.doctor-item .doctor-top a:hover {
+.Dentist-item .Dentist-top a:hover {
     color: #ffffff;
     background-color: #111111;
 }
 
-.doctor-item .doctor-top img {
+.Dentist-item .Dentist-top img {
     width: 100%;
     border-radius: 10px;
 }
 
-.doctor-item .doctor-bottom {
+.Dentist-item .Dentist-bottom {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-.doctor-item .doctor-bottom h3 a {
+.Dentist-item .Dentist-bottom h3 a {
     display: block;
     font-weight: 600;
     font-size: 22px;
@@ -1248,21 +1251,21 @@ button:focus {
     color: #232323;
 }
 
-.doctor-item .doctor-bottom h3 a:hover {
+.Dentist-item .Dentist-bottom h3 a:hover {
     color: #0046c0;
 }
 
-.doctor-item .doctor-bottom span {
+.Dentist-item .Dentist-bottom span {
     display: block;
     color: #344c5d;
     font-size: 15px;
 }
 
-.doctor-btn {
+.Dentist-btn {
     text-align: center;
 }
 
-.doctor-btn a {
+.Dentist-btn a {
     margin-top: 30px;
     display: inline-block;
     font-weight: 600;
@@ -1273,12 +1276,12 @@ button:focus {
     border-radius: 10px;
 }
 
-.doctor-btn a:hover {
+.Dentist-btn a:hover {
     color: #ffffff;
     background-color: #386ae6;
 }
 
-/*-- End Doctors --*/
+/*-- End Dentists --*/
 /*-- Blog --*/
 .blog-area {
     background-color: #f8fbff;
@@ -2759,7 +2762,7 @@ footer {
 
 /*-- End Review Slider --*/
 /*----- End Home Page Three -----*/
-/*----- Doctor Page -----*/
+/*----- Dentist Page -----*/
 /*-- Page Title --*/
 .page-title-one {
     background-image: url('/images/page-banner1.jpg');
@@ -2836,8 +2839,8 @@ footer {
 }
 
 /*-- End Page Title --*/
-/*-- Doctor Search --*/
-.doctor-search-wrap {
+/*-- Dentist Search --*/
+.Dentist-search-wrap {
     padding-top: 45px;
     padding-bottom: 15px;
     border-radius: 10px;
@@ -2852,7 +2855,7 @@ footer {
     margin-left: auto;
 }
 
-.doctor-search-item {
+.Dentist-search-item {
     margin-bottom: 30px;
     position: relative;
     max-width: 340px;
@@ -2860,13 +2863,13 @@ footer {
     margin-left: auto;
 }
 
-.doctor-search-item .form-group {
+.Dentist-search-item .form-group {
     position: relative;
     padding-left: 60px;
     margin-bottom: 0;
 }
 
-.doctor-search-item .form-group i {
+.Dentist-search-item .form-group i {
     display: inline-block;
     color: #0046c0;
     font-size: 45px;
@@ -2875,13 +2878,13 @@ footer {
     left: 0;
 }
 
-.doctor-search-item .form-group label {
+.Dentist-search-item .form-group label {
     color: #344c5d;
     font-size: 15px;
     margin-bottom: 5px;
 }
 
-.doctor-search-item .form-group .form-control {
+.Dentist-search-item .form-group .form-control {
     font-weight: 600;
     font-size: 15px;
     border-radius: 0;
@@ -2892,29 +2895,29 @@ footer {
     border-bottom: 1px solid #ccd9f2;
 }
 
-.doctor-search-item .form-group .form-control:focus {
+.Dentist-search-item .form-group .form-control:focus {
     border-bottom: 1px solid #111111;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.doctor-search-item .form-group ::-webkit-input-placeholder {
+.Dentist-search-item .form-group ::-webkit-input-placeholder {
     color: #344c5d;
 }
 
-.doctor-search-item .form-group :-ms-input-placeholder {
+.Dentist-search-item .form-group :-ms-input-placeholder {
     color: #344c5d;
 }
 
-.doctor-search-item .form-group ::-ms-input-placeholder {
+.Dentist-search-item .form-group ::-ms-input-placeholder {
     color: #344c5d;
 }
 
-.doctor-search-item .form-group ::placeholder {
+.Dentist-search-item .form-group ::placeholder {
     color: #344c5d;
 }
 
-.doctor-search-item .doctor-search-btn {
+.Dentist-search-item .Dentist-search-btn {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -2922,13 +2925,13 @@ footer {
     font-size: 18px;
 }
 
-/*-- End Doctor Search --*/
-/*-- Doctor --*/
-.doctors-area-two {
+/*-- End Dentist Search --*/
+/*-- Dentist --*/
+.Dentists-area-two {
     position: relative;
 }
 
-.doctors-area-two .doctor-shape {
+.Dentists-area-two .Dentist-shape {
     position: absolute;
     top: 45%;
     left: 0;
@@ -2936,8 +2939,8 @@ footer {
     animation: a-six 5s infinite linear;
 }
 
-/*-- End Doctor --*/
-/*----- End Doctor Page -----*/
+/*-- End Dentist --*/
+/*----- End Dentist Page -----*/
 /*----- Apoointment Page -----*/
 /*-- Page Title --*/
 .page-title-two {
@@ -3009,7 +3012,7 @@ footer {
 
 /*-- End Appointment --*/
 /*----- End Apoointment Page -----*/
-/*----- Doctor Details Page -----*/
+/*----- Dentist Details Page -----*/
 /*-- Page Title --*/
 .page-title-three {
     background-image: url('/images/page-banner3.jpg');
@@ -3044,41 +3047,41 @@ footer {
 }
 
 /*-- End Page Title --*/
-/*-- Doctor Details --*/
-.doctor-details-left {
+/*-- Dentist Details --*/
+.Dentist-details-left {
     -webkit-box-shadow: 0px 0px 10px 0px #ddd;
     box-shadow: 0px 0px 10px 0px #ddd;
     border-radius: 10px;
 }
 
-.doctor-details-item {
+.Dentist-details-item {
     margin-bottom: 30px;
 }
 
-.doctor-details-item img {
+.Dentist-details-item img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 50px;
 }
 
-.doctor-details-item .doctor-details-contact {
+.Dentist-details-item .Dentist-details-contact {
     padding: 0 40px;
     margin-bottom: 50px;
 }
 
-.doctor-details-item .doctor-details-contact h3 {
+.Dentist-details-item .Dentist-details-contact h3 {
     font-weight: 600;
     font-size: 22px;
     color: #344c5d;
     margin-bottom: 30px;
 }
 
-.doctor-details-item .doctor-details-contact ul {
+.Dentist-details-item .Dentist-details-contact ul {
     margin: 0;
     padding: 0;
 }
 
-.doctor-details-item .doctor-details-contact ul li {
+.Dentist-details-item .Dentist-details-contact ul li {
     list-style-type: none;
     display: block;
     font-weight: 500;
@@ -3087,11 +3090,11 @@ footer {
     margin-bottom: 25px;
 }
 
-.doctor-details-item .doctor-details-contact ul li:last-child {
+.Dentist-details-item .Dentist-details-contact ul li:last-child {
     margin-bottom: 0;
 }
 
-.doctor-details-item .doctor-details-contact ul li i {
+.Dentist-details-item .Dentist-details-contact ul li i {
     display: inline-block;
     color: #0046c0;
     margin-right: 10px;
@@ -3100,26 +3103,26 @@ footer {
     top: 2px;
 }
 
-.doctor-details-item .doctor-details-work {
+.Dentist-details-item .Dentist-details-work {
     padding: 0 40px;
     padding-bottom: 50px;
 }
 
-.doctor-details-item .doctor-details-work h3 {
+.Dentist-details-item .Dentist-details-work h3 {
     font-weight: 600;
     font-size: 22px;
     color: #344c5d;
     margin-bottom: 30px;
 }
 
-.doctor-details-item .doctor-details-work .appointment-item-two-right {
+.Dentist-details-item .Dentist-details-work .appointment-item-two-right {
     background-image: none;
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.doctor-details-item
-    .doctor-details-work
+.Dentist-details-item
+    .Dentist-details-work
     .appointment-item-two-right
     .appointment-item-content {
     padding: 0;
@@ -3127,8 +3130,8 @@ footer {
     margin: 0;
 }
 
-.doctor-details-item
-    .doctor-details-work
+.Dentist-details-item
+    .Dentist-details-work
     .appointment-item-two-right
     .appointment-item-content
     ul
@@ -3137,8 +3140,8 @@ footer {
     padding: 10px 0;
 }
 
-.doctor-details-item
-    .doctor-details-work
+.Dentist-details-item
+    .Dentist-details-work
     .appointment-item-two-right
     .appointment-item-content
     ul
@@ -3146,42 +3149,42 @@ footer {
     border-top: 1px solid #eee;
 }
 
-.doctor-details-item .doctor-details-biography {
+.Dentist-details-item .Dentist-details-biography {
     padding-left: 30px;
     margin-bottom: 40px;
 }
 
-.doctor-details-item .doctor-details-biography:last-child {
+.Dentist-details-item .Dentist-details-biography:last-child {
     margin-bottom: 0;
 }
 
-.doctor-details-item .doctor-details-biography h3 {
+.Dentist-details-item .Dentist-details-biography h3 {
     font-weight: 600;
     font-size: 24px;
     color: #2f60bd;
     margin-bottom: 25px;
 }
 
-.doctor-details-item .doctor-details-biography p:last-child {
+.Dentist-details-item .Dentist-details-biography p:last-child {
     margin-bottom: 0;
 }
 
-.doctor-details-item .doctor-details-biography ul {
+.Dentist-details-item .Dentist-details-biography ul {
     margin: 0;
     padding: 0;
 }
 
-.doctor-details-item .doctor-details-biography ul li {
+.Dentist-details-item .Dentist-details-biography ul li {
     list-style-type: none;
     display: block;
     margin-bottom: 15px;
 }
 
-.doctor-details-item .doctor-details-biography ul li:last-child {
+.Dentist-details-item .Dentist-details-biography ul li:last-child {
     margin-bottom: 0;
 }
 
-/*-- End Doctor Details --*/
+/*-- End Dentist Details --*/
 /*-- Appointment --*/
 .appointment-area-three .appointment-item {
     max-width: 565px;
@@ -3202,7 +3205,7 @@ footer {
 }
 
 /*-- End Appointment --*/
-/*----- End Doctor Details Page -----*/
+/*----- End Dentist Details Page -----*/
 /*----- Blog Details Page -----*/
 /*-- Page Title --*/
 .page-title-four {

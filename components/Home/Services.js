@@ -17,14 +17,22 @@ const Services = () => {
                                 <div className="d-table">
                                     <div className="d-table-cell">
                                         <div className="service-front">
-                                            <i className="icofont-doctor"></i>
-                                            <h3>Expert Doctor</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <i className="icofont-Dentist"></i>
+                                            <h3>Expert Dentist</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
-                                            <i className="icofont-doctor"></i>
-                                            <h3>Expert Doctor</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <i className="icofont-Dentist"></i>
+                                            <h3>Expert Dentist</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
 
                                             <Link href="/service-details">
                                                 <a>Read More</a>
@@ -42,13 +50,21 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-prescription"></i>
                                             <h3>Diagnosis</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-prescription"></i>
                                             <h3>Diagnosis</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                            
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
+
                                             <Link href="/service-details">
                                                 <a>Read More</a>
                                             </Link>
@@ -65,12 +81,20 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-patient-file"></i>
                                             <h3>Pathology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-patient-file"></i>
                                             <h3>Pathology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
 
                                             <Link href="/service-details">
                                                 <a>Read More</a>
@@ -88,13 +112,21 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-tooth"></i>
                                             <h3>Dental Care</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-tooth"></i>
                                             <h3>Dental Care</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                            
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
+
                                             <Link href="/service-details">
                                                 <a>Read More</a>
                                             </Link>
@@ -111,12 +143,20 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-heart-beat-alt"></i>
                                             <h3>Cardiology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-heart-beat-alt"></i>
                                             <h3>Cardiology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                             <Link href="/service-details">
                                                 <a>Read More</a>
                                             </Link>
@@ -133,12 +173,20 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-drug"></i>
                                             <h3>Medicine</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-drug"></i>
                                             <h3>Medicine</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
 
                                             <Link href="/service-details">
                                                 <a>Read More</a>
@@ -156,12 +204,20 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-dna-alt-1"></i>
                                             <h3>Neurology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-dna-alt-1"></i>
                                             <h3>Neurology</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
 
                                             <Link href="/service-details">
                                                 <a>Read More</a>
@@ -179,13 +235,21 @@ const Services = () => {
                                         <div className="service-front">
                                             <i className="icofont-ambulance-cross"></i>
                                             <h3>Ambulance</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
                                         </div>
                                         <div className="service-end">
                                             <i className="icofont-ambulance-cross"></i>
                                             <h3>Ambulance</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                            
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod
+                                            </p>
+
                                             <Link href="/service-details">
                                                 <a>Read More</a>
                                             </Link>
@@ -198,7 +262,7 @@ const Services = () => {
                 </div>
             </div>
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default Services;

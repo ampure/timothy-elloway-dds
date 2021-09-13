@@ -4,7 +4,7 @@ import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Footer from '../components/_App/Footer';
 import OurExpertise from '../components/Home/OurExpertise';
-import Services from '../components/HomeOne/Services';
+import Services from '../components/Home/Services';
 import TestimonialSlider from '../components/Common/TestimonialSlider';
 import LatestBlogPost from '../components/Common/LatestBlogPost';
 
@@ -88,9 +88,9 @@ const About = () => {
                         </div>
                         <div className="col-sm-6 col-lg-3">
                             <div className="counter-item">
-                                <i className="icofont-doctor-alt"></i>
+                                <i className="icofont-Dentist-alt"></i>
                                 <h3 className="counter">750</h3>
-                                <p>Doctors & Nurse</p>
+                                <p>Dentists & Nurse</p>
                             </div>
                         </div>
                         <div className="col-sm-6 col-lg-3">

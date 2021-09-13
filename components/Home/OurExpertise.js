@@ -18,28 +18,40 @@ const OurExpertise = () => {
                                         <div className="speciality-inner">
                                             <i className="icofont-check-circled"></i>
                                             <h3>Child Care</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, is
+                                                consectetur adipiscing
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-lg-6">
                                         <div className="speciality-inner">
                                             <i className="icofont-check-circled"></i>
                                             <h3>More Stuff</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, is
+                                                consectetur adipiscing
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-lg-6">
                                         <div className="speciality-inner">
                                             <i className="icofont-check-circled"></i>
                                             <h3>Enough Lab</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, is
+                                                consectetur adipiscing
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-lg-6">
                                         <div className="speciality-inner">
                                             <i className="icofont-check-circled"></i>
-                                            <h3>24 Hour Doctor</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                            <h3>24 Hour Dentist</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, is
+                                                consectetur adipiscing
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +75,7 @@ const OurExpertise = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default OurExpertise;

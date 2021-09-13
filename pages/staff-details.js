@@ -5,7 +5,7 @@ import PageBanner from '../components/Common/PageBanner';
 import AppointmentFormTwo from '../components/Common/AppointmentFormTwo';
 import Footer from '../components/_App/Footer';
 
-const DoctorDetails = () => {
+const DentistDetails = () => {
     return (
         <React.Fragment>
             <TopHeader />
@@ -15,21 +15,21 @@ const DoctorDetails = () => {
                 pageTitle="Dr. Sarah Taylor (Neurosurgeon)"
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText="Doctor Details"
+                activePageText="Dentist Details"
                 bgImage="page-title-five"
             />
 
-            <div className="doctor-details-area pt-100 pb-70">
+            <div className="Dentist-details-area pt-100 pb-70">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-5">
-                            <div className="doctor-details-item doctor-details-left">
+                            <div className="Dentist-details-item Dentist-details-left">
                                 <img
-                                    src="/images/doctors/doctor3.jpg"
-                                    alt="Doctor"
+                                    src="/images/dentists/Dentist3.jpg"
+                                    alt="Dentist"
                                 />
 
-                                <div className="doctor-details-contact">
+                                <div className="Dentist-details-contact">
                                     <h3>Contact info</h3>
                                     <ul>
                                         <li>
@@ -47,7 +47,7 @@ const DoctorDetails = () => {
                                     </ul>
                                 </div>
 
-                                <div className="doctor-details-work">
+                                <div className="Dentist-details-work">
                                     <h3>Working hours</h3>
                                     <div className="appointment-item-two-right">
                                         <div className="appointment-item-content">
@@ -84,9 +84,9 @@ const DoctorDetails = () => {
                         </div>
 
                         <div className="col-lg-7">
-                            <div className="doctor-details-item">
-                                <div className="doctor-details-right">
-                                    <div className="doctor-details-biography">
+                            <div className="Dentist-details-item">
+                                <div className="Dentist-details-right">
+                                    <div className="Dentist-details-biography">
                                         <h3>Dr. Sarah Taylor (Neurosurgeon)</h3>
                                         <p>
                                             MBBS in Neurology, PHD in
@@ -94,7 +94,7 @@ const DoctorDetails = () => {
                                         </p>
                                     </div>
 
-                                    <div className="doctor-details-biography">
+                                    <div className="Dentist-details-biography">
                                         <h3>Biography</h3>
 
                                         <p>
@@ -149,7 +149,7 @@ const DoctorDetails = () => {
                                         <p></p>
                                     </div>
 
-                                    <div className="doctor-details-biography">
+                                    <div className="Dentist-details-biography">
                                         <h3>Education</h3>
                                         <ul>
                                             <li>
@@ -166,7 +166,7 @@ const DoctorDetails = () => {
                                         </ul>
                                     </div>
 
-                                    <div className="doctor-details-biography">
+                                    <div className="Dentist-details-biography">
                                         <h3>Experience</h3>
                                         <p>
                                             At vero eos et accusamus et iusto
@@ -194,4 +194,4 @@ const DoctorDetails = () => {
     );
 };
 
-export default DoctorDetails;
+export default DentistDetails;

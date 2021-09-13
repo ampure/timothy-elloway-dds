@@ -7,7 +7,7 @@ import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/Home/Services';
 import AboutUs from '../components/Home/AboutUs';
 import VideoIntro from '../components/Common/VideoIntro';
-import OurDoctors from '../components/Common/OurDoctors';
+import OurDentists from '../components/Common/OurDentists';
 import Stats from '../components/Home/Stats';
 import FeedbackSlider from '../components/Home/FeedbackSlider';
 import LatestBlogPost from '../components/Common/LatestBlogPost';
@@ -33,7 +33,7 @@ const Index = ({ homepage }) => {
             <Services />
             <AboutUs />
             <VideoIntro />
-            <OurDoctors />
+            <OurDentists />
             <div className="pb-100">
                 <Stats />
             </div>

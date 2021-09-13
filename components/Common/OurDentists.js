@@ -1,26 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 
-const OurDoctors = () => {
+const OurDentists = () => {
     return (
-        <div className="doctors-area ptb-100">
+        <div className="Dentists-area ptb-100">
             <div className="container">
                 <div className="section-title">
-                    <h2>Meet Our Doctors</h2>
+                    <h2>Meet Our Dentists</h2>
                 </div>
 
                 <div className="row">
                     <div className="col-sm-6 col-lg-4">
-                        <div className="doctor-item">
-                            <div className="doctor-top">
-                                <img src="/images/doctors/doctor1.jpg" alt="Doctor" />
+                        <div className="Dentist-item">
+                            <div className="Dentist-top">
+                                <img
+                                    src="/images/dentists/Dentist1.jpg"
+                                    alt="Dentist"
+                                />
                                 <Link href="/appointment">
                                     <a>Get Appointment</a>
                                 </Link>
                             </div>
-                            <div className="doctor-bottom">
+                            <div className="Dentist-bottom">
                                 <h3>
-                                    <Link href="/doctor-details">
+                                    <Link href="/staff-details">
                                         <a>Dr. Babatunde</a>
                                     </Link>
                                 </h3>
@@ -30,16 +33,19 @@ const OurDoctors = () => {
                     </div>
 
                     <div className="col-sm-6 col-lg-4">
-                        <div className="doctor-item">
-                            <div className="doctor-top">
-                                <img src="/images/doctors/doctor2.jpg" alt="Doctor" />
+                        <div className="Dentist-item">
+                            <div className="Dentist-top">
+                                <img
+                                    src="/images/dentists/Dentist2.jpg"
+                                    alt="Dentist"
+                                />
                                 <Link href="/appointment">
                                     <a>Get Appointment</a>
                                 </Link>
                             </div>
-                            <div className="doctor-bottom">
+                            <div className="Dentist-bottom">
                                 <h3>
-                                    <Link href="/doctor-details">
+                                    <Link href="/staff-details">
                                         <a>Dr. Addision Smith</a>
                                     </Link>
                                 </h3>
@@ -49,16 +55,19 @@ const OurDoctors = () => {
                     </div>
 
                     <div className="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                        <div className="doctor-item">
-                            <div className="doctor-top">
-                                <img src="/images/doctors/doctor3.jpg" alt="Doctor" />
+                        <div className="Dentist-item">
+                            <div className="Dentist-top">
+                                <img
+                                    src="/images/dentists/Dentist3.jpg"
+                                    alt="Dentist"
+                                />
                                 <Link href="/appointment">
                                     <a>Get Appointment</a>
                                 </Link>
                             </div>
-                            <div className="doctor-bottom">
+                            <div className="Dentist-bottom">
                                 <h3>
-                                    <Link href="/doctor-details">
+                                    <Link href="/staff-details">
                                         <a>Dr. Sarah Tylor</a>
                                     </Link>
                                 </h3>
@@ -68,14 +77,14 @@ const OurDoctors = () => {
                     </div>
                 </div>
 
-                <div className="doctor-btn">
-                    <Link href="/doctor-details">
+                <div className="Dentist-btn">
+                    <Link href="/staff-details">
                         <a>See All</a>
                     </Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default OurDoctors;
+export default OurDentists;
