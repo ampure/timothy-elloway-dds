@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ contactinfo }) => {
     const currentYear = new Date().getFullYear();
     return (
         <React.Fragment>
@@ -15,26 +15,26 @@ const Footer = () => {
                                     <ul>
                                         <li>
                                             <i className="icofont-ui-message"></i>
-                                            <a href="mailto:info@TimothyElloway.com">
-                                                info@TimothyElloway.com
+                                            <a href={contactinfo.email}>
+                                                {contactinfo?.email}
                                             </a>
-                                            <a href="mailto:hello@TimothyElloway.com">
+                                            {/* <a href="mailto:hello@TimothyElloway.com">
                                                 hello@TimothyElloway.com
-                                            </a>
+                                            </a> */}
                                         </li>
                                         <li>
                                             <i className="icofont-stock-mobile"></i>
-                                            <a href="tel:+07554332322">
-                                                Call: +07 554 332 322
-                                            </a>
-                                            <a href="tel:+236256256365">
-                                                Call: +236 256 256 365
+                                            <a
+                                                href={`tel:${contactinfo?.phone}`}
+                                            >
+                                                Call: {contactinfo?.phone}
                                             </a>
                                         </li>
                                         <li>
                                             <i className="icofont-location-pin"></i>
-                                            210-27 Quadra, Market Street,
-                                            Victoria Canada
+                                            {contactinfo?.name}
+                                            <br />
+                                            {contactinfo?.address}
                                         </li>
                                     </ul>
                                 </div>
@@ -56,16 +56,7 @@ const Footer = () => {
                                                 <a>Blog</a>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/blog-details">
-                                                <a>Our Expertise</a>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/faq">
-                                                <a>Faq</a>
-                                            </Link>
-                                        </li>
+
                                         <li>
                                             <Link href="/Dentist">
                                                 <a>Dentists</a>
@@ -87,33 +78,33 @@ const Footer = () => {
                                     <h3>Our Services</h3>
                                     <ul>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Dental Care</a>
+                                            <Link href="/services/dental-implants">
+                                                <a>Dental Implants</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Cardiology</a>
+                                            <Link href="/services/crowns">
+                                                <a>Crowns</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Hijama Therapy</a>
+                                            <Link href="/services/fillings">
+                                                <a>Fillings</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Massage Therapy</a>
+                                            <Link href="/services/dentures">
+                                                <a>Dentures</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Ambluance Sevices</a>
+                                            <Link href="/services/bridges">
+                                                <a>Bridges</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
-                                                <a>Medicine</a>
+                                            <Link href="/services/root-canals">
+                                                <a>Root Canals</a>
                                             </Link>
                                         </li>
                                     </ul>
@@ -124,7 +115,7 @@ const Footer = () => {
                         <div className="col-sm-6 col-lg-3">
                             <div className="footer-item">
                                 <div className="footer-feedback">
-                                    <h3>Feedback</h3>
+                                    <h3>Contact Us</h3>
                                     <form>
                                         <div className="form-group">
                                             <input

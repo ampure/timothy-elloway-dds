@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopHeader = () => {
+const TopHeader = ({ contactinfo }) => {
     return (
         <div className="header-top">
             <div className="container">
@@ -12,18 +12,18 @@ const TopHeader = () => {
                                     <li>
                                         <a href="tel:+07554332322">
                                             <i className="icofont-ui-call"></i>
-                                            Call : +07 554 332 322
+                                            Call : {contactinfo?.phone}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:hello@TimothyElloway.com">
                                             <i className="icofont-ui-message"></i>
-                                            hello@TimothyElloway.com
+                                            {contactinfo?.email}
                                         </a>
                                     </li>
                                     <li>
                                         <i className="icofont-location-pin"></i>
-                                        210-27 Quadra, Canada
+                                        {contactinfo?.address}
                                     </li>
                                 </ul>
                             </div>
@@ -36,7 +36,7 @@ const TopHeader = () => {
                                 <ul>
                                     <li>
                                         <a
-                                            href="https://www.facebook.com/"
+                                            href={contactinfo?.facebook}
                                             target="_blank"
                                         >
                                             <i className="icofont-facebook"></i>
@@ -44,7 +44,7 @@ const TopHeader = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://twitter.com/"
+                                            href={contactinfo?.twitter}
                                             target="_blank"
                                         >
                                             <i className="icofont-twitter"></i>
@@ -52,7 +52,7 @@ const TopHeader = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://www.linkedin.com/"
+                                            href={contactinfo?.linkedin}
                                             target="_blank"
                                         >
                                             <i className="icofont-linkedin"></i>
@@ -60,7 +60,7 @@ const TopHeader = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="https://www.instagram.com/"
+                                            href={contactinfo?.instagram}
                                             target="_blank"
                                         >
                                             <i className="icofont-instagram"></i>

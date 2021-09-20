@@ -6,29 +6,21 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>
-                    TimothyElloway - React Next Medical & Dentists Template
-                </title>
+                <title>TimothyElloway DDS - Dentist in Chico, CA</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
                 />
-                <meta
-                    name="description"
-                    content="TimothyElloway - React Next Medical & Dentists Template"
-                />
+                <meta name="description" content="TimothyElloway" />
                 <meta
                     name="og:title"
                     property="og:title"
-                    content="TimothyElloway - React Next Medical & Dentists Template"
+                    content="TimothyElloway"
                 ></meta>
-                <meta
-                    name="twitter:card"
-                    content="TimothyElloway - React Next Medical & Dentists Template"
-                ></meta>
+                <meta name="twitter:card" content="TimothyElloway"></meta>
                 <link
                     rel="canonical"
-                    href="https://TimothyElloway-react.envytheme.com/"
+                    href="https://www.timothyellowaydds.com"
                 ></link>
             </Head>
 
