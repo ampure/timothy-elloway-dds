@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const MainBanner = (props) => {
-    console.warn(props);
     return (
         <div className="banner-area">
             <div className="d-table">

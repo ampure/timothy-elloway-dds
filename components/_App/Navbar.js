@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '../../utils/ActiveLink';
 
-const Navbar = () => {
+const Navbar = ({ servicesNav }) => {
     const [menu, setMenu] = React.useState(true);
 
     const toggleNavbar = () => {
@@ -150,37 +150,33 @@ const Navbar = () => {
                                     </Link>
 
                                     <ul className="dropdown-menu">
-                                        <li className="nav-item">
-                                            <Link
-                                                href="/services"
-                                                activeClassName="active"
-                                            >
-                                                <a
-                                                    onClick={toggleNavbar}
-                                                    className="nav-link"
-                                                >
-                                                    Services
-                                                </a>
-                                            </Link>
-                                        </li>
-
-                                        <li className="nav-item">
-                                            <Link
-                                                href="/service-details"
-                                                activeClassName="active"
-                                            >
-                                                <a
-                                                    onClick={toggleNavbar}
-                                                    className="nav-link"
-                                                >
-                                                    Service Details
-                                                </a>
-                                            </Link>
-                                        </li>
+                                        {servicesNav?.page?.children?.nodes?.map(
+                                            (node) => {
+                                                return (
+                                                    <>
+                                                        <li className="nav-item">
+                                                            <Link
+                                                                href={node.uri}
+                                                                activeClassName="active"
+                                                            >
+                                                                <a
+                                                                    onClick={
+                                                                        toggleNavbar
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    {node.title}
+                                                                </a>
+                                                            </Link>
+                                                        </li>
+                                                    </>
+                                                );
+                                            }
+                                        )}
                                     </ul>
                                 </li>
 
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link href="#">
                                         <a
                                             onClick={(e) => e.preventDefault()}
@@ -219,19 +215,22 @@ const Navbar = () => {
                                             </Link>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> */}
 
                                 <li className="nav-item">
-                                    <Link href="#">
+                                    {/* <Link href="#">
                                         <a
                                             onClick={(e) => e.preventDefault()}
                                             className="nav-link dropdown-toggle"
                                         >
                                             Blog
                                         </a>
+                                    </Link> */}
+                                    <Link href="/blog">
+                                        <a className="nav-link">Blog</a>
                                     </Link>
 
-                                    <ul className="dropdown-menu">
+                                    {/* <ul className="dropdown-menu">
                                         <li className="nav-item">
                                             <Link
                                                 href="/blog"
@@ -259,7 +258,7 @@ const Navbar = () => {
                                                 </a>
                                             </Link>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
 
                                 <li className="nav-item">

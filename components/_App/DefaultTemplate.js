@@ -5,14 +5,14 @@ import Footer from './Footer';
 
 import Head from 'next/head';
 
-const DefaultTemplate = ({ children, contact, seo }) => {
+const DefaultTemplate = ({ children, contact, seo, servicesNav }) => {
     return (
         <React.Fragment>
             <Head>
                 <title>{seo?.title}</title>
             </Head>
             <TopHeader contactinfo={contact} />
-            <Navbar />
+            <Navbar servicesNav={servicesNav} />
             {children}
             <Footer contactinfo={contact} />
         </React.Fragment>

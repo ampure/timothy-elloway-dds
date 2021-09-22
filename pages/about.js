@@ -1,18 +1,22 @@
 import React from 'react';
-import TopHeader from '../components/_App/TopHeader';
-import Navbar from '../components/_App/Navbar';
+import Image from 'next/image';
+import DefaultTemplate from '../components/_App/DefaultTemplate';
 import PageBanner from '../components/Common/PageBanner';
-import Footer from '../components/_App/Footer';
 import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/Home/Services';
 import TestimonialSlider from '../components/Common/TestimonialSlider';
 import LatestBlogPost from '../components/Common/LatestBlogPost';
 
-const About = () => {
+// data
+import { getPage, getChildren } from '../lib/api';
+
+const About = ({ about, contact, servicesNav }) => {
     return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
+        <DefaultTemplate
+            contact={contact}
+            seo={about?.seo}
+            servicesNav={servicesNav}
+        >
             <PageBanner
                 pageTitle="About"
                 homePageUrl="/"
@@ -27,7 +31,30 @@ const About = () => {
                         <div className="col-lg-6">
                             <div className="about-item">
                                 <div className="about-left">
-                                    <img src="/images/about1.jpg" alt="About" />
+                                    {/* <img src="/images/about1.jpg" alt="About" /> */}
+                                    <Image
+                                        className="banner-image"
+                                        src={
+                                            about?.customFields?.headerimage
+                                                ?.sourceUrl
+                                        }
+                                        title={
+                                            about?.customFields?.headerimage
+                                                ?.title
+                                        }
+                                        width={
+                                            about?.customFields?.headerimage
+                                                ?.mediaDetails?.width
+                                        }
+                                        height={
+                                            about?.customFields?.headerimage
+                                                ?.mediaDetails?.height
+                                        }
+                                        alt={
+                                            about?.customFields?.headerimage
+                                                ?.mediaDetails?.altText
+                                        }
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -38,16 +65,12 @@ const About = () => {
                                     src="/images/about-shape1.png"
                                     alt="About"
                                 />
-                                <h2>About Our Hospital</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Quis ipsum suspendisse ultrices gravida.
-                                    Risus commodo viverra maecenas accumsan
-                                    lacus vel facilisis.{' '}
-                                </p>
-                                <ul>
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: about?.content,
+                                    }}
+                                />
+                                {/* <ul>
                                     <li>
                                         <i className="icofont-check-circled"></i>
                                         Browse Our Website
@@ -60,7 +83,7 @@ const About = () => {
                                         <i className="icofont-check-circled"></i>
                                         Send Messege
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                     </div>
@@ -111,10 +134,22 @@ const About = () => {
             <TestimonialSlider />
 
             <LatestBlogPost />
-
-            <Footer />
-        </React.Fragment>
+        </DefaultTemplate>
     );
 };
 
 export default About;
+
+export const getStaticProps = async () => {
+    const about = await getPage('about');
+    const contact = await getPage('contact');
+    const servicesNavItems = await getChildren('services');
+
+    return {
+        props: {
+            about: about?.page ? about.page : {},
+            contact: contact?.page ? contact.page?.contact : {},
+            servicesNav: servicesNavItems,
+        },
+    };
+};

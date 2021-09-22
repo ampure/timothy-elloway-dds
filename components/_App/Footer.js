@@ -15,7 +15,7 @@ const Footer = ({ contactinfo }) => {
                                     <ul>
                                         <li>
                                             <i className="icofont-ui-message"></i>
-                                            <a href={contactinfo.email}>
+                                            <a href={contactinfo?.email}>
                                                 {contactinfo?.email}
                                             </a>
                                             {/* <a href="mailto:hello@TimothyElloway.com">

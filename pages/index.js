@@ -13,12 +13,15 @@ import LatestBlogPost from '../components/Common/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 
 // data
-import { getPage } from '../lib/api';
+import { getPage, getChildren } from '../lib/api';
 
-const Index = ({ homepage, contact }) => {
-    console.warn('homepagedata', contact);
+const Index = ({ homepage, contact, servicesNav }) => {
     return (
-        <DefaultTemplate contact={contact} seo={homepage?.seo}>
+        <DefaultTemplate
+            contact={contact}
+            seo={homepage?.seo}
+            servicesNav={servicesNav}
+        >
             <MainBanner
                 h1={homepage?.customFields?.h1}
                 headercontent={homepage?.customFields?.headercontent}
@@ -45,11 +48,13 @@ export default Index;
 export const getStaticProps = async () => {
     const home = await getPage('homepage');
     const contact = await getPage('contact');
+    const servicesNavItems = await getChildren('services');
 
     return {
         props: {
             homepage: home?.page ? home.page : {},
             contact: contact?.page ? contact.page?.contact : {},
+            servicesNav: servicesNavItems,
         },
     };
 };
