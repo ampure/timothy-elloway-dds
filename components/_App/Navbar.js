@@ -151,10 +151,13 @@ const Navbar = ({ servicesNav }) => {
 
                                     <ul className="dropdown-menu">
                                         {servicesNav?.page?.children?.nodes?.map(
-                                            (node) => {
+                                            (node, index) => {
                                                 return (
                                                     <>
-                                                        <li className="nav-item">
+                                                        <li
+                                                            className="nav-item"
+                                                            key={index}
+                                                        >
                                                             <Link
                                                                 href={node.uri}
                                                                 activeClassName="active"

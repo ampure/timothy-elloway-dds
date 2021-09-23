@@ -1,6 +1,7 @@
 import React from 'react';
 
-const ContactInfo = () => {
+const ContactInfo = ({ contact }) => {
+    console.warn(contact);
     return (
         <div className="location-area pt-100 pb-70">
             <div className="container">
@@ -9,10 +10,7 @@ const ContactInfo = () => {
                         <div className="location-item">
                             <i className="icofont-location-pin"></i>
                             <h3>Location</h3>
-                            <p>
-                                2108-267 Road Quadra, Toronto, <br /> Victiria
-                                Canada
-                            </p>
+                            <p>{contact?.address}</p>
                         </div>
                     </div>
 
@@ -20,8 +18,7 @@ const ContactInfo = () => {
                         <div className="location-item">
                             <i className="icofont-ui-message"></i>
                             <h3>Email</h3>
-                            <p>hello@TimothyElloway.com</p>
-                            <p>emailexample@name.com</p>
+                            <p>{contact?.email}</p>
                         </div>
                     </div>
 
@@ -29,8 +26,7 @@ const ContactInfo = () => {
                         <div className="location-item">
                             <i className="icofont-ui-call"></i>
                             <h3>Phone</h3>
-                            <p>+07 5554 3332 322</p>
-                            <p>+07 5554 3332 322</p>
+                            <p>{contact?.phone}</p>
                         </div>
                     </div>
                 </div>

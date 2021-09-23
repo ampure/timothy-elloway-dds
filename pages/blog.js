@@ -8,12 +8,12 @@ import moment from 'moment';
 // data
 import { getAllPosts, getPage, getChildren } from '../lib/api';
 
-const Blog = (
-    { allPosts: { edges, pageInfo } },
+const Blog = ({
+    allPosts: { edges, pageInfo },
     blog,
     contact,
-    servicesNav
-) => {
+    servicesNav,
+}) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -31,11 +31,13 @@ const Blog = (
             <div className="blog-area-two pt-100 pb-70">
                 <div className="container">
                     <div className="row">
-                        {edges.map((post) => {
-                            console.warn(post);
+                        {edges.map((post, index) => {
                             return (
                                 <>
-                                    <div className="col-12 col-md-6 col-lg-4">
+                                    <div
+                                        className="col-12 col-md-6 col-lg-4"
+                                        key={index}
+                                    >
                                         <div className="blog-item">
                                             <div className="blog-top">
                                                 <Link

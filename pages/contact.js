@@ -1,6 +1,5 @@
 import React from 'react';
-import TopHeader from '../components/_App/TopHeader';
-import Navbar from '../components/_App/Navbar';
+import DefaultTemplate from '../components/_App/DefaultTemplate';
 import PageBanner from '../components/Common/PageBanner';
 import ContactInfo from '../components/Contact/ContactInfo';
 import ContactForm from '../components/Contact/ContactForm';
@@ -8,13 +7,15 @@ import GoogleMap from '../components/Contact/GoogleMap';
 import Footer from '../components/_App/Footer';
 
 // data
-import { getPage } from '../lib/api';
+import { getPage, getChildren } from '../lib/api';
 
-const Contact = ({ contact }) => {
+const Contact = ({ contact, servicesNav }) => {
     return (
-        <React.Fragment>
-            <TopHeader contactinfo={contact} />
-            <Navbar />
+        <DefaultTemplate
+            contact={contact}
+            seo={contact?.seo}
+            servicesNav={servicesNav}
+        >
             <PageBanner
                 pageTitle="Contact Us"
                 homePageUrl="/"
@@ -23,14 +24,14 @@ const Contact = ({ contact }) => {
                 bgImage="page-title-one"
             />
 
-            <ContactInfo />
+            <ContactInfo contact={contact} />
 
             <ContactForm />
 
-            <GoogleMap />
+            <GoogleMap contact={contact} />
 
             <Footer contactinfo={contact} />
-        </React.Fragment>
+        </DefaultTemplate>
     );
 };
 
@@ -38,10 +39,12 @@ export default Contact;
 
 export const getStaticProps = async () => {
     const contact = await getPage('contact');
+    const servicesNavItems = await getChildren('services');
 
     return {
         props: {
             contact: contact?.page ? contact.page?.contact : {},
+            servicesNav: servicesNavItems,
         },
     };
 };

@@ -7,22 +7,27 @@ import LatestBlogPost from '../../components/Blog/LatestBlogPost';
 import moment from 'moment';
 
 // data
-import { getPost, getPage, getChildren } from '../../lib/api';
+import {
+    getPost,
+    getPage,
+    getChildren,
+    getAllCategoriesWithSlug,
+} from '../../lib/api';
 
-const BlogDetails = ({ blog, contact, servicesNav }) => {
+const BlogDetails = ({ blog, contact, servicesNav, categories }) => {
     return (
         <DefaultTemplate
             contact={contact}
             seo={blog?.seo}
             servicesNav={servicesNav}
         >
-            <PageBanner
+            {/* <PageBanner
                 pageTitle={`${blog?.title}`}
                 homePageUrl="/blog"
                 homePageText="Blog"
                 activePageText={`${blog?.title}`}
                 bgImage="page-title-four"
-            />
+            /> */}
 
             <div className="blog-details-area pt-100">
                 <div className="container">
@@ -59,20 +64,17 @@ const BlogDetails = ({ blog, contact, servicesNav }) => {
                                             }
                                         />
                                     ) : (
-                                        <img
-                                            src="/images/blog/blog-details.jpg"
-                                            alt="Blog"
-                                        />
+                                        <></>
                                     )}
                                     <h2>{blog?.title}</h2>
 
                                     <ul>
-                                        {/* <li>
+                                        <li>
                                             <a href="/blog">
                                                 <i className="icofont-businessman"></i>{' '}
-                                                Admin
+                                                {blog?.author?.node?.name}
                                             </a>
-                                        </li> */}
+                                        </li>
                                         <li>
                                             <i className="icofont-calendar"></i>
                                             {moment(blog?.date).format(
@@ -103,11 +105,11 @@ const BlogDetails = ({ blog, contact, servicesNav }) => {
                                 </div> */}
                             </div>
 
-                            <CommentForm />
+                            {/* <CommentForm /> */}
                         </div>
 
                         <div className="col-lg-4">
-                            <BlogSidebar />
+                            <BlogSidebar categories={categories} />
                         </div>
                     </div>
                 </div>
@@ -124,10 +126,12 @@ export async function getServerSideProps({ params }) {
     const page = params?.slug;
     const contact = await getPage('contact');
     const servicesNavItems = await getChildren('services');
+    const categories = await getAllCategoriesWithSlug();
     const blog = await getPost(`${page}`);
 
     return {
         props: {
+            categories,
             blog: blog?.post,
             contact,
             servicesNav: servicesNavItems,
