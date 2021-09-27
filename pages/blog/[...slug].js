@@ -133,7 +133,7 @@ export async function getServerSideProps({ params }) {
         props: {
             categories,
             blog: blog?.post,
-            contact,
+            contact: contact?.page ? contact.page?.contact : {},
             servicesNav: servicesNavItems,
         },
     };

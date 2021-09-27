@@ -30,7 +30,6 @@ const Contact = ({ contact, servicesNav }) => {
 
             <GoogleMap contact={contact} />
 
-            <Footer contactinfo={contact} />
         </DefaultTemplate>
     );
 };
