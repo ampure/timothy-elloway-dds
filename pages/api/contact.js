@@ -1,24 +1,36 @@
 import nodemailer from 'nodemailer';
 import sgTransport from 'nodemailer-sendgrid-transport';
 
-const transporter = {
-    auth: {
-        // Use SendGrid API key
-        api_key: '###',
-    },
-};
+// const transporter = {
+//     auth: {
+//         // Use SendGrid API key
+//         api_key: '###',
+//     },
+// };
 
-const mailer = nodemailer.createTransport(sgTransport(transporter));
+// const mailer = nodemailer.createTransport(sgTransport(transporter));
+const mailer = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'brettsker@gmail.com',
+      pass: 'wguskqbcbcmyoybh' // app password, not the real one
+    }
+  });
 
 export default async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const { name, email, number, subject, text } = req.body;
 
     const data = {
         to: 'brettsker@gmail.com',
         from: email,
-        subject: 'Hi there',
-        text: text,
+        subject: subject,
+        text: `
+            From: ${name} \n
+            Number: ${number} \n
+            Subject: ${subject} \n
+            Message: ${text} 
+        `,
         html: `
             <b>From:</b> ${name} <br /> 
             <b>Number:</b> ${number} <br /> 
