@@ -17,9 +17,9 @@ const ServicesChild = ({ service, contact, servicesNav }) => {
         >
             <PageBanner
                 pageTitle={service?.customFields?.h1}
-                homePageUrl="/services"
-                homePageText="Services"
-                activePageText={service?.customFields?.title}
+                homePageUrl="/"
+                homePageText="Home"
+                activePageText="Services"
                 bgImage="page-title-four"
             />
 

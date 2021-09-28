@@ -1,14 +1,18 @@
 import React from 'react';
-import TopHeader from '../components/_App/TopHeader';
-import Navbar from '../components/_App/Navbar';
+import DefaultTemplate from '../components/_App/DefaultTemplate';
 import PageBanner from '../components/Common/PageBanner';
-import Footer from '../components/_App/Footer';
 
-const Appointment = () => {
+// data
+import { getPage, getChildren } from '../lib/api';
+
+const Appointment = ({ contact, servicesNav }) => {
+    console.warn(contact);
     return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
+        <DefaultTemplate
+            contact={contact}
+            seo={contact?.seo}
+            servicesNav={servicesNav}
+        >
             <PageBanner
                 pageTitle="Appointment"
                 homePageUrl="/"
@@ -31,8 +35,8 @@ const Appointment = () => {
 
                                 <h2>Book your appointment</h2>
                                 <span>
-                                    We will confirm your appointment within 2
-                                    hours
+                                    We will confirm your appointment as soon as
+                                    possible
                                 </span>
 
                                 <div className="appointment-form">
@@ -179,10 +183,20 @@ const Appointment = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer />
-        </React.Fragment>
+        </DefaultTemplate>
     );
 };
 
 export default Appointment;
+
+export const getStaticProps = async () => {
+    const contact = await getPage('contact');
+    const servicesNavItems = await getChildren('services');
+
+    return {
+        props: {
+            contact: contact?.page ? contact.page?.contact : {},
+            servicesNav: servicesNavItems,
+        },
+    };
+};

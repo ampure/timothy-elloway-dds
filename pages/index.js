@@ -15,7 +15,7 @@ import NewsletterForm from '../components/Common/NewsletterForm';
 // data
 import { getPage, getChildren } from '../lib/api';
 
-const Index = ({ homepage, contact, servicesNav }) => {
+const Index = ({ homepage, contact, servicesNav, testimonials }) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -36,7 +36,7 @@ const Index = ({ homepage, contact, servicesNav }) => {
             <div className="pb-100">
                 <Stats />
             </div>
-            <FeedbackSlider />
+            <FeedbackSlider testimonials={testimonials} />
             <LatestBlogPost />
             <NewsletterForm />
         </DefaultTemplate>
@@ -49,11 +49,15 @@ export const getStaticProps = async () => {
     const home = await getPage('homepage');
     const contact = await getPage('contact');
     const servicesNavItems = await getChildren('services');
+    const testimonials = await getPage('testimonials');
 
     return {
         props: {
             homepage: home?.page ? home.page : {},
             contact: contact?.page ? contact.page?.contact : {},
+            testimonials: testimonials?.page
+                ? testimonials.page?.testimonials?.testimonials
+                : {},
             servicesNav: servicesNavItems,
         },
     };
