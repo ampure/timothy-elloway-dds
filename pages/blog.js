@@ -530,14 +530,16 @@ export const getStaticProps = async () => {
     const allPosts = await getAllPosts(12); // 12 at a time?
     const blog = await getPage('blog');
     const contact = await getPage('contact');
-    const servicesNavItems = await getChildren('services');
+    const services = await getChildren('services');
 
     return {
         props: {
             allPosts,
             blog: blog?.page ? blog.page : {},
             contact: contact?.page ? contact.page?.contact : {},
-            servicesNav: servicesNavItems,
+            servicesNav: services?.page?.children?.nodes
+                ? services?.page?.children?.nodes
+                : {},
         },
         revalidate: 60,
     };

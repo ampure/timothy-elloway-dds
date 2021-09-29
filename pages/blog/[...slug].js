@@ -125,7 +125,7 @@ export default BlogDetails;
 export async function getServerSideProps({ params }) {
     const page = params?.slug;
     const contact = await getPage('contact');
-    const servicesNavItems = await getChildren('services');
+    const servicesNav = await getChildren('services');
     const categories = await getAllCategoriesWithSlug();
     const blog = await getPost(`${page}`);
 
@@ -134,7 +134,9 @@ export async function getServerSideProps({ params }) {
             categories,
             blog: blog?.post,
             contact: contact?.page ? contact.page?.contact : {},
-            servicesNav: servicesNavItems,
+            servicesNav: services?.page?.children?.nodes
+                ? services?.page?.children?.nodes
+                : {},
         },
     };
 }

@@ -150,30 +150,28 @@ const Navbar = ({ servicesNav }) => {
                                     </Link>
 
                                     <ul className="dropdown-menu">
-                                        {servicesNav?.page?.children?.nodes?.map(
-                                            (node, index) => {
-                                                return (
-                                                    <li
-                                                        className="nav-item"
-                                                        key={index}
+                                        {servicesNav?.map((node, index) => {
+                                            return (
+                                                <li
+                                                    className="nav-item"
+                                                    key={index}
+                                                >
+                                                    <Link
+                                                        href={node.uri}
+                                                        activeClassName="active"
                                                     >
-                                                        <Link
-                                                            href={node.uri}
-                                                            activeClassName="active"
+                                                        <a
+                                                            onClick={
+                                                                toggleNavbar
+                                                            }
+                                                            className="nav-link"
                                                         >
-                                                            <a
-                                                                onClick={
-                                                                    toggleNavbar
-                                                                }
-                                                                className="nav-link"
-                                                            >
-                                                                {node.title}
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                );
-                                            }
-                                        )}
+                                                            {node.title}
+                                                        </a>
+                                                    </Link>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </li>
 

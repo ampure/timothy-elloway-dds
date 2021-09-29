@@ -191,12 +191,14 @@ export default Appointment;
 
 export const getStaticProps = async () => {
     const contact = await getPage('contact');
-    const servicesNavItems = await getChildren('services');
+    const services = await getChildren('services');
 
     return {
         props: {
             contact: contact?.page ? contact.page?.contact : {},
-            servicesNav: servicesNavItems,
+            servicesNav: services?.page?.children?.nodes
+                ? services?.page?.children?.nodes
+                : {},
         },
     };
 };

@@ -15,21 +15,22 @@ import NewsletterForm from '../components/Common/NewsletterForm';
 // data
 import { getPage, getChildren } from '../lib/api';
 
-const Index = ({ homepage, contact, servicesNav, testimonials }) => {
+const Index = ({ homepage, contact, services, testimonials }) => {
+    console.warn(services);
     return (
         <DefaultTemplate
             contact={contact}
             seo={homepage?.seo}
-            servicesNav={servicesNav}
+            servicesNav={services}
         >
             <MainBanner
                 h1={homepage?.customFields?.h1}
                 headercontent={homepage?.customFields?.headercontent}
                 headerimage={homepage?.customFields?.headerimage}
             />
-            <AboutOurHospital />
-            <OurExpertise />
-            <Services />
+            {/* <AboutOurHospital />
+            <OurExpertise /> */}
+            <Services services={services} />
             <AboutUs />
             <VideoIntro />
             <OurDentists />
@@ -38,7 +39,7 @@ const Index = ({ homepage, contact, servicesNav, testimonials }) => {
             </div>
             <FeedbackSlider testimonials={testimonials} />
             <LatestBlogPost />
-            <NewsletterForm />
+            {/* <NewsletterForm /> */}
         </DefaultTemplate>
     );
 };
@@ -48,8 +49,9 @@ export default Index;
 export const getStaticProps = async () => {
     const home = await getPage('homepage');
     const contact = await getPage('contact');
-    const servicesNavItems = await getChildren('services');
+    const services = await getChildren('services');
     const testimonials = await getPage('testimonials');
+    console.warn(services);
 
     return {
         props: {
@@ -58,7 +60,9 @@ export const getStaticProps = async () => {
             testimonials: testimonials?.page
                 ? testimonials.page?.testimonials?.testimonials
                 : {},
-            servicesNav: servicesNavItems,
+            services: services?.page?.children?.nodes
+                ? services?.page?.children?.nodes
+                : {},
         },
     };
 };

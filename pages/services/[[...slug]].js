@@ -102,15 +102,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
     const service = await getPage(`/services/${params?.slug}`);
     const contact = await getPage('contact');
-    const servicesNavItems = await getChildren('services');
+    const servicesNav = await getChildren('services');
 
     return {
         props: {
             service: service?.page ? service.page : {},
             slugs: params.slug || null,
             contact: contact?.page ? contact.page?.contact : {},
-            // TODO FIGURE OUT THE SERVICES NAV!
-            servicesNav: servicesNavItems,
+            servicesNav: servicesNav?.page?.children?.nodes
+                ? servicesNav?.page?.children?.nodes
+                : {},
         },
         revalidate: 600, // every X seconds, check for updates
     };
