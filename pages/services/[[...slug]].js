@@ -3,12 +3,12 @@ import Image from 'next/image';
 import DefaultTemplate from '../../components/_App/DefaultTemplate';
 import PageBanner from '../../components/Common/PageBanner';
 import TestimonialSlider from '../../components/Common/TestimonialSlider';
-import LatestBlogPost from '../../components/Common/LatestBlogPost';
+import LatestBlogPost from '../../components/Blog/LatestBlogPost';
 
 // data
-import { getPage, getChildren } from '../../lib/api';
+import { getPage, getChildren, getAllPosts } from '../../lib/api';
 
-const ServicesChild = ({ service, contact, servicesNav }) => {
+const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -83,7 +83,7 @@ const ServicesChild = ({ service, contact, servicesNav }) => {
 
             <TestimonialSlider />
 
-            <LatestBlogPost />
+            <LatestBlogPost posts={latestPosts} />
         </DefaultTemplate>
     );
 };
@@ -103,9 +103,11 @@ export const getStaticProps = async ({ params }) => {
     const service = await getPage(`/services/${params?.slug}`);
     const contact = await getPage('contact');
     const servicesNav = await getChildren('services');
+    const latestPosts = await getAllPosts(3);
 
     return {
         props: {
+            latestPosts: latestPosts,
             service: service?.page ? service.page : {},
             slugs: params.slug || null,
             contact: contact?.page ? contact.page?.contact : {},

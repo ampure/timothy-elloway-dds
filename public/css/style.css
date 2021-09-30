@@ -1308,6 +1308,10 @@ button:focus {
     overflow: hidden;
 }
 
+.blog-item .blog-top a > div {
+    width: 100%;
+}
+
 .blog-item .blog-top img {
     width: 100%;
     border-radius: 10px;

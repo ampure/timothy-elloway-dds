@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultTemplate from '../../components/_App/DefaultTemplate';
-import PageBanner from '../../components/Common/PageBanner';
-import CommentForm from '../../components/Blog/CommentForm';
+// import PageBanner from '../../components/Common/PageBanner';
+// import CommentForm from '../../components/Blog/CommentForm';
 import BlogSidebar from '../../components/Blog/BlogSidebar';
 import LatestBlogPost from '../../components/Blog/LatestBlogPost';
 import moment from 'moment';
@@ -12,9 +12,17 @@ import {
     getPage,
     getChildren,
     getAllCategoriesWithSlug,
+    getAllPosts,
 } from '../../lib/api';
 
-const BlogDetails = ({ blog, contact, servicesNav, categories }) => {
+const BlogDetails = ({
+    blog,
+    contact,
+    servicesNav,
+    categories,
+    latestPosts,
+}) => {
+    console.warn(latestPosts);
     return (
         <DefaultTemplate
             contact={contact}
@@ -115,7 +123,7 @@ const BlogDetails = ({ blog, contact, servicesNav, categories }) => {
                 </div>
             </div>
 
-            <LatestBlogPost />
+            <LatestBlogPost posts={latestPosts} />
         </DefaultTemplate>
     );
 };
@@ -125,14 +133,16 @@ export default BlogDetails;
 export async function getServerSideProps({ params }) {
     const page = params?.slug;
     const contact = await getPage('contact');
-    const servicesNav = await getChildren('services');
+    const services = await getChildren('services');
     const categories = await getAllCategoriesWithSlug();
     const blog = await getPost(`${page}`);
+    const latestPosts = await getAllPosts(3);
 
     return {
         props: {
             categories,
             blog: blog?.post,
+            latestPosts: latestPosts,
             contact: contact?.page ? contact.page?.contact : {},
             servicesNav: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes

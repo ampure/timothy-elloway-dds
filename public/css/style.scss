@@ -1159,6 +1159,10 @@ button {
         }
         a {
             display: block;
+
+            > div {
+                width: 100%;
+            }
         }
     }
     .blog-bottom {

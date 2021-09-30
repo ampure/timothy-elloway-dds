@@ -9,13 +9,13 @@ import VideoIntro from '../components/Common/VideoIntro';
 import OurDentists from '../components/Common/OurDentists';
 import Stats from '../components/Home/Stats';
 import FeedbackSlider from '../components/Home/FeedbackSlider';
-import LatestBlogPost from '../components/Common/LatestBlogPost';
+import LatestBlogPost from '../components/Blog/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 
 // data
-import { getPage, getChildren } from '../lib/api';
+import { getPage, getChildren, getAllPosts } from '../lib/api';
 
-const Index = ({ homepage, contact, services, testimonials }) => {
+const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
     console.warn(services);
     return (
         <DefaultTemplate
@@ -38,7 +38,7 @@ const Index = ({ homepage, contact, services, testimonials }) => {
                 <Stats />
             </div>
             <FeedbackSlider testimonials={testimonials} />
-            <LatestBlogPost />
+            <LatestBlogPost posts={latestBlogs} />
             {/* <NewsletterForm /> */}
         </DefaultTemplate>
     );
@@ -51,10 +51,11 @@ export const getStaticProps = async () => {
     const contact = await getPage('contact');
     const services = await getChildren('services');
     const testimonials = await getPage('testimonials');
-    console.warn(services);
+    const latestPosts = await getAllPosts(3);
 
     return {
         props: {
+            latestBlogs: latestPosts,
             homepage: home?.page ? home.page : {},
             contact: contact?.page ? contact.page?.contact : {},
             testimonials: testimonials?.page
