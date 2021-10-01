@@ -65,7 +65,7 @@ const MainBanner = (props) => {
             </div>
 
             <div className="heart-shape">
-                <img src="/images/heart-graph.png" alt="Banner" />
+                {/* <img src="/images/heart-graph.png" alt="Banner" /> */}
             </div>
         </div>
     );
