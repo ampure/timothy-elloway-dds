@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import sgTransport from 'nodemailer-sendgrid-transport';
+// import sgTransport from 'nodemailer-sendgrid-transport';
 
 // const transporter = {
 //     auth: {
@@ -10,10 +10,13 @@ import sgTransport from 'nodemailer-sendgrid-transport';
 
 // const mailer = nodemailer.createTransport(sgTransport(transporter));
 const mailer = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
     auth: {
-      user: 'brettsker@gmail.com',
-      pass: 'wguskqbcbcmyoybh' // app password, not the real one
+        user: process.env.GMAIL_ACCOUNT, 
+        pass: process.env.GMAIL_APP_PASS 
     }
   });
 
@@ -22,7 +25,7 @@ export default async (req, res) => {
     const { name, email, number, subject, text } = req.body;
 
     const data = {
-        to: 'brettsker@gmail.com',
+        to: process.env.SEND_EMAIL_TO,
         from: email,
         subject: subject,
         text: `

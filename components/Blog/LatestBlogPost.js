@@ -4,7 +4,6 @@ import moment from 'moment';
 import Image from 'next/image';
 
 const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
-    console.warn('hosl');
     return (
         <div className="blog-area pt-100 pb-70">
             <div className="container">

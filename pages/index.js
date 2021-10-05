@@ -16,7 +16,6 @@ import NewsletterForm from '../components/Common/NewsletterForm';
 import { getPage, getChildren, getAllPosts } from '../lib/api';
 
 const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
-    console.warn(services);
     return (
         <DefaultTemplate
             contact={contact}

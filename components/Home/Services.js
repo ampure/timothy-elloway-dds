@@ -12,7 +12,6 @@ const Services = ({ services }) => {
                     </div>
                     <div className="row">
                         {services.map((service, index) => {
-                            console.warn(service);
                             return (
                                 <div className="col-sm-6 col-lg-3" key={index}>
                                     <div className="service-item">

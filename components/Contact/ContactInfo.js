@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ContactInfo = ({ contact }) => {
-    console.warn(contact);
     return (
         <div className="location-area pt-100 pb-70">
             <div className="container">

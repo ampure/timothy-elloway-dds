@@ -22,7 +22,6 @@ const BlogDetails = ({
     categories,
     latestPosts,
 }) => {
-    console.warn(latestPosts);
     return (
         <DefaultTemplate
             contact={contact}
