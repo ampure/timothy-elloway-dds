@@ -21,8 +21,11 @@ const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
                                 >
                                     <div className="blog-item">
                                         <div className="blog-top">
-                                            <Link
+                                            {/* <Link
                                                 href={`/blog/${post?.node.slug}`}
+                                            > */}
+                                            <Link
+                                                href={`/${post?.node.slug}`}
                                             >
                                                 <a>
                                                     <Image
@@ -67,7 +70,7 @@ const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
                                         <div className="blog-bottom">
                                             <h3>
                                                 <Link
-                                                    href={`/blog/${post?.node.slug}`}
+                                                    href={`/${post?.node.slug}`}
                                                 >
                                                     <a>{post?.node?.title}</a>
                                                 </Link>
@@ -80,7 +83,7 @@ const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
                                             <ul>
                                                 <li>
                                                     <Link
-                                                        href={`/blog/${post?.node.slug}`}
+                                                        href={`/${post?.node.slug}`}
                                                     >
                                                         <a>
                                                             Read More{' '}

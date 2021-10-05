@@ -41,7 +41,7 @@ const Blog = ({
                                         <div className="blog-item">
                                             <div className="blog-top">
                                                 <Link
-                                                    href={`/blog/${post?.node.slug}`}
+                                                    href={`/${post?.node.slug}`}
                                                 >
                                                     <a>
                                                         <Image
@@ -86,7 +86,7 @@ const Blog = ({
                                             <div className="blog-bottom">
                                                 <h3>
                                                     <Link
-                                                        href={`/blog/${post?.node.slug}`}
+                                                        href={`/${post?.node.slug}`}
                                                     >
                                                         <a>
                                                             {post?.node?.title}
@@ -102,7 +102,7 @@ const Blog = ({
                                                 <ul>
                                                     <li>
                                                         <Link
-                                                            href={`/blog/${post?.node.slug}`}
+                                                            href={`/${post?.node.slug}`}
                                                         >
                                                             <a>
                                                                 Read More{' '}
