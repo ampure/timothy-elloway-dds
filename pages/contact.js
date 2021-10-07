@@ -21,7 +21,7 @@ const Contact = ({ contact, servicesNav }) => {
                 homePageUrl="/"
                 homePageText="Home"
                 activePageText="Contact Us"
-                bgImage="page-title-one"
+                bgImage="page-title-contact"
             />
 
             <ContactInfo contact={contact} />

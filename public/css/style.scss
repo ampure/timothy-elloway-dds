@@ -657,30 +657,30 @@ button {
         border-radius: 10px;
         animation: a-seven 10s infinite linear;
     }
-    &:before {
-        position: absolute;
-        content: '';
-        top: -10px;
-        left: -10px;
-        width: 430px;
-        height: 375px;
-        border-radius: 10px;
-        z-index: -1;
-        animation: a-one 5s infinite linear;
-        background-color: $main-color;
-    }
-    &:after {
-        position: absolute;
-        content: '';
-        bottom: -10px;
-        right: -10px;
-        width: 430px;
-        height: 375px;
-        border-radius: 10px;
-        z-index: -1;
-        animation: a-two 5s infinite linear;
-        background-color: $main-color;
-    }
+    // &:before {
+    //     position: absolute;
+    //     content: '';
+    //     top: -10px;
+    //     left: -10px;
+    //     width: 430px;
+    //     height: 375px;
+    //     border-radius: 10px;
+    //     z-index: -1;
+    //     animation: a-one 5s infinite linear;
+    //     background-color: $main-color;
+    // }
+    // &:after {
+    //     position: absolute;
+    //     content: '';
+    //     bottom: -10px;
+    //     right: -10px;
+    //     width: 430px;
+    //     height: 375px;
+    //     border-radius: 10px;
+    //     z-index: -1;
+    //     animation: a-two 5s infinite linear;
+    //     background-color: $main-color;
+    // }
 }
 @keyframes a-one {
     0% {

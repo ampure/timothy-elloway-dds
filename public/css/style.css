@@ -685,6 +685,10 @@ button:focus {
     position: relative;
 }
 
+.about-left > div {
+    display: block !important;
+}
+
 .about-left img {
     width: 100%;
     z-index: 1;
@@ -693,7 +697,7 @@ button:focus {
     animation: a-seven 10s infinite linear;
 }
 
-.about-left:before {
+/* .about-left:before {
     position: absolute;
     content: '';
     top: -10px;
@@ -719,7 +723,7 @@ button:focus {
     -webkit-animation: a-two 5s infinite linear;
     animation: a-two 5s infinite linear;
     background-color: #0046c0;
-}
+} */
 
 @-webkit-keyframes a-one {
     0% {
@@ -2770,6 +2774,9 @@ footer {
 /*-- Page Title --*/
 .page-title-one {
     background-image: url('/images/page-banner1.jpg');
+}
+.page-title-contact {
+    background-image: url('/images/page-banner-contact.jpg');
 }
 
 .page-title-area {

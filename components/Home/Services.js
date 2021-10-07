@@ -50,7 +50,7 @@ const Services = ({ services }) => {
                                                     />
 
                                                     <Link
-                                                        href={`/services/${service?.slug}`}
+                                                        href={`/${service?.slug}`}
                                                     >
                                                         <a>Read More</a>
                                                     </Link>

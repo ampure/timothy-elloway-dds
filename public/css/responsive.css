@@ -1637,7 +1637,7 @@
         width: 100%;
         z-index: 1;
     }
-    .about-left:before {
+    /* .about-left:before {
         position: absolute;
         content: '';
         top: -10px;
@@ -1662,7 +1662,7 @@
         -webkit-animation: a-two 5s infinite linear;
         animation: a-two 5s infinite linear;
         background-color: #0046c0;
-    }
+    } */
     @-webkit-keyframes a-one {
         50% {
             -webkit-transform: translate(-10px, 10px);
