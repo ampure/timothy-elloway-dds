@@ -78,32 +78,32 @@ const Footer = ({ contactinfo }) => {
                                     <h3>Our Services</h3>
                                     <ul>
                                         <li>
-                                            <Link href="/services/dental-implants">
+                                            <Link href="/dental-implants">
                                                 <a>Dental Implants</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/services/crowns">
+                                            <Link href="/crowns">
                                                 <a>Crowns</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/services/fillings">
+                                            <Link href="/fillings">
                                                 <a>Fillings</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/services/dentures">
+                                            <Link href="/dentures">
                                                 <a>Dentures</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/services/bridges">
+                                            <Link href="/bridges">
                                                 <a>Bridges</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/services/root-canals">
+                                            <Link href="/root-canals">
                                                 <a>Root Canals</a>
                                             </Link>
                                         </li>

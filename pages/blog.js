@@ -25,7 +25,7 @@ const Blog = ({
                 homePageUrl="/"
                 homePageText="Home"
                 activePageText="Blog"
-                bgImage="page-title-four"
+                bgImage="page-title-blog"
             />
 
             <div className="blog-area-two pt-100 pb-70">

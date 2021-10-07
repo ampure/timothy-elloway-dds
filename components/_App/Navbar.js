@@ -157,7 +157,7 @@ const Navbar = ({ servicesNav }) => {
                                                     key={index}
                                                 >
                                                     <Link
-                                                        href={node.uri}
+                                                        href={node.slug}
                                                         activeClassName="active"
                                                     >
                                                         <a

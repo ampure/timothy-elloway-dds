@@ -1,12 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import DefaultTemplate from '../../components/_App/DefaultTemplate';
-import PageBanner from '../../components/Common/PageBanner';
-import TestimonialSlider from '../../components/Common/TestimonialSlider';
-import LatestBlogPost from '../../components/Blog/LatestBlogPost';
-
-// data
-import { getPage, getChildren, getAllPosts } from '../../lib/api';
+import DefaultTemplate from '../_App/DefaultTemplate';
+import PageBanner from '..//Common/PageBanner';
+import TestimonialSlider from '../Common/TestimonialSlider';
+import LatestBlogPost from '..//Blog/LatestBlogPost';
 
 const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
     return (
@@ -16,7 +13,11 @@ const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
             servicesNav={servicesNav}
         >
             <PageBanner
-                pageTitle={service?.customFields?.h1}
+                pageTitle={
+                    service?.customFields?.h1
+                        ? service?.customFields?.h1
+                        : service?.title
+                }
                 homePageUrl="/"
                 homePageText="Home"
                 activePageText="Services"
@@ -90,31 +91,31 @@ const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
 
 export default ServicesChild;
 
-export const getStaticPaths = async () => {
-    const allServices = await getChildren('services');
+// export const getStaticPaths = async () => {
+//     const allServices = await getChildren('services');
 
-    return {
-        paths: allServices?.page?.children?.nodes?.map((node) => node.uri),
-        fallback: 'blocking',
-    };
-};
+//     return {
+//         paths: allServices?.page?.children?.nodes?.map((node) => node.uri),
+//         fallback: 'blocking',
+//     };
+// };
 
-export const getStaticProps = async ({ params }) => {
-    const service = await getPage(`/services/${params?.slug}`);
-    const contact = await getPage('contact');
-    const servicesNav = await getChildren('services');
-    const latestPosts = await getAllPosts(3);
+// export const getStaticProps = async ({ params }) => {
+//     const service = await getPage(`/services/${params?.slug}`);
+//     const contact = await getPage('contact');
+//     const servicesNav = await getChildren('services');
+//     const latestPosts = await getAllPosts(3);
 
-    return {
-        props: {
-            latestPosts: latestPosts,
-            service: service?.page ? service.page : {},
-            slugs: params.slug || null,
-            contact: contact?.page ? contact.page?.contact : {},
-            servicesNav: servicesNav?.page?.children?.nodes
-                ? servicesNav?.page?.children?.nodes
-                : {},
-        },
-        revalidate: 600, // every X seconds, check for updates
-    };
-};
+//     return {
+//         props: {
+//             latestPosts: latestPosts,
+//             service: service?.page ? service.page : {},
+//             slugs: params.slug || null,
+//             contact: contact?.page ? contact.page?.contact : {},
+//             servicesNav: servicesNav?.page?.children?.nodes
+//                 ? servicesNav?.page?.children?.nodes
+//                 : {},
+//         },
+//         revalidate: 600, // every X seconds, check for updates
+//     };
+// };

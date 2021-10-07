@@ -3215,6 +3215,9 @@ footer {
 .page-title-four {
     background-image: url('/images/page-banner4.jpg');
 }
+.page-title-blog {
+    background-image: url('/images/page-blog.jpg');
+}
 
 /*-- End Page Title --*/
 /*-- Blog Details --*/
