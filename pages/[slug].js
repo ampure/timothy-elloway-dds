@@ -26,7 +26,7 @@ const BlogDetails = ({
     categories,
     latestPosts,
 }) => {
-    console.warn(pageOrPost);
+    // console.warn(pageOrPost);
 
     if (pageOrPost?.parent?.node?.slug === 'services') {
         return (
@@ -70,7 +70,23 @@ export const getStaticPaths = async () => {
     const postSlugsFromApiCall = first25Posts?.posts?.edges.map(
         ({ node }) => `/${node.slug}`
     );
-    const pageSlugs = allPages?.pages?.edges.map(({ node }) => `/${node.slug}`); //uri?
+
+    //TODO: this isn't scalable. bad idea
+    const excluded = [
+        'about',
+        'blog',
+        'contact',
+        'testimonials',
+        'services',
+        'homepage',
+    ]; //exclude these from slug since we build them by themselves.
+    const includedPages = allPages?.pages?.edges.filter(({ node }) => {
+        if (!excluded.includes(node.slug)) return node;
+        else return false;
+    }); //uri?
+    const pageSlugs = includedPages?.map(({ node }) => `/${node.slug}`);
+
+    // console.warn(pageSlugs);
 
     return {
         paths: postSlugsFromApiCall.concat(pageSlugs),
