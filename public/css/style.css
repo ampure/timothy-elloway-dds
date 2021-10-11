@@ -2250,8 +2250,8 @@ footer {
 
 .banner-item .banner-right > .banner-image {
     position: absolute;
-    top: -125px;
-    right: 10px;
+    top: -50px;
+    right: 50px;
     max-width: 510px;
     width: 400px;
     height: 400px;
@@ -2261,6 +2261,13 @@ footer {
     display: block;
 }
 
+.banner-item .banner-right > .banner-image > div {
+    position: inherit;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
 .banner-item .banner-right > .banner-image img {
     object-fit: cover;
 }
@@ -2268,21 +2275,23 @@ footer {
 .banner-item .banner-right .blob1 {
     top: -125px;
     right: 20px;
-    max-width: 510px;
+    max-width: 610px;
     -webkit-animation: a-four 5s infinite linear;
     animation: a-four 5s infinite linear;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.2;
 }
 
 .banner-item .banner-right .blob2 {
     top: -125px;
-    right: 0px;
-    max-width: 510px;
+    right: -150px;
+    max-width: 610px;
     -webkit-animation: a-five 5s infinite linear;
     animation: a-five 5s infinite linear;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.5;
 }
 
 .banner-item .banner-right .animated-bgimage {
@@ -2359,7 +2368,15 @@ footer {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
-    50% {
+    35% {
+        -webkit-transform: translate(10px, 10px);
+        transform: translate(10px, 10px);
+    }
+    60% {
+        -webkit-transform: translate(5px, 5px);
+        transform: translate(5px, 5px);
+    }
+    75% {
         -webkit-transform: translate(10px, 10px);
         transform: translate(10px, 10px);
     }
@@ -2374,7 +2391,15 @@ footer {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
     }
-    50% {
+    35% {
+        -webkit-transform: translate(10px, 10px);
+        transform: translate(10px, 10px);
+    }
+    60% {
+        -webkit-transform: translate(5px, 5px);
+        transform: translate(5px, 5px);
+    }
+    75% {
         -webkit-transform: translate(10px, 10px);
         transform: translate(10px, 10px);
     }
