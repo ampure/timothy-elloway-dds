@@ -24,15 +24,15 @@ const MainBanner = (props) => {
                             </div>
 
                             <div className="banner-right">
-                                <img
+                                {/* <img
                                     src={props?.headerimage?.sourceUrl}
                                     alt={
                                         props?.headerimage?.mediaDetails
                                             ?.altText
                                     }
-                                />
-                                {/* <Image
-                                    className="banner-image"
+                                /> */}
+                                <span className="banner-image">
+                                    <Image
                                     src={props?.headerimage?.sourceUrl}
                                     title={props?.headerimage?.title}
                                     width={
@@ -45,18 +45,21 @@ const MainBanner = (props) => {
                                         props?.headerimage?.mediaDetails
                                             ?.altText
                                     }
-                                /> */}
+                                /></span>
                                 <img
-                                    src="/images/home/home-three-banner-shape2.png"
+                                    src="/images/home/blob.svg"
                                     alt="Banner"
+                                    className="blob1"
                                 />
                                 <img
-                                    src="/images/home/home-three-banner-shape2.png"
+                                    src="/images/home/blob2.svg"
                                     alt="Banner"
+                                    className="blob2"
                                 />
                                 <img
                                     src="/images/about-shape1.png"
                                     alt="Banner"
+                                    className="animated-bgimage"
                                 />
                             </div>
                         </div>

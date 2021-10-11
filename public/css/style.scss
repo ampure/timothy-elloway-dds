@@ -2004,10 +2004,8 @@ footer {
         }
     }
     .banner-right {
-        img {
-            position: absolute;
-
-            &:nth-child(1) {
+        &div {
+            img {
                 top: -125px;
                 right: 10px;
                 max-width: 510px;
@@ -2015,7 +2013,19 @@ footer {
                 margin-left: auto;
                 margin-right: auto;
             }
-            &:nth-child(2) {
+        }
+        img {
+            position: absolute;
+
+            // &:nth-child(1) {
+            //     top: -125px;
+            //     right: 10px;
+            //     max-width: 510px;
+            //     z-index: 1;
+            //     margin-left: auto;
+            //     margin-right: auto;
+            // }
+            &:nth-child(1) {
                 top: -125px;
                 right: 20px;
                 max-width: 510px;
@@ -2023,7 +2033,7 @@ footer {
                 margin-left: auto;
                 margin-right: auto;
             }
-            &:nth-child(3) {
+            &:nth-child(2) {
                 top: -125px;
                 right: 0px;
                 max-width: 510px;
@@ -2031,7 +2041,7 @@ footer {
                 margin-left: auto;
                 margin-right: auto;
             }
-            &:nth-child(4) {
+            &:nth-child(3) {
                 bottom: 215px;
                 left: 50px;
                 max-width: 360px;

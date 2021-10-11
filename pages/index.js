@@ -30,12 +30,12 @@ const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
             {/* <AboutOurHospital />
             <OurExpertise /> */}
             <Services services={services} />
-            <AboutUs />
-            <VideoIntro />
-            <OurDentists />
+            <div className="pb-100"><VideoIntro /></div>
+            {/* <OurDentists />
             <div className="pb-100">
                 <Stats />
-            </div>
+            </div> */}
+            <AboutUs />
             <FeedbackSlider testimonials={testimonials} />
             <LatestBlogPost posts={latestBlogs} />
             {/* <NewsletterForm /> */}

@@ -2248,16 +2248,24 @@ footer {
     position: absolute;
 }
 
-.banner-item .banner-right img:nth-child(1) {
+.banner-item .banner-right > .banner-image {
+    position: absolute;
     top: -125px;
     right: 10px;
     max-width: 510px;
+    width: 400px;
+    height: 400px;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
+    display: block;
 }
 
-.banner-item .banner-right img:nth-child(2) {
+.banner-item .banner-right > .banner-image img {
+    object-fit: cover;
+}
+
+.banner-item .banner-right .blob1 {
     top: -125px;
     right: 20px;
     max-width: 510px;
@@ -2267,7 +2275,7 @@ footer {
     margin-right: auto;
 }
 
-.banner-item .banner-right img:nth-child(3) {
+.banner-item .banner-right .blob2 {
     top: -125px;
     right: 0px;
     max-width: 510px;
@@ -2277,7 +2285,7 @@ footer {
     margin-right: auto;
 }
 
-.banner-item .banner-right img:nth-child(4) {
+.banner-item .banner-right .animated-bgimage {
     bottom: 215px;
     left: 50px;
     max-width: 360px;
