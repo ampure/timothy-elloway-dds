@@ -13,9 +13,16 @@ import LatestBlogPost from '../components/Blog/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 
 // data
-import { getPage, getChildren, getAllPosts } from '../lib/api';
+import { getPage, getChildren, getAllPosts, getVideoBlade } from '../lib/api';
 
-const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
+const Index = ({
+    homepage,
+    contact,
+    services,
+    testimonials,
+    latestBlogs,
+    videoProps,
+}) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -30,7 +37,9 @@ const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
             {/* <AboutOurHospital />
             <OurExpertise /> */}
             <Services services={services} />
-            <div className="pb-100"><VideoIntro /></div>
+            <div className="pb-100">
+                <VideoIntro props={videoProps} />
+            </div>
             {/* <OurDentists />
             <div className="pb-100">
                 <Stats />
@@ -50,6 +59,7 @@ export const getStaticProps = async () => {
     const contact = await getPage('contact');
     const services = await getChildren('services');
     const testimonials = await getPage('testimonials');
+    const videoProps = await getVideoBlade();
     const latestPosts = await getAllPosts(3);
 
     return {
@@ -60,6 +70,7 @@ export const getStaticProps = async () => {
             testimonials: testimonials?.page
                 ? testimonials.page?.testimonials?.testimonials
                 : {},
+            videoProps: videoProps?.page ? videoProps.page?.videoTabs : {},
             services: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
                 : {},
