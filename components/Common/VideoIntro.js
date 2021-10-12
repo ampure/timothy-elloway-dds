@@ -13,7 +13,7 @@ const VideoIntro = ({ props }) => {
         setIsOpen(!isOpen);
     };
 
-    console.warn(props);
+    // console.warn(props);
 
     return (
         <React.Fragment>
