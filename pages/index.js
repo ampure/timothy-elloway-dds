@@ -13,7 +13,13 @@ import LatestBlogPost from '../components/Blog/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 
 // data
-import { getPage, getChildren, getAllPosts, getVideoBlade } from '../lib/api';
+import {
+    getPage,
+    getChildren,
+    getAllPosts,
+    getVideoBlade,
+    getAboutBlade,
+} from '../lib/api';
 
 const Index = ({
     homepage,
@@ -22,6 +28,7 @@ const Index = ({
     testimonials,
     latestBlogs,
     videoProps,
+    aboutProps,
 }) => {
     return (
         <DefaultTemplate
@@ -44,7 +51,7 @@ const Index = ({
             <div className="pb-100">
                 <Stats />
             </div> */}
-            <AboutUs />
+            <AboutUs props={aboutProps} />
             <FeedbackSlider testimonials={testimonials} />
             <LatestBlogPost posts={latestBlogs} />
             {/* <NewsletterForm /> */}
@@ -60,6 +67,7 @@ export const getStaticProps = async () => {
     const services = await getChildren('services');
     const testimonials = await getPage('testimonials');
     const videoProps = await getVideoBlade();
+    const aboutProps = await getAboutBlade();
     const latestPosts = await getAllPosts(3);
 
     return {
@@ -71,6 +79,7 @@ export const getStaticProps = async () => {
                 ? testimonials.page?.testimonials?.testimonials
                 : {},
             videoProps: videoProps?.page ? videoProps.page?.videoTabs : {},
+            aboutProps: aboutProps?.page ? aboutProps.page?.aboutList : {},
             services: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
                 : {},
