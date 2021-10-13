@@ -14,94 +14,88 @@ const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
                 <div className="row">
                     {edges.map((post, index) => {
                         return (
-                            <>
-                                <div
-                                    className="col-12 col-md-6 col-lg-4"
-                                    key={index}
-                                >
-                                    <div className="blog-item">
-                                        <div className="blog-top">
-                                            {/* <Link
+                            <div
+                                className="col-12 col-md-6 col-lg-4"
+                                key={index}
+                            >
+                                <div className="blog-item">
+                                    <div className="blog-top">
+                                        {/* <Link
                                                 href={`/blog/${post?.node.slug}`}
                                             > */}
-                                            <Link
-                                                href={`/${post?.node.slug}`}
-                                            >
-                                                <a>
-                                                    <Image
-                                                        src={
-                                                            post?.node
-                                                                ?.blogCustomFields
-                                                                ?.featuredImageSmall
-                                                                ?.sourceUrl
-                                                        }
-                                                        title={
-                                                            post?.node
-                                                                ?.blogCustomFields
-                                                                ?.featuredImageSmall
-                                                                ?.title
-                                                        }
-                                                        width={
-                                                            post?.node
-                                                                ?.blogCustomFields
-                                                                ?.featuredImageSmall
-                                                                ?.mediaDetails
-                                                                ?.width
-                                                        }
-                                                        height={
-                                                            post?.node
-                                                                ?.blogCustomFields
-                                                                ?.featuredImageSmall
-                                                                ?.mediaDetails
-                                                                ?.height
-                                                        }
-                                                        alt={
-                                                            post?.node
-                                                                ?.blogCustomFields
-                                                                ?.featuredImageSmall
-                                                                ?.mediaDetails
-                                                                ?.altText
-                                                        }
-                                                    />
-                                                </a>
-                                            </Link>
-                                        </div>
+                                        <Link href={`/${post?.node.slug}`}>
+                                            <a>
+                                                <Image
+                                                    src={
+                                                        post?.node
+                                                            ?.blogCustomFields
+                                                            ?.featuredImageSmall
+                                                            ?.sourceUrl
+                                                    }
+                                                    title={
+                                                        post?.node
+                                                            ?.blogCustomFields
+                                                            ?.featuredImageSmall
+                                                            ?.title
+                                                    }
+                                                    width={
+                                                        post?.node
+                                                            ?.blogCustomFields
+                                                            ?.featuredImageSmall
+                                                            ?.mediaDetails
+                                                            ?.width
+                                                    }
+                                                    height={
+                                                        post?.node
+                                                            ?.blogCustomFields
+                                                            ?.featuredImageSmall
+                                                            ?.mediaDetails
+                                                            ?.height
+                                                    }
+                                                    alt={
+                                                        post?.node
+                                                            ?.blogCustomFields
+                                                            ?.featuredImageSmall
+                                                            ?.mediaDetails
+                                                            ?.altText
+                                                    }
+                                                />
+                                            </a>
+                                        </Link>
+                                    </div>
 
-                                        <div className="blog-bottom">
-                                            <h3>
+                                    <div className="blog-bottom">
+                                        <h3>
+                                            <Link href={`/${post?.node.slug}`}>
+                                                <a>{post?.node?.title}</a>
+                                            </Link>
+                                        </h3>
+                                        <p
+                                            dangerouslySetInnerHTML={{
+                                                __html: post?.node?.excerpt,
+                                            }}
+                                        />
+                                        <ul>
+                                            <li>
                                                 <Link
                                                     href={`/${post?.node.slug}`}
                                                 >
-                                                    <a>{post?.node?.title}</a>
+                                                    <a>
+                                                        Read More{' '}
+                                                        <i className="icofont-long-arrow-right"></i>
+                                                    </a>
                                                 </Link>
-                                            </h3>
-                                            <p
-                                                dangerouslySetInnerHTML={{
-                                                    __html: post?.node?.excerpt,
-                                                }}
-                                            />
-                                            <ul>
-                                                <li>
-                                                    <Link
-                                                        href={`/${post?.node.slug}`}
-                                                    >
-                                                        <a>
-                                                            Read More{' '}
-                                                            <i className="icofont-long-arrow-right"></i>
-                                                        </a>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <i className="icofont-calendar"></i>
-                                                    {moment(
-                                                        post?.node?.date
-                                                    ).format('MMM D, YYYY')}
-                                                </li>
-                                            </ul>
-                                        </div>
+                                            </li>
+                                            <li>
+                                                <i className="icofont-calendar"></i>
+                                                {moment(
+                                                    post?.node?.date
+                                                ).format('MMM D, YYYY')}
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </>
+                            </div>
                         );
                     })}
                 </div>

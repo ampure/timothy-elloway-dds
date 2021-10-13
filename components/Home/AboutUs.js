@@ -26,24 +26,22 @@ const AboutUs = ({ props }) => {
                                 <h2>{props?.title}</h2>
                             </div>
                             <ul>
-                                {props?.list?.map((item) => {
+                                {props?.list?.map((item, index) => {
                                     return (
-                                        <>
-                                            <li>
-                                                <i
-                                                    className={`icofont-${item.icon}`}
-                                                ></i>
-                                                <div className="welcome-inner">
-                                                    <h3>{item?.title}</h3>
+                                        <li key={index}>
+                                            <i
+                                                className={`icofont-${item.icon}`}
+                                            ></i>
+                                            <div className="welcome-inner">
+                                                <h3>{item?.title}</h3>
 
-                                                    <p
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: item?.content,
-                                                        }}
-                                                    />
-                                                </div>
-                                            </li>
-                                        </>
+                                                <p
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: item?.content,
+                                                    }}
+                                                />
+                                            </div>
+                                        </li>
                                     );
                                 })}
                             </ul>

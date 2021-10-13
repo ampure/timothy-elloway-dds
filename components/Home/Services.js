@@ -1,14 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Services = ({ services }) => {
+const Services = ({ services, header, count }) => {
+    if (count) {
+        // featured services only! (homepage)
+        services = services
+            .filter((item) => item.card.featured === true)
+            .slice(0, count);
+    }
     return (
         <React.Fragment>
             <div className="services-area pb-70">
                 <div className="container">
                     <div className="section-title-two">
                         <span>Services</span>
-                        <h2>Our Clinic Services</h2>
+                        <h2>{header}</h2>
                     </div>
                     <div className="row">
                         {services.map((service, index) => {

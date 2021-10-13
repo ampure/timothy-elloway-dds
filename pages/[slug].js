@@ -7,6 +7,7 @@ import moment from 'moment';
 // templates
 import Services from '../components/PageTemplates/Services';
 import Blog from '../components/PageTemplates/Blog';
+import DefaultPage from '../components/PageTemplates/DefaultPage';
 
 // data
 import {

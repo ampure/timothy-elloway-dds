@@ -43,7 +43,11 @@ const Index = ({
             />
             {/* <AboutOurHospital />
             <OurExpertise /> */}
-            <Services services={services} />
+            <Services
+                services={services}
+                header={homepage?.customFields?.servicesBladeHeader}
+                count={2}
+            />
             <div className="pb-100">
                 <VideoIntro props={videoProps} />
             </div>

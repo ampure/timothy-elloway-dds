@@ -19,46 +19,40 @@ const VideoIntro = ({ props }) => {
         <React.Fragment>
             <div className="video-wrap">
                 <Tabs>
-                    {props?.tabs?.map((tab) => {
+                    {props?.tabs?.map((tab, index) => {
                         return (
-                            <>
-                                <TabPanel>
-                                    <div
-                                        className="video-area"
-                                        style={{
-                                            backgroundImage: `url(${props?.background?.sourceUrl})`,
-                                            // opacity: '.5',
-                                        }}
-                                    >
-                                        <div className="d-table">
-                                            <div className="d-table-cell">
-                                                <div className="container">
-                                                    <div className="video-item">
-                                                        <div
-                                                            onClick={(e) => {
-                                                                e.preventDefault();
-                                                                openModal();
-                                                            }}
-                                                            className="popup-youtube"
-                                                        >
-                                                            <i className="icofont-ui-play"></i>
-                                                        </div>
+                            <TabPanel key={index}>
+                                <div
+                                    className="video-area"
+                                    style={{
+                                        backgroundImage: `url(${props?.background?.sourceUrl})`,
+                                        // opacity: '.5',
+                                    }}
+                                >
+                                    <div className="d-table">
+                                        <div className="d-table-cell">
+                                            <div className="container">
+                                                <div className="video-item">
+                                                    <div
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            openModal();
+                                                        }}
+                                                        className="popup-youtube"
+                                                    >
+                                                        <i className="icofont-ui-play"></i>
+                                                    </div>
 
-                                                        <div className="video-content">
-                                                            <h3>
-                                                                {tab?.header}
-                                                            </h3>
-                                                            <p>
-                                                                {tab?.content}{' '}
-                                                            </p>
-                                                        </div>
+                                                    <div className="video-content">
+                                                        <h3>{tab?.header}</h3>
+                                                        <p>{tab?.content} </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </TabPanel>
-                            </>
+                                </div>
+                            </TabPanel>
                         );
                     })}
 
