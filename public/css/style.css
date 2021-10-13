@@ -1821,10 +1821,10 @@ footer {
 /*-- End Emergency --*/
 /*-- Welcome --*/
 .welcome-left {
-    background-image: url('/images/about3.jpg');
+    /*background-image: url('/images/about3.jpg');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     border-radius: 0 10px 10px 0;
     margin-bottom: 30px;
     width: 100%;
@@ -1832,7 +1832,8 @@ footer {
 }
 
 .welcome-left img {
-    display: none;
+    /*display: none;*/
+    border-radius: 0 10px 10px 0;
 }
 
 .welcome-item ul {
