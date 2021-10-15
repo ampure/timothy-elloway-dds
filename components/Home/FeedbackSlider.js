@@ -54,11 +54,21 @@ const FeedbackSlider = ({ testimonials }) => {
                                         />
                                         <h3>{testimonial?.name}</h3>
                                     </div>
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: testimonial?.quote,
-                                        }}
-                                    />
+                                    {testimonial?.googleReviewLink ? (
+                                        <a
+                                            href={testimonial?.googleReviewLink}
+                                            target="_blank"
+                                            dangerouslySetInnerHTML={{
+                                                __html: testimonial?.quote,
+                                            }}
+                                        />
+                                    ) : (
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: testimonial?.quote,
+                                            }}
+                                        />
+                                    )}
                                 </div>
                             );
                         })}

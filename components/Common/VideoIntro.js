@@ -9,11 +9,13 @@ const ModalVideo = dynamic(() => import('react-modal-video'), {
 const VideoIntro = ({ props }) => {
     // Popup Video
     const [isOpen, setIsOpen] = React.useState(true);
-    const openModal = () => {
+    const [videoId, setVideoId] = React.useState(props?.youtubeVideoId);
+    const openModal = (videoId) => {
+        if (videoId) {
+            setVideoId(videoId);
+        }
         setIsOpen(!isOpen);
     };
-
-    // console.warn(props);
 
     return (
         <React.Fragment>
@@ -25,7 +27,11 @@ const VideoIntro = ({ props }) => {
                                 <div
                                     className="video-area"
                                     style={{
-                                        backgroundImage: `url(${props?.background?.sourceUrl})`,
+                                        backgroundImage: `url(${
+                                            tab?.background?.sourceUrl
+                                                ? tab.background.sourceUrl
+                                                : props?.background?.sourceUrl
+                                        })`,
                                         // opacity: '.5',
                                     }}
                                 >
@@ -33,15 +39,19 @@ const VideoIntro = ({ props }) => {
                                         <div className="d-table-cell">
                                             <div className="container">
                                                 <div className="video-item">
-                                                    <div
-                                                        onClick={(e) => {
-                                                            e.preventDefault();
-                                                            openModal();
-                                                        }}
-                                                        className="popup-youtube"
-                                                    >
-                                                        <i className="icofont-ui-play"></i>
-                                                    </div>
+                                                    {tab?.youtubeVideoId ? (
+                                                        <div
+                                                            onClick={(e) => {
+                                                                e.preventDefault();
+                                                                openModal(
+                                                                    tab?.youtubeVideoId
+                                                                );
+                                                            }}
+                                                            className="popup-youtube"
+                                                        >
+                                                            <i className="icofont-ui-play"></i>
+                                                        </div>
+                                                    ) : null}
 
                                                     <div className="video-content">
                                                         <h3>{tab?.header}</h3>
@@ -57,13 +67,15 @@ const VideoIntro = ({ props }) => {
                     })}
 
                     <TabList>
-                        {props?.tabs?.map((tab) => {
-                            return (
-                                <>
-                                    <Tab>{tab.title}</Tab>
-                                </>
-                            );
-                        })}
+                        {props?.tabs.length > 1
+                            ? props?.tabs?.map((tab) => {
+                                  return (
+                                      <>
+                                          <Tab>{tab.title}</Tab>
+                                      </>
+                                  );
+                              })
+                            : null}
                     </TabList>
                 </Tabs>
             </div>
@@ -72,7 +84,7 @@ const VideoIntro = ({ props }) => {
             <ModalVideo
                 channel="youtube"
                 isOpen={!isOpen}
-                videoId={props?.youtubeVideoId}
+                videoId={videoId}
                 onClose={() => setIsOpen(!isOpen)}
             />
         </React.Fragment>
