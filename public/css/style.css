@@ -1714,7 +1714,8 @@ footer {
 }
 
 .home-slider-two .slider-item {
-    height: 830px;
+    height: 750px;
+    margin-bottom: 48px;
 }
 
 .home-slider-two .slider-item .slider-shape img {

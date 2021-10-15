@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultTemplate from '../components/_App/DefaultTemplate';
-import MainBanner from '../components/Home/MainBanner';
+import HeroSlider from '../components/Home/HeroSlider';
 import AboutOurHospital from '../components/Home/AboutOurHospital';
 import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/Home/Services';
@@ -36,12 +36,14 @@ const Index = ({
             seo={homepage?.seo}
             servicesNav={services}
         >
+            <HeroSlider slides={homepage?.homepage?.heroslider} />
+            {/*
             <MainBanner
                 h1={homepage?.customFields?.h1}
                 headercontent={homepage?.customFields?.headercontent}
                 headerimage={homepage?.customFields?.headerimage}
             />
-            {/* <AboutOurHospital />
+            <AboutOurHospital />
             <OurExpertise /> */}
             <Services
                 services={services}
