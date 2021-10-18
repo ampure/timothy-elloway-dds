@@ -32,20 +32,21 @@ const MainBanner = (props) => {
                                     }
                                 /> */}
                                 <span className="banner-image">
-                                    <Image
-                                    src={props?.headerimage?.sourceUrl}
-                                    title={props?.headerimage?.title}
-                                    width={
-                                        props?.headerimage?.mediaDetails?.width
-                                    }
-                                    height={
-                                        props?.headerimage?.mediaDetails?.height
-                                    }
-                                    alt={
-                                        props?.headerimage?.mediaDetails
-                                            ?.altText
-                                    }
-                                /></span>
+                                    {props?.headerimage?.sourceUrl ? (<Image
+                                        src={props?.headerimage?.sourceUrl}
+                                        title={props?.headerimage?.title}
+                                        width={
+                                            props?.headerimage?.mediaDetails?.width
+                                        }
+                                        height={
+                                            props?.headerimage?.mediaDetails?.height
+                                        }
+                                        alt={
+                                            props?.headerimage?.mediaDetails
+                                                ?.altText
+                                        }
+                                    />):null}
+                                </span>
                                 <img
                                     src="/images/home/blob.svg"
                                     alt="Banner"

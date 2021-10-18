@@ -1,140 +1,199 @@
 import React from 'react';
-import Image from 'next/image';
-import DefaultTemplate from '../components/_App/DefaultTemplate';
+import TopHeader from '../components/_App/TopHeader';
+import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
-import OurExpertise from '../components/Home/OurExpertise';
-import Services from '../components/Home/Services';
-import FeedbackSlider from '../components/Home/FeedbackSlider';
-import LatestBlogPost from '../components/Blog/LatestBlogPost';
+import AppointmentFormTwo from '../components/Common/AppointmentFormTwo';
+import Footer from '../components/_App/Footer';
 
 // data
 import { getPage, getChildren, getAllPosts } from '../lib/api';
 
 const About = ({ about, contact, services, latestBlogs, testimonials }) => {
     return (
-        <DefaultTemplate
-            contact={contact}
-            seo={about?.seo}
-            servicesNav={services}
-        >
+        <React.Fragment>
+            <TopHeader />
+            <Navbar />
+
             <PageBanner
-                pageTitle="About"
+                pageTitle="Dr. Sarah Taylor (Neurosurgeon)"
                 homePageUrl="/"
                 homePageText="Home"
-                activePageText="About"
-                bgImage="page-title-one"
+                activePageText="Dentist Details"
+                bgImage="page-title-five"
             />
 
-            <div className="about-area pt-100 pb-70">
+            <div className="Dentist-details-area pt-100 pb-70">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="about-item">
-                                <div className="about-left">
-                                    {/* <img src="/images/about1.jpg" alt="About" /> */}
-                                    <Image
-                                        className="banner-image"
-                                        src={
-                                            about?.customFields?.headerimage
-                                                ?.sourceUrl
-                                        }
-                                        title={
-                                            about?.customFields?.headerimage
-                                                ?.title
-                                        }
-                                        width={
-                                            about?.customFields?.headerimage
-                                                ?.mediaDetails?.width
-                                        }
-                                        height={
-                                            about?.customFields?.headerimage
-                                                ?.mediaDetails?.height
-                                        }
-                                        alt={
-                                            about?.customFields?.headerimage
-                                                ?.mediaDetails?.altText
-                                        }
-                                    />
+                    <div className="row">
+                        <div className="col-lg-5">
+                            <div className="Dentist-details-item Dentist-details-left">
+                                <img
+                                    src="/images/dentists/Dentist3.jpg"
+                                    alt="Dentist"
+                                />
+
+                                <div className="Dentist-details-contact">
+                                    <h3>Contact info</h3>
+                                    <ul>
+                                        <li>
+                                            <i className="icofont-ui-call"></i>
+                                            Call: +07 554 332 322
+                                        </li>
+                                        <li>
+                                            <i className="icofont-ui-message"></i>
+                                            hello@TimothyElloway.com
+                                        </li>
+                                        <li>
+                                            <i className="icofont-location-pin"></i>
+                                            4th Floor, 408 No Chamber
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="Dentist-details-work">
+                                    <h3>Working hours</h3>
+                                    <div className="appointment-item-two-right">
+                                        <div className="appointment-item-content">
+                                            <ul>
+                                                <li>
+                                                    Monday{' '}
+                                                    <span>
+                                                        9:00 AM - 8:00 PM
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    Tuesday{' '}
+                                                    <span>
+                                                        9:00 AM - 8:00 PM
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    Wednesday{' '}
+                                                    <span>
+                                                        9:00 AM - 8:00 PM
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    Sunday{' '}
+                                                    <span>
+                                                        9:00 AM - 8:00 PM
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
-                            <div className="about-item about-right">
-                                <img
-                                    src="/images/about-shape1.png"
-                                    alt="About"
-                                />
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: about?.content,
-                                    }}
-                                />
-                                {/* <ul>
-                                    <li>
-                                        <i className="icofont-check-circled"></i>
-                                        Browse Our Website
-                                    </li>
-                                    <li>
-                                        <i className="icofont-check-circled"></i>
-                                        Choose Service
-                                    </li>
-                                    <li>
-                                        <i className="icofont-check-circled"></i>
-                                        Send Messege
-                                    </li>
-                                </ul> */}
+                        <div className="col-lg-7">
+                            <div className="Dentist-details-item">
+                                <div className="Dentist-details-right">
+                                    <div className="Dentist-details-biography">
+                                        <h3>Dr. Sarah Taylor (Neurosurgeon)</h3>
+                                        <p>
+                                            MBBS in Neurology, PHD in
+                                            Neurosurgeon
+                                        </p>
+                                    </div>
+
+                                    <div className="Dentist-details-biography">
+                                        <h3>Biography</h3>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore
+                                            et dolore magna aliqua. Ut enim ad
+                                            minim veniam, quis nostrud
+                                            exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in
+                                            reprehenderit in voluptate velit
+                                            esse cillum dolore eu fugiat nulla
+                                            pariatur. Excepteur sint occaecat
+                                            cupidatat non proident, sunt in
+                                            culpa qui officia deserunt mollit
+                                            anim id est laborum.
+                                        </p>
+
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste
+                                            natus error sit voluptatem
+                                            accusantium doloremque laudantium,
+                                            totam rem aperiam, eaque ipsa quae
+                                            ab illo inventore veritatis et quasi
+                                            architecto beatae vitae dicta sunt
+                                            explicabo. Nemo enim ipsam
+                                            voluptatem quia voluptas sit
+                                            aspernatur aut odit aut fugit, sed
+                                            quia consequuntur magni dolores eos
+                                            qui ratione voluptatem sequi
+                                            nesciunt.
+                                        </p>
+
+                                        <p>
+                                            But I must explain to you how all
+                                            this mistaken idea of denouncing
+                                            pleasure and praising pain was born
+                                            and I will give you a complete
+                                            account of the system, and expound
+                                            the actual teachings of the great
+                                            explorer of the truth, the
+                                            master-builder of human happiness.
+                                            No one rejects, dislikes, or avoids
+                                            pleasure itself, because it is
+                                            pleasure, but because those who do
+                                            not know how to pursue pleasure
+                                            rationally encounter consequences
+                                            that are extremely painful.
+                                        </p>
+
+                                        <p></p>
+                                    </div>
+
+                                    <div className="Dentist-details-biography">
+                                        <h3>Education</h3>
+                                        <ul>
+                                            <li>
+                                                PHD Degree in Neurology at
+                                                University of UCLan School of
+                                                Medicine Preston (2006)
+                                            </li>
+                                            <li>
+                                                Master of Neurosurgery at
+                                                University of University of
+                                                Exeter Medical School Exeter
+                                                (2002)
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="Dentist-details-biography">
+                                        <h3>Experience</h3>
+                                        <p>
+                                            At vero eos et accusamus et iusto
+                                            odio dignissimos ducimus qui
+                                            blanditiis praesentium voluptatum
+                                            deleniti atque corrupti quos dolores
+                                            et quas molestias excepturi sint
+                                            occaecati cupiditate non provident,
+                                            similique sunt in culpa.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="counter-area counter-bg counter-area-four">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="counter-item">
-                                <i className="icofont-patient-bed"></i>
-                                <h3 className="counter">850</h3>
-                                <p>Patients Beds</p>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="counter-item">
-                                <i className="icofont-people"></i>
-                                <h3>
-                                    <span className="counter">25000</span>+
-                                </h3>
-                                <p>Happy Patients</p>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="counter-item">
-                                <i className="icofont-Dentist-alt"></i>
-                                <h3 className="counter">750</h3>
-                                <p>Dentists & Nurse</p>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="counter-item">
-                                <i className="icofont-badge"></i>
-                                <h3 className="counter">18</h3>
-                                <p>Year Experience</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="pb-100">
+                <AppointmentFormTwo />
             </div>
 
-            <OurExpertise />
-
-            <Services services={services} />
-
-            <FeedbackSlider testimonials={testimonials} />
-
-            <LatestBlogPost posts={latestBlogs} />
-        </DefaultTemplate>
+            <Footer />
+        </React.Fragment>
     );
 };
 
