@@ -34,38 +34,38 @@ const TopHeader = ({ contactinfo }) => {
                         <div className="header-top-item">
                             <div className="header-top-right">
                                 <ul>
-                                    <li>
+                                {contactinfo?.facebook && contactinfo?.facebook !='' ? (<li>
                                         <a
                                             href={contactinfo?.facebook}
                                             target="_blank"
                                         >
                                             <i className="icofont-facebook"></i>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </li>) : null }
+                                    {contactinfo?.twitter && contactinfo?.twitter !='' ? ( <li>
                                         <a
                                             href={contactinfo?.twitter}
                                             target="_blank"
                                         >
                                             <i className="icofont-twitter"></i>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </li>):null}
+                                    {contactinfo?.linkedin && contactinfo?.linkedin !='' ? (<li>
                                         <a
                                             href={contactinfo?.linkedin}
                                             target="_blank"
                                         >
                                             <i className="icofont-linkedin"></i>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </li>) :null}
+                                    {contactinfo?.instagram && contactinfo?.instagram !='' ? (<li>
                                         <a
                                             href={contactinfo?.instagram}
                                             target="_blank"
                                         >
                                             <i className="icofont-instagram"></i>
                                         </a>
-                                    </li>
+                                    </li>) : null}
                                 </ul>
                             </div>
                         </div>
