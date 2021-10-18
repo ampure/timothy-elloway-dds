@@ -25,13 +25,13 @@ const TopHeader = ({ contactinfo }) => {
                                         <i className="icofont-location-pin"></i>
                                         {contactinfo?.cidLink ? (
                                             <a
-                                                href={contactinfo.cidLink}
+                                                href={contactinfo?.cidLink}
                                                 target="_blank"
                                             >
                                                 {contactinfo?.address}
                                             </a>
                                         ) : (
-                                            <>{contactinfo.address}</>
+                                            <>{contactinfo?.address}</>
                                         )}
                                     </li>
                                 </ul>

@@ -1,15 +1,15 @@
 import React from 'react';
 
-const AppointmentFormTwo = () => {
+const AppointmentFormTwo = ({services}) => {
     return (
         <div className="appointment-area-three">
             <div className="container-fluid p-0">
                 <div className="row m-0">
                     <div className="col-lg-7">
                         <div className="appointment-item appointment-item-two">
-                            <h2>Book your appointment</h2>
+                            <h2>Request an appointment</h2>
                             <span>
-                                We will confirm your appointment within 2 hours
+                                We will confirm with you as soon as possible
                             </span>
 
                             <div className="appointment-form">
@@ -59,11 +59,14 @@ const AppointmentFormTwo = () => {
                                                     className="form-control"
                                                     id="exampleFormControlSelect1"
                                                 >
-                                                    <option>Dental Care</option>
+                                                    {/* <option>Dental Care</option>
                                                     <option>Pathology</option>
                                                     <option>Diagnosis</option>
                                                     <option>Neurology</option>
-                                                    <option>Cardiology</option>
+                                                    <option>Cardiology</option> */}
+                                                    {services?.map((item,index)=>{
+                                                        return (<option value={item.title} key={index}>{item.title}</option>)
+                                                    })}
                                                 </select>
                                             </div>
                                         </div>
@@ -117,8 +120,8 @@ const AppointmentFormTwo = () => {
                                 <div className="speciality-icon">
                                     <i className="icofont-ui-call"></i>
                                 </div>
-                                <h3>Emergency Call</h3>
-                                <p>+07 554 332 322</p>
+                                <h3>For emergencies</h3>
+                                <p>call 911</p>
                             </div>
                         </div>
                     </div>
