@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import DefaultTemplate from '../_App/DefaultTemplate';
-import TestimonialSlider from '../Common/TestimonialSlider';
+import FeedbackSlider from '../Home/FeedbackSlider';
 import LatestBlogPost from '..//Blog/LatestBlogPost';
 
 const DefaultPage = ({ page, contact, servicesNav, latestPosts }) => {
@@ -66,7 +66,7 @@ const DefaultPage = ({ page, contact, servicesNav, latestPosts }) => {
                 </div>
             </div>
 
-            <TestimonialSlider />
+            <FeedbackSlider />
 
             <LatestBlogPost posts={latestPosts} />
         </DefaultTemplate>

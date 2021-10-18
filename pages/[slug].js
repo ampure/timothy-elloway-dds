@@ -1,8 +1,8 @@
 import React from 'react';
-import DefaultTemplate from '../components/_App/DefaultTemplate';
-import BlogSidebar from '../components/Blog/BlogSidebar';
-import LatestBlogPost from '../components/Blog/LatestBlogPost';
-import moment from 'moment';
+// import DefaultTemplate from '../components/_App/DefaultTemplate';
+// import BlogSidebar from '../components/Blog/BlogSidebar';
+// import LatestBlogPost from '../components/Blog/LatestBlogPost';
+// import moment from 'moment';
 
 // templates
 import Services from '../components/PageTemplates/Services';
@@ -26,6 +26,7 @@ const BlogDetails = ({
     servicesNav,
     categories,
     latestPosts,
+    testimonials,
 }) => {
     // console.warn(pageOrPost);
 
@@ -36,6 +37,7 @@ const BlogDetails = ({
                 contact={contact}
                 servicesNav={servicesNav}
                 latestPosts={latestPosts}
+                testimonials={testimonials}
             />
         );
     }
@@ -87,8 +89,6 @@ export const getStaticPaths = async () => {
     }); //uri?
     const pageSlugs = includedPages?.map(({ node }) => `/${node.slug}`);
 
-    // console.warn(pageSlugs);
-
     return {
         paths: postSlugsFromApiCall.concat(pageSlugs),
         fallback: 'blocking',
@@ -112,6 +112,7 @@ export async function getStaticProps({ params }) {
         ? servicePage.page
         : {};
     const latestPosts = await getAllPosts(3);
+    const testimonials = await getPage('testimonials');
 
     return {
         props: {
@@ -121,6 +122,9 @@ export async function getStaticProps({ params }) {
             contact: contact?.page ? contact.page?.contact : {},
             servicesNav: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
+                : {},
+            testimonials: testimonials?.page
+                ? testimonials.page?.testimonials?.testimonials
                 : {},
         },
     };

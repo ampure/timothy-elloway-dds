@@ -2,10 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 import DefaultTemplate from '../_App/DefaultTemplate';
 import PageBanner from '..//Common/PageBanner';
-import TestimonialSlider from '../Common/TestimonialSlider';
+import FeedbackSlider from '../Home/FeedbackSlider';
 import LatestBlogPost from '..//Blog/LatestBlogPost';
 
-const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
+const ServicesChild = ({
+    service,
+    contact,
+    servicesNav,
+    testimonials,
+    latestPosts,
+}) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -82,7 +88,7 @@ const ServicesChild = ({ service, contact, servicesNav, latestPosts }) => {
                 </div>
             </div>
 
-            <TestimonialSlider />
+            <FeedbackSlider testimonials={testimonials} />
 
             <LatestBlogPost posts={latestPosts} />
         </DefaultTemplate>
@@ -104,6 +110,7 @@ export default ServicesChild;
 //     const service = await getPage(`/services/${params?.slug}`);
 //     const contact = await getPage('contact');
 //     const servicesNav = await getChildren('services');
+//     const testimonials = await getPage('testimonials');
 //     const latestPosts = await getAllPosts(3);
 
 //     return {
@@ -114,6 +121,9 @@ export default ServicesChild;
 //             contact: contact?.page ? contact.page?.contact : {},
 //             servicesNav: servicesNav?.page?.children?.nodes
 //                 ? servicesNav?.page?.children?.nodes
+//                 : {},
+//             testimonials: testimonials?.page
+//                 ? testimonials.page?.testimonials?.testimonials
 //                 : {},
 //         },
 //         revalidate: 600, // every X seconds, check for updates

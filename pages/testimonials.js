@@ -3,7 +3,7 @@ import TopHeader from '../components/_App/TopHeader';
 import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import OurExpertise from '../components/Home/OurExpertise';
-import TestimonialSlider from '../components/Common/TestimonialSlider';
+import FeedbackSlider from '../components/Home/FeedbackSlider';
 import OurDentists from '../components/Common/OurDentists';
 import Footer from '../components/_App/Footer';
 
@@ -26,7 +26,7 @@ const Testimonials = () => {
                 <OurExpertise />
             </div>
 
-            <TestimonialSlider />
+            <FeedbackSlider />
 
             <OurDentists />
 

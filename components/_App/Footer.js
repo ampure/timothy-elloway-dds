@@ -42,7 +42,7 @@ const Footer = ({ contactinfo }) => {
                                                     {contactinfo?.address}
                                                 </a>
                                             ) : (
-                                                <>{contactinfo.address}</>
+                                                <>{contactinfo?.address}</>
                                             )}
                                         </li>
                                     </ul>
