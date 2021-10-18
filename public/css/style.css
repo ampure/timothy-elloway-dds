@@ -246,7 +246,6 @@ button:focus {
     max-width: 450px;
 }
 .main-nav nav .navbar-nav {
-    margin-right: auto;
     margin-left: auto;
 }
 
@@ -1715,7 +1714,8 @@ footer {
 }
 
 .home-slider-two .slider-item {
-    height: 830px;
+    height: 750px;
+    margin-bottom: 48px;
 }
 
 .home-slider-two .slider-item .slider-shape img {
@@ -1821,10 +1821,10 @@ footer {
 /*-- End Emergency --*/
 /*-- Welcome --*/
 .welcome-left {
-    background-image: url('/images/about3.jpg');
+    /*background-image: url('/images/about3.jpg');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     border-radius: 0 10px 10px 0;
     margin-bottom: 30px;
     width: 100%;
@@ -1832,7 +1832,8 @@ footer {
 }
 
 .welcome-left img {
-    display: none;
+    /*display: none;*/
+    border-radius: 0 10px 10px 0;
 }
 
 .welcome-item ul {
@@ -1897,7 +1898,7 @@ footer {
 }
 
 .section-title-two {
-    max-width: 430px;
+    /* max-width: 430px; */
     margin-left: 0;
     margin-bottom: 40px;
     margin-top: -5px;

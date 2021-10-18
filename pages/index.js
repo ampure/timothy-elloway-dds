@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultTemplate from '../components/_App/DefaultTemplate';
-import MainBanner from '../components/Home/MainBanner';
+import HeroSlider from '../components/Home/HeroSlider';
 import AboutOurHospital from '../components/Home/AboutOurHospital';
 import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/Home/Services';
@@ -13,29 +13,51 @@ import LatestBlogPost from '../components/Blog/LatestBlogPost';
 import NewsletterForm from '../components/Common/NewsletterForm';
 
 // data
-import { getPage, getChildren, getAllPosts } from '../lib/api';
+import {
+    getPage,
+    getChildren,
+    getAllPosts,
+    getVideoBlade,
+    getAboutBlade,
+} from '../lib/api';
 
-const Index = ({ homepage, contact, services, testimonials, latestBlogs }) => {
+const Index = ({
+    homepage,
+    contact,
+    services,
+    testimonials,
+    latestBlogs,
+    videoProps,
+    aboutProps,
+}) => {
     return (
         <DefaultTemplate
             contact={contact}
             seo={homepage?.seo}
             servicesNav={services}
         >
+            <HeroSlider slides={homepage?.homepage?.heroslider} />
+            {/*
             <MainBanner
                 h1={homepage?.customFields?.h1}
                 headercontent={homepage?.customFields?.headercontent}
                 headerimage={homepage?.customFields?.headerimage}
             />
-            {/* <AboutOurHospital />
+            <AboutOurHospital />
             <OurExpertise /> */}
-            <Services services={services} />
-            <div className="pb-100"><VideoIntro /></div>
+            <Services
+                services={services}
+                header={homepage?.customFields?.servicesBladeHeader}
+                count={2}
+            />
+            <div className="pb-100">
+                <VideoIntro props={videoProps} />
+            </div>
             {/* <OurDentists />
             <div className="pb-100">
                 <Stats />
             </div> */}
-            <AboutUs />
+            <AboutUs props={aboutProps} />
             <FeedbackSlider testimonials={testimonials} />
             <LatestBlogPost posts={latestBlogs} />
             {/* <NewsletterForm /> */}
@@ -50,6 +72,8 @@ export const getStaticProps = async () => {
     const contact = await getPage('contact');
     const services = await getChildren('services');
     const testimonials = await getPage('testimonials');
+    const videoProps = await getVideoBlade();
+    const aboutProps = await getAboutBlade();
     const latestPosts = await getAllPosts(3);
 
     return {
@@ -60,6 +84,8 @@ export const getStaticProps = async () => {
             testimonials: testimonials?.page
                 ? testimonials.page?.testimonials?.testimonials
                 : {},
+            videoProps: videoProps?.page ? videoProps.page?.videoTabs : {},
+            aboutProps: aboutProps?.page ? aboutProps.page?.aboutList : {},
             services: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
                 : {},

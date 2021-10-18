@@ -34,7 +34,16 @@ const Footer = ({ contactinfo }) => {
                                             <i className="icofont-location-pin"></i>
                                             {contactinfo?.name}
                                             <br />
-                                            {contactinfo?.address}
+                                            {contactinfo?.cidLink ? (
+                                                <a
+                                                    href={contactinfo.cidLink}
+                                                    target="_blank"
+                                                >
+                                                    {contactinfo?.address}
+                                                </a>
+                                            ) : (
+                                                <>{contactinfo.address}</>
+                                            )}
                                         </li>
                                     </ul>
                                 </div>

@@ -4,13 +4,13 @@ import DefaultTemplate from '../components/_App/DefaultTemplate';
 import PageBanner from '../components/Common/PageBanner';
 import OurExpertise from '../components/Home/OurExpertise';
 import Services from '../components/Home/Services';
-import TestimonialSlider from '../components/Common/TestimonialSlider';
+import FeedbackSlider from '../components/Home/FeedbackSlider';
 import LatestBlogPost from '../components/Blog/LatestBlogPost';
 
 // data
 import { getPage, getChildren, getAllPosts } from '../lib/api';
 
-const About = ({ about, contact, services, latestBlogs }) => {
+const About = ({ about, contact, services, latestBlogs, testimonials }) => {
     return (
         <DefaultTemplate
             contact={contact}
@@ -131,7 +131,7 @@ const About = ({ about, contact, services, latestBlogs }) => {
 
             <Services services={services} />
 
-            <TestimonialSlider />
+            <FeedbackSlider testimonials={testimonials} />
 
             <LatestBlogPost posts={latestBlogs} />
         </DefaultTemplate>
@@ -145,12 +145,16 @@ export const getStaticProps = async () => {
     const contact = await getPage('contact');
     const services = await getChildren('services');
     const latestPosts = await getAllPosts(3);
+    const testimonials = await getPage('testimonials');
 
     return {
         props: {
             latestBlogs: latestPosts,
             about: about?.page ? about.page : {},
             contact: contact?.page ? contact.page?.contact : {},
+            testimonials: testimonials?.page
+                ? testimonials.page?.testimonials?.testimonials
+                : {},
             services: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
                 : {},
