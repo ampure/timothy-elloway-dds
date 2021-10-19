@@ -48,7 +48,7 @@ const Index = ({
             <Services
                 services={services}
                 header={homepage?.customFields?.servicesBladeHeader}
-                count={2}
+                count={8}
             />
             <div className="pb-100">
                 <VideoIntro props={videoProps} />
