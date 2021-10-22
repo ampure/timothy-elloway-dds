@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+// import Image from 'next/image';
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
@@ -35,7 +35,7 @@ const FeedbackSlider = ({ testimonials }) => {
                             return (
                                 <div className="feedback-item" key={index}>
                                     <div className="client-img">
-                                        <Image
+                                        {/* <Image
                                             className="banner-image"
                                             src={testimonial?.image?.sourceUrl}
                                             title={testimonial?.image?.title}
@@ -51,7 +51,7 @@ const FeedbackSlider = ({ testimonials }) => {
                                                 testimonial?.image?.mediaDetails
                                                     ?.altText
                                             }
-                                        />
+                                        /> */}
                                         <h3>{testimonial?.name}</h3>
                                     </div>
                                     {testimonial?.googleReviewLink ? (
