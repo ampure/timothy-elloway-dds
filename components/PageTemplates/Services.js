@@ -18,7 +18,7 @@ const ServicesChild = ({
             seo={service?.seo}
             servicesNav={servicesNav}
         >
-            <PageBanner
+            {/* <PageBanner
                 pageTitle={
                     service?.customFields?.h1
                         ? service?.customFields?.h1
@@ -28,17 +28,34 @@ const ServicesChild = ({
                 homePageText="Home"
                 activePageText="Services"
                 bgImage="page-title-four"
-            />
+            /> */}
 
-            <div className="about-area pt-100 pb-70">
+            <div className="about-area pt-50 pb-70">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6">
+                        {/* <div className="col-lg-6">
                             <div className="about-item">
                                 <div className="about-left">
-                                    {/* <img src="/images/about1.jpg" alt="About" /> */}
-                                    {service?.customFields?.headerimage ? (
-                                        <Image
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div> */}
+
+                        <div className="col-12">
+                            
+                            <div className="about-item about-right">
+                                <img
+                                    src="/images/about-shape1.png"
+                                    alt="About"
+                                />
+                                <h1> {
+                                    service?.customFields?.h1
+                                        ? service?.customFields?.h1
+                                        : service?.title
+                                }</h1>
+                                {service?.customFields?.headerimage ? (
+                                        <div className="about-left"><Image
                                             className="banner-image"
                                             src={
                                                 service?.customFields
@@ -63,20 +80,10 @@ const ServicesChild = ({
                                                     ?.headerimage?.mediaDetails
                                                     ?.altText
                                             }
-                                        />
+                                        /></div>
                                     ) : (
                                         <></>
                                     )}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-6">
-                            <div className="about-item about-right">
-                                <img
-                                    src="/images/about-shape1.png"
-                                    alt="About"
-                                />
                                 <div
                                     dangerouslySetInnerHTML={{
                                         __html: service?.content,

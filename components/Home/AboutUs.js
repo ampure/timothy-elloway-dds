@@ -22,7 +22,7 @@ const AboutUs = ({ props }) => {
                     <div className="col-lg-6">
                         <div className="welcome-item welcome-right">
                             <div className="section-title-two">
-                                <span>About Us</span>
+                                {/* <span>About Us</span> */}
                                 <h2>{props?.title}</h2>
                             </div>
                             <ul>

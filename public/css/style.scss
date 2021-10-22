@@ -234,8 +234,11 @@ button {
         transition: $transition;
 
         .navbar-brand {
+            display: inline-flex;
+            max-width: 50%;
             img {
-                max-width: 500px;
+                width: 400px;
+                max-width: 100%;
             }
         }
 

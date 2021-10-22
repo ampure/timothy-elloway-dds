@@ -5,23 +5,23 @@ const TopHeader = ({ contactinfo }) => {
         <div className="header-top">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-sm-8 col-lg-9">
+                    <div className="col-8 col-lg-9">
                         <div className="header-top-item">
                             <div className="header-top-left">
                                 <ul>
-                                    <li>
+                                    <li className="">
                                         <a href="tel:+07554332322">
                                             <i className="icofont-ui-call"></i>
                                             Call : {contactinfo?.phone}
                                         </a>
                                     </li>
-                                    <li>
+                                    <li className="d-none d-md-inline-block">
                                         <a href="mailto:hello@TimothyElloway.com">
                                             <i className="icofont-ui-message"></i>
                                             {contactinfo?.email}
                                         </a>
                                     </li>
-                                    <li>
+                                    <li className="d-none d-md-inline-block">
                                         <i className="icofont-location-pin"></i>
                                         {contactinfo?.cidLink ? (
                                             <a
@@ -39,7 +39,7 @@ const TopHeader = ({ contactinfo }) => {
                         </div>
                     </div>
 
-                    <div className="col-sm-4 col-lg-3">
+                    <div className="col-4 col-lg-3">
                         <div className="header-top-item">
                             <div className="header-top-right">
                                 <ul>
