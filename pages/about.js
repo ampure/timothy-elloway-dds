@@ -6,8 +6,8 @@ import AppointmentFormTwo from '../components/Common/AppointmentFormTwo';
 
 // data
 import { getPage, getChildren, getAllPosts } from '../lib/api';
-import image from 'next/image';
-import BreadCrumbJsonLd from 'next-seo/lib/jsonld/breadcrumb';
+// import image from 'next/image';
+// import BreadCrumbJsonLd from 'next-seo/lib/jsonld/breadcrumb';
 
 const About = ({ about, contact, services }) => {
     return (
