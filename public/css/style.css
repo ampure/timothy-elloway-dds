@@ -643,9 +643,13 @@ button:focus {
     margin-bottom: 30px;
 }
 
+.about-item h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
 .about-item h2 {
     font-size: 38px;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -657,15 +661,16 @@ button:focus {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+    margin-left: 48px;
 }
 
 .about-item ul li {
-    list-style-type: none;
+    /* list-style-type: none;
     display: block;
     font-size: 18px;
     font-weight: 500;
     color: #111111;
-    margin-bottom: 12px;
+    margin-bottom: 12px; */
 }
 
 .about-item ul li:last-child {
@@ -682,18 +687,18 @@ button:focus {
 }
 
 .about-item a {
-    display: inline-block;
+    /* display: inline-block;
     font-size: 15px;
     color: #ffffff;
     background-color: #0046c0;
     font-weight: 500;
     padding: 20px 45px;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 
 .about-item a:hover {
-    color: 15px;
-    background-color: #111111;
+    /* color: 15px;
+    background-color: #111111; */
 }
 
 .about-left {
@@ -970,7 +975,22 @@ button:focus {
     padding-bottom: 5px;
 }
 
-.service-item .service-end i {
+.service-item .service-end .icon {
+    width: 100% !important;
+    height: 100% !important;
+}
+.service-item .service-end .icon > div {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 10%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.service-item .service-end i, .service-item .service-end img {
     position: absolute;
     left: 0;
     right: 0;
@@ -988,7 +1008,7 @@ button:focus {
     margin-bottom: 20px;
 }
 
-.service-item .service-end p {
+.service-item .service-end p, .service-item .service-end div {
     margin-bottom: 0;
     color: #ffffff;
 }
