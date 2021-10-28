@@ -31,7 +31,7 @@ const FeedbackSlider = ({ testimonials }) => {
                         className="feedback-slider owl-carousel owl-theme"
                         {...options}
                     >
-                        {testimonials.map((testimonial, index) => {
+                        {testimonials?.map((testimonial, index) => {
                             return (
                                 <div className="feedback-item" key={index}>
                                     <div className="client-img">

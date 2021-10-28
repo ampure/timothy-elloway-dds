@@ -2853,15 +2853,16 @@ footer {
     opacity: 0.2;
 }
 
-.feedback-item p {
+.feedback-item p, .feedback-item div {
     max-width: 600px;
-    margin-left: 84px;
-    margin-right: auto;
+    margin-left: 90px;
+    margin-right: 90px;
     display: block;
 }
 .feedback-item a {
     color: inherit;
-    margin-left: 84px;
+    margin-left: 90px;
+    margin-right: 90px;
     display: block;
     position: relative;
 }

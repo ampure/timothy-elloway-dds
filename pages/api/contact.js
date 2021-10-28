@@ -27,7 +27,7 @@ export default async (req, res) => {
     const data = {
         to: process.env.SEND_EMAIL_TO,
         from: email,
-        subject: subject,
+        subject: subject ? subject : 'Contact form from website',
         text: `
             From: ${name} \n
             Number: ${number} \n
