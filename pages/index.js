@@ -30,7 +30,6 @@ const Index = ({
     videoProps,
     aboutProps,
 }) => {
-    console.warn(homepage)
     return (
         <DefaultTemplate
             contact={contact}

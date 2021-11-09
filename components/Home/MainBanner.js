@@ -16,11 +16,11 @@ const MainBanner = (props) => {
                                 <Link href="/appointment">
                                     <a>Get Appointment</a>
                                 </Link>
-                                <Link href="/about">
+                                {/* <Link href="/about">
                                     <a className="cmn-btn-right-two">
                                         Learn More
                                     </a>
-                                </Link>
+                                </Link> */}
                             </div>
 
                             <div className="banner-right">
