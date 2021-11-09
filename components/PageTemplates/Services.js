@@ -18,7 +18,7 @@ const ServicesChild = ({
             seo={service?.seo}
             servicesNav={servicesNav}
         >
-            {/* <PageBanner
+            <PageBanner
                 pageTitle={
                     service?.customFields?.h1
                         ? service?.customFields?.h1
@@ -27,10 +27,10 @@ const ServicesChild = ({
                 homePageUrl="/"
                 homePageText="Home"
                 activePageText="Services"
-                bgImage="page-title-four"
-            /> */}
+                bgImage="page-title-one"
+            />
 
-            <div className="about-area pt-50 pb-70">
+            <div className="service-details-area pt-50 pb-70">
                 <div className="container">
                     <div className="row align-items-center">
                         {/* <div className="col-lg-6">
@@ -43,47 +43,50 @@ const ServicesChild = ({
                         </div> */}
 
                         <div className="col-12">
+
+                        {service?.customFields?.headerimage ? (
+                            <div className="services-details-img">
+                                <Image
+                                className="banner-image"
+                                src={
+                                    service?.customFields
+                                        ?.headerimage?.sourceUrl
+                                }
+                                title={
+                                    service?.customFields
+                                        ?.headerimage?.title
+                                }
+                                width={
+                                    service?.customFields
+                                        ?.headerimage?.mediaDetails
+                                        ?.width
+                                }
+                                height={
+                                    service?.customFields
+                                        ?.headerimage?.mediaDetails
+                                        ?.height
+                                }
+                                alt={
+                                    service?.customFields
+                                        ?.headerimage?.mediaDetails
+                                        ?.altText
+                                }
+                            /></div>
+                        ) : (
+                            <></>
+                        )}
                             
-                            <div className="about-item about-right">
+                            <div className="services-details-img about-item about-right">
                                 <img
                                     src="/images/about-shape1.png"
                                     alt="About"
                                 />
-                                <h1> {
+                                {/* <h1> {
                                     service?.customFields?.h1
                                         ? service?.customFields?.h1
                                         : service?.title
-                                }</h1>
-                                {service?.customFields?.headerimage ? (
-                                        <div className="about-left"><Image
-                                            className="banner-image"
-                                            src={
-                                                service?.customFields
-                                                    ?.headerimage?.sourceUrl
-                                            }
-                                            title={
-                                                service?.customFields
-                                                    ?.headerimage?.title
-                                            }
-                                            width={
-                                                service?.customFields
-                                                    ?.headerimage?.mediaDetails
-                                                    ?.width
-                                            }
-                                            height={
-                                                service?.customFields
-                                                    ?.headerimage?.mediaDetails
-                                                    ?.height
-                                            }
-                                            alt={
-                                                service?.customFields
-                                                    ?.headerimage?.mediaDetails
-                                                    ?.altText
-                                            }
-                                        /></div>
-                                    ) : (
-                                        <></>
-                                    )}
+                                }</h1> */}
+                                
                                 <div
                                     dangerouslySetInnerHTML={{
                                         __html: service?.content,
