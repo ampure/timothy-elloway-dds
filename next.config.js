@@ -6,10 +6,11 @@ module.exports = {
     },
     images: {
         domains: [
-            'timothyellowaydds.co',
-            'timothyellowaydds.com',
-            'assets.timothyellowaydds.co',
-            'assets.timothyellowaydds.com',
+            'timothyellowayddsinc.co',
+            'timothyellowayddsinc.com',
+            'assets.timothyellowayddsinc.co',
+            'assets.timothyellowayddsinc.com',
+            'content.timothyellowayddsinc.com',
             'dev-timothy-elloway.pantheonsite.io',
             'test-timothy-elloway.pantheonsite.io',
             'live-timothy-elloway.pantheonsite.io',
