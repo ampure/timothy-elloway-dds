@@ -30,6 +30,7 @@ const Index = ({
     videoProps,
     aboutProps,
 }) => {
+    console.warn(homepage)
     return (
         <DefaultTemplate
             contact={contact}
@@ -50,8 +51,18 @@ const Index = ({
                 header={homepage?.customFields?.servicesBladeHeader}
                 count={8}
             />
-            <div className="pb-100">
-                <VideoIntro props={videoProps} />
+            <div className="container pb-100">
+                <div className="row">
+                    <div className="col-lg-8">
+                {/* <VideoIntro props={videoProps} /> */}
+                
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: homepage?.content,
+                            }}
+                        />
+                    </div>
+                </div>
             </div>
             {/* <OurDentists />
             <div className="pb-100">
