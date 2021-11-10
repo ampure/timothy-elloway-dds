@@ -27,7 +27,7 @@ const ServicesChild = ({
                 homePageUrl="/"
                 homePageText="Home"
                 activePageText="Services"
-                bgImage="page-title-one"
+                // bgImage="page-title-one"
             />
 
             <div className="service-details-area pt-50 pb-70">
@@ -43,39 +43,42 @@ const ServicesChild = ({
                         </div> */}
 
                         <div className="col-12">
+                            {service?.customFields?.headerimage ? (
+                                <div className="services-details-img">
+                                    {service?.customFields?.headerimage
+                                        ?.sourceUrl ? (
+                                        <Image
+                                            className="banner-image"
+                                            src={
+                                                service?.customFields
+                                                    ?.headerimage?.sourceUrl
+                                            }
+                                            title={
+                                                service?.customFields
+                                                    ?.headerimage?.title
+                                            }
+                                            width={
+                                                service?.customFields
+                                                    ?.headerimage?.mediaDetails
+                                                    ?.width
+                                            }
+                                            height={
+                                                service?.customFields
+                                                    ?.headerimage?.mediaDetails
+                                                    ?.height
+                                            }
+                                            alt={
+                                                service?.customFields
+                                                    ?.headerimage?.mediaDetails
+                                                    ?.altText
+                                            }
+                                        />
+                                    ) : null}
+                                </div>
+                            ) : (
+                                <></>
+                            )}
 
-                        {service?.customFields?.headerimage ? (
-                            <div className="services-details-img">
-                                <Image
-                                className="banner-image"
-                                src={
-                                    service?.customFields
-                                        ?.headerimage?.sourceUrl
-                                }
-                                title={
-                                    service?.customFields
-                                        ?.headerimage?.title
-                                }
-                                width={
-                                    service?.customFields
-                                        ?.headerimage?.mediaDetails
-                                        ?.width
-                                }
-                                height={
-                                    service?.customFields
-                                        ?.headerimage?.mediaDetails
-                                        ?.height
-                                }
-                                alt={
-                                    service?.customFields
-                                        ?.headerimage?.mediaDetails
-                                        ?.altText
-                                }
-                            /></div>
-                        ) : (
-                            <></>
-                        )}
-                            
                             <div className="services-details-img about-item about-right">
                                 <img
                                     src="/images/about-shape1.png"
@@ -86,7 +89,7 @@ const ServicesChild = ({
                                         ? service?.customFields?.h1
                                         : service?.title
                                 }</h1> */}
-                                
+
                                 <div
                                     dangerouslySetInnerHTML={{
                                         __html: service?.content,

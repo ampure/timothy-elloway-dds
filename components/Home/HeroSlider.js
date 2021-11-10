@@ -74,14 +74,14 @@ const HeroSlider = ({ slides }) => {
                                                 />
 
                                                 <div className="common-btn">
-                                                    <Link href="/appointment">
+                                                    <Link href="/contact">
                                                         <a>Get Appointment</a>
                                                     </Link>
-                                                    <Link href="/about">
+                                                    {/* <Link href="/about">
                                                         <a className="cmn-btn-right">
                                                             Learn More
                                                         </a>
-                                                    </Link>
+                                                    </Link> */}
                                                 </div>
                                             </div>
                                         </div>

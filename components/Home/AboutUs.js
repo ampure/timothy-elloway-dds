@@ -8,14 +8,16 @@ const AboutUs = ({ props }) => {
                 <div className="row m-0">
                     <div className="col-lg-6 pl-0">
                         <div className="welcome-item welcome-left welcome-left-two">
-                            <Image
-                                className=""
-                                src={props?.image?.sourceUrl}
-                                title={props?.image?.title}
-                                width={props?.image?.mediaDetails?.width}
-                                height={props?.image?.mediaDetails?.height}
-                                alt={props?.image?.mediaDetails?.altText}
-                            />
+                            {props?.image?.sourceUrl ? (
+                                <Image
+                                    className=""
+                                    src={props?.image?.sourceUrl}
+                                    title={props?.image?.title}
+                                    width={props?.image?.mediaDetails?.width}
+                                    height={props?.image?.mediaDetails?.height}
+                                    alt={props?.image?.mediaDetails?.altText}
+                                />
+                            ) : null}
                         </div>
                     </div>
 

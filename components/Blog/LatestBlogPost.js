@@ -23,45 +23,48 @@ const LatestBlogPost = ({ posts: { edges, pageInfo } }) => {
                                         {/* <Link
                                                 href={`/blog/${post?.node.slug}`}
                                             > */}
-                                        <Link href={`/${post?.node.slug}`}>
-                                            <a>
-                                                <Image
-                                                    src={
-                                                        post?.node
-                                                            ?.blogCustomFields
-                                                            ?.featuredImageSmall
-                                                            ?.sourceUrl
-                                                    }
-                                                    title={
-                                                        post?.node
-                                                            ?.blogCustomFields
-                                                            ?.featuredImageSmall
-                                                            ?.title
-                                                    }
-                                                    width={
-                                                        post?.node
-                                                            ?.blogCustomFields
-                                                            ?.featuredImageSmall
-                                                            ?.mediaDetails
-                                                            ?.width
-                                                    }
-                                                    height={
-                                                        post?.node
-                                                            ?.blogCustomFields
-                                                            ?.featuredImageSmall
-                                                            ?.mediaDetails
-                                                            ?.height
-                                                    }
-                                                    alt={
-                                                        post?.node
-                                                            ?.blogCustomFields
-                                                            ?.featuredImageSmall
-                                                            ?.mediaDetails
-                                                            ?.altText
-                                                    }
-                                                />
-                                            </a>
-                                        </Link>
+                                        {post?.node?.blogCustomFields
+                                            ?.featuredImageSmall?.sourceUrl ? (
+                                            <Link href={`/${post?.node.slug}`}>
+                                                <a>
+                                                    <Image
+                                                        src={
+                                                            post?.node
+                                                                ?.blogCustomFields
+                                                                ?.featuredImageSmall
+                                                                ?.sourceUrl
+                                                        }
+                                                        title={
+                                                            post?.node
+                                                                ?.blogCustomFields
+                                                                ?.featuredImageSmall
+                                                                ?.title
+                                                        }
+                                                        width={
+                                                            post?.node
+                                                                ?.blogCustomFields
+                                                                ?.featuredImageSmall
+                                                                ?.mediaDetails
+                                                                ?.width
+                                                        }
+                                                        height={
+                                                            post?.node
+                                                                ?.blogCustomFields
+                                                                ?.featuredImageSmall
+                                                                ?.mediaDetails
+                                                                ?.height
+                                                        }
+                                                        alt={
+                                                            post?.node
+                                                                ?.blogCustomFields
+                                                                ?.featuredImageSmall
+                                                                ?.mediaDetails
+                                                                ?.altText
+                                                        }
+                                                    />
+                                                </a>
+                                            </Link>
+                                        ) : null}
                                     </div>
 
                                     <div className="blog-bottom">

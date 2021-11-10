@@ -25,25 +25,56 @@ const Services = ({ services, header, count }) => {
                                         <div className="d-table">
                                             <div className="d-table-cell">
                                                 <div className="service-front">
-                                                    {service?.card?.icon ? (<i
-                                                        className={`icofont-${service?.card?.icon}`}
-                                                    ></i>): (service?.card?.iconImage ? (
-                                                    <div className="icon mb-3">
-                                                        <Image
-                                                    
-                                                        src={service?.card?.iconImage?.sourceUrl}
-                                                        title={service?.card?.iconImage?.title}
-                                                        width={
-                                                            service?.card?.iconImage?.mediaDetails?.width
-                                                        }
-                                                        height={
-                                                            service?.card?.iconImage?.mediaDetails?.height
-                                                        }
-                                                        alt={
-                                                            service?.card?.iconImage?.mediaDetails
-                                                                ?.altText
-                                                        }
-                                                    /></div>):'')}
+                                                    {service?.card?.icon ? (
+                                                        <i
+                                                            className={`icofont-${service?.card?.icon}`}
+                                                        ></i>
+                                                    ) : service?.card
+                                                          ?.iconImage ? (
+                                                        <div className="icon mb-3">
+                                                            {service?.card
+                                                                ?.iconImage
+                                                                ?.sourceUrl ? (
+                                                                <Image
+                                                                    src={
+                                                                        service
+                                                                            ?.card
+                                                                            ?.iconImage
+                                                                            ?.sourceUrl
+                                                                    }
+                                                                    title={
+                                                                        service
+                                                                            ?.card
+                                                                            ?.iconImage
+                                                                            ?.title
+                                                                    }
+                                                                    width={
+                                                                        service
+                                                                            ?.card
+                                                                            ?.iconImage
+                                                                            ?.mediaDetails
+                                                                            ?.width
+                                                                    }
+                                                                    height={
+                                                                        service
+                                                                            ?.card
+                                                                            ?.iconImage
+                                                                            ?.mediaDetails
+                                                                            ?.height
+                                                                    }
+                                                                    alt={
+                                                                        service
+                                                                            ?.card
+                                                                            ?.iconImage
+                                                                            ?.mediaDetails
+                                                                            ?.altText
+                                                                    }
+                                                                />
+                                                            ) : null}{' '}
+                                                        </div>
+                                                    ) : (
+                                                        ''
+                                                    )}
                                                     <h3>
                                                         {service?.card?.name
                                                             ? service.card.name
@@ -57,25 +88,52 @@ const Services = ({ services, header, count }) => {
                                                     />
                                                 </div>
                                                 <div className="service-end">
-                                                {service?.card?.icon ? (<i
-                                                        className={`icofont-${service?.card?.icon}`}
-                                                    ></i>): (service?.card?.iconImage ? (
-                                                    <div className="icon mb-3">
-                                                        <Image
-                                                    
-                                                        src={service?.card?.iconImage?.sourceUrl}
-                                                        title={service?.card?.iconImage?.title}
-                                                        width={
-                                                            service?.card?.iconImage?.mediaDetails?.width
-                                                        }
-                                                        height={
-                                                            service?.card?.iconImage?.mediaDetails?.height
-                                                        }
-                                                        alt={
-                                                            service?.card?.iconImage?.mediaDetails
-                                                                ?.altText
-                                                        }
-                                                    /></div>):'')}
+                                                    {service?.card?.icon ? (
+                                                        <i
+                                                            className={`icofont-${service?.card?.icon}`}
+                                                        ></i>
+                                                    ) : service?.card
+                                                          ?.iconImage ? (
+                                                        <div className="icon mb-3">
+                                                            <Image
+                                                                src={
+                                                                    service
+                                                                        ?.card
+                                                                        ?.iconImage
+                                                                        ?.sourceUrl
+                                                                }
+                                                                title={
+                                                                    service
+                                                                        ?.card
+                                                                        ?.iconImage
+                                                                        ?.title
+                                                                }
+                                                                width={
+                                                                    service
+                                                                        ?.card
+                                                                        ?.iconImage
+                                                                        ?.mediaDetails
+                                                                        ?.width
+                                                                }
+                                                                height={
+                                                                    service
+                                                                        ?.card
+                                                                        ?.iconImage
+                                                                        ?.mediaDetails
+                                                                        ?.height
+                                                                }
+                                                                alt={
+                                                                    service
+                                                                        ?.card
+                                                                        ?.iconImage
+                                                                        ?.mediaDetails
+                                                                        ?.altText
+                                                                }
+                                                            />
+                                                        </div>
+                                                    ) : (
+                                                        ''
+                                                    )}
                                                     <h3>
                                                         {service?.card?.name
                                                             ? service.card.name
@@ -86,6 +144,7 @@ const Services = ({ services, header, count }) => {
                                                             __html: service
                                                                 ?.card?.about,
                                                         }}
+                                                        className="pb-3"
                                                     />
 
                                                     <Link

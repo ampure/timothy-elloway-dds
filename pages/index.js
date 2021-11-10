@@ -52,9 +52,9 @@ const Index = ({
             />
             <div className="container pb-100">
                 <div className="row">
-                    <div className="col-lg-8">
-                {/* <VideoIntro props={videoProps} /> */}
-                
+                    <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        {/* <VideoIntro props={videoProps} /> */}
+
                         <div
                             dangerouslySetInnerHTML={{
                                 __html: homepage?.content,

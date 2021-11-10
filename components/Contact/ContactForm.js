@@ -26,7 +26,7 @@ const INITIAL_STATE = {
     text: '',
 };
 
-const ContactForm = ({minimal}) => {
+const ContactForm = ({ minimal }) => {
     const [contact, setContact] = useState(INITIAL_STATE);
     const { register, handleSubmit, errors } = useForm();
 
@@ -51,141 +51,136 @@ const ContactForm = ({minimal}) => {
         }
     };
 
-    const theForm = (<form
-        id="contactForm"
-        onSubmit={handleSubmit(onSubmit)}
-    >
-        <div className="row">
-            <div className={minimal ? "col-12" : "col-lg-6 col-md-6"}>
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        className="form-control"
-                        value={contact.name}
-                        onChange={handleChange}
-                        ref={register({
-                            required: true,
-                        })}
-                    />
-                    <div
-                        className="invalid-feedback"
-                        style={{ display: 'block' }}
-                    >
-                        {errors.name &&
-                            'Name is required.'}
+    const theForm = (
+        <form id="contactForm" onSubmit={handleSubmit(onSubmit)}>
+            <div className="row">
+                <div className={minimal ? 'col-12' : 'col-lg-6 col-md-6'}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            className="form-control"
+                            value={contact.name}
+                            onChange={handleChange}
+                            ref={register({
+                                required: true,
+                            })}
+                        />
+                        <div
+                            className="invalid-feedback"
+                            style={{ display: 'block' }}
+                        >
+                            {errors.name && 'Name is required.'}
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div className={minimal ? "col-12" : "col-lg-6 col-md-6"}>
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Your email"
-                        className="form-control"
-                        value={contact.email}
-                        onChange={handleChange}
-                        ref={register({
-                            required: true,
-                            pattern: /^\S+@\S+$/i,
-                        })}
-                    />
-                    <div
-                        className="invalid-feedback"
-                        style={{ display: 'block' }}
-                    >
-                        {errors.email &&
-                            'Email is required.'}
-                    </div>
-                </div>
-            </div>
-            {!minimal ? (<div className="col-lg-6 col-md-6">
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="number"
-                        placeholder="Your phone number"
-                        className="form-control"
-                        value={contact.number}
-                        onChange={handleChange}
-                        ref={register({
-                            required: true,
-                        })}
-                    />
-                    <div
-                        className="invalid-feedback"
-                        style={{ display: 'block' }}
-                    >
-                        {errors.number &&
-                            'Number is required.'}
-                    </div>
-                </div>
-            </div>) : null}
-            
-            {!minimal ? (<div className="col-lg-6 col-md-6">
-                <div className="form-group">
-                    <input
-                        type="text"
-                        name="subject"
-                        placeholder="Your Subject"
-                        className="form-control"
-                        value={contact.subject}
-                        onChange={handleChange}
-                        ref={register({
-                            required: true,
-                        })}
-                    />
-                    <div
-                        className="invalid-feedback"
-                        style={{ display: 'block' }}
-                    >
-                        {errors.subject &&
-                            'Subject is required.'}
-                    </div>
-                </div>
-            </div>
-            ) : null}
-            
-            <div className={minimal ? "col-12" : "col-lg-6 col-md-6"}>
-                <div className="form-group">
-                    <textarea
-                        name="text"
-                        cols="30"
-                        rows="5"
-                        placeholder="Write your message..."
-                        className="form-control"
-                        value={contact.text}
-                        onChange={handleChange}
-                        ref={register({
-                            required: true,
-                        })}
-                    />
-                    <div
-                        className="invalid-feedback"
-                        style={{ display: 'block' }}
-                    >
-                        {errors.text &&
-                            'Text body is required.'}
-                    </div>
-                </div>
-            </div>
 
-            <div className="col-lg-12 col-sm-12">
-                <button
-                    type="submit"
-                    className="drop-btn"
-                >
-                    Send Message
-                </button>
-            </div>
-        </div>
-    </form>
-);
+                <div className={minimal ? 'col-12' : 'col-lg-6 col-md-6'}>
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Your email"
+                            className="form-control"
+                            value={contact.email}
+                            onChange={handleChange}
+                            ref={register({
+                                required: true,
+                                pattern: /^\S+@\S+$/i,
+                            })}
+                        />
+                        <div
+                            className="invalid-feedback"
+                            style={{ display: 'block' }}
+                        >
+                            {errors.email && 'Email is required.'}
+                        </div>
+                    </div>
+                </div>
+                {!minimal ? (
+                    <div className="col-lg-6 col-md-6">
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="number"
+                                placeholder="Your phone number"
+                                className="form-control"
+                                value={contact.number}
+                                onChange={handleChange}
+                                ref={register({
+                                    required: true,
+                                })}
+                            />
+                            <div
+                                className="invalid-feedback"
+                                style={{ display: 'block' }}
+                            >
+                                {errors.number && 'Number is required.'}
+                            </div>
+                        </div>
+                    </div>
+                ) : null}
 
-    return minimal ? theForm : (
+                {!minimal ? (
+                    <div className="col-lg-6 col-md-6">
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="subject"
+                                placeholder="Your Subject"
+                                className="form-control"
+                                value={contact.subject}
+                                onChange={handleChange}
+                                ref={register({
+                                    required: true,
+                                })}
+                            />
+                            <div
+                                className="invalid-feedback"
+                                style={{ display: 'block' }}
+                            >
+                                {errors.subject && 'Subject is required.'}
+                            </div>
+                        </div>
+                    </div>
+                ) : null}
+
+                <div className={minimal ? 'col-12' : 'col-lg-6 col-md-6'}>
+                    <div className="form-group">
+                        <textarea
+                            name="text"
+                            cols="30"
+                            rows="5"
+                            placeholder="Write your message..."
+                            className="form-control"
+                            value={contact.text}
+                            onChange={handleChange}
+                            ref={register({
+                                required: true,
+                            })}
+                        />
+                        <div
+                            className="invalid-feedback"
+                            style={{ display: 'block' }}
+                        >
+                            {errors.text && 'Text body is required.'}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-12 col-sm-12">
+                    <button type="submit" className="drop-btn">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </form>
+    );
+
+    return minimal ? (
+        theForm
+    ) : (
         <div className="drop-area">
             <div className="container-fluid">
                 <div className="row">
@@ -193,7 +188,7 @@ const ContactForm = ({minimal}) => {
                         <div className="drop-item drop-img">
                             <div className="drop-left">
                                 <h2>
-                                    Drop your message for any info or question
+                                    Ask a question or request an appointment
                                 </h2>
                                 {theForm}
                             </div>

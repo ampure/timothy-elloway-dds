@@ -1,9 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 
-const PageBanner = ({pageTitle, homePageUrl, homePageText, activePageText, bgImage}) => {
+const PageBanner = ({
+    pageTitle,
+    homePageUrl,
+    homePageText,
+    activePageText,
+    bgImage,
+}) => {
     return (
-        <div className={`page-title-area ${bgImage}`}>
+        <div className={`page-title-area ${bgImage ? bgImage : ''}`}>
             <div className="d-table">
                 <div className="d-table-cell">
                     <div className="page-title-item">
@@ -21,6 +27,6 @@ const PageBanner = ({pageTitle, homePageUrl, homePageText, activePageText, bgIma
             </div>
         </div>
     );
-}
+};
 
 export default PageBanner;

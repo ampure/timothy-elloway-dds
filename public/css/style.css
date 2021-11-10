@@ -927,8 +927,8 @@ button:focus {
     transform: scale(0.5);
 }
 .service-item .service-front .icon > div {
-    max-width: 65px !important;
-    max-height: 65px !important;
+    max-width: 85px !important;
+    max-height: 85px !important;
     text-align: center;
     display: block;
 }
@@ -990,7 +990,8 @@ button:focus {
     z-index: -1;
 }
 
-.service-item .service-end i, .service-item .service-end img {
+.service-item .service-end i,
+.service-item .service-end img {
     position: absolute;
     left: 0;
     right: 0;
@@ -1008,7 +1009,8 @@ button:focus {
     margin-bottom: 20px;
 }
 
-.service-item .service-end p, .service-item .service-end div {
+.service-item .service-end p,
+.service-item .service-end div {
     margin-bottom: 0;
     color: #ffffff;
 }
@@ -2853,7 +2855,8 @@ footer {
     opacity: 0.2;
 }
 
-.feedback-item p, .feedback-item div {
+.feedback-item p,
+.feedback-item div {
     max-width: 600px;
     margin-left: 90px;
     margin-right: 90px;
