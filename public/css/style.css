@@ -2902,7 +2902,9 @@ footer {
     text-align: center;
     position: relative;
 }
-
+.services .page-title-area {
+    height: 200px;
+}
 .page-title-area:before {
     position: absolute;
     content: '';

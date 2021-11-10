@@ -14,14 +14,16 @@ const PageBanner = ({
                 <div className="d-table-cell">
                     <div className="page-title-item">
                         <h2>{pageTitle}</h2>
-                        <ul>
-                            <li>
-                                <Link href={homePageUrl}>
-                                    <a>{homePageText}</a>
-                                </Link>
-                            </li>
-                            <li className="active">{activePageText}</li>
-                        </ul>
+                        {homePageUrl && activePageText ? (
+                            <ul>
+                                <li>
+                                    <Link href={homePageUrl}>
+                                        <a>{homePageText}</a>
+                                    </Link>
+                                </li>
+                                <li className="active">{activePageText}</li>
+                            </ul>
+                        ) : null}
                     </div>
                 </div>
             </div>
