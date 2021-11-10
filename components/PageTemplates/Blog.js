@@ -11,7 +11,7 @@ const BlogDetails = ({
     categories,
     latestPosts,
 }) => {
-    console.warn(blog)
+    // console.warn(blog);
     return (
         <DefaultTemplate
             contact={contact}
@@ -67,7 +67,9 @@ const BlogDetails = ({
 
                                     <ul>
                                         <li>
-                                            <a href={`/bio/${blog?.author?.node?.name}`}>
+                                            <a
+                                                href={`/bio/${blog?.author?.node?.slug}`}
+                                            >
                                                 <i className="icofont-businessman"></i>{' '}
                                                 {blog?.author?.node?.name}
                                             </a>

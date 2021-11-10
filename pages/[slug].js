@@ -74,7 +74,7 @@ export const getStaticPaths = async () => {
         ({ node }) => `/${node.slug}`
     );
 
-    //TODO: this isn't scalable. bad idea
+    // TODO BP: this isn't scalable. bad idea
     const excluded = [
         'about',
         'blog',
@@ -82,11 +82,11 @@ export const getStaticPaths = async () => {
         'testimonials',
         'services',
         'homepage',
-    ]; //exclude these from slug since we build them by themselves.
+    ]; // exclude these from slug since we build them by themselves.
     const includedPages = allPages?.pages?.edges.filter(({ node }) => {
         if (!excluded.includes(node.slug)) return node;
         else return false;
-    }); //uri?
+    }); // uri?
     const pageSlugs = includedPages?.map(({ node }) => `/${node.slug}`);
 
     return {

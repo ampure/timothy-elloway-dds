@@ -6,7 +6,7 @@ import PageBanner from '../components/Common/PageBanner';
 import { getPage, getChildren } from '../lib/api';
 
 const Appointment = ({ contact, servicesNav }) => {
-    console.warn(contact);
+    // console.warn(contact);
     return (
         <DefaultTemplate
             contact={contact}
