@@ -96,7 +96,10 @@ const Navbar = ({ servicesNav }) => {
                                                             }
                                                             className="nav-link"
                                                         >
-                                                            {node.title}
+                                                            {node.title.replace(
+                                                                /\sin.*/i,
+                                                                ''
+                                                            )}
                                                         </a>
                                                     </Link>
                                                 </li>

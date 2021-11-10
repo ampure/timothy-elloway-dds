@@ -74,6 +74,12 @@ h6 {
     color: #232323;
 }
 
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #232323;
+}
+
 p {
     line-height: 1.7;
 }
