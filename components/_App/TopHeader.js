@@ -43,6 +43,15 @@ const TopHeader = ({ contactinfo }) => {
                         <div className="header-top-item">
                             <div className="header-top-right">
                                 <ul>
+                                    <li>
+                                        <a
+                                            href="https://g.page/EllowayChicoSmiles"
+                                            target="_blank"
+                                        >
+                                            <i className="icofont-google-plus"></i>
+                                        </a>
+                                    </li>
+
                                     {contactinfo?.facebook &&
                                     contactinfo?.facebook != '' ? (
                                         <li>
@@ -87,14 +96,6 @@ const TopHeader = ({ contactinfo }) => {
                                             </a>
                                         </li>
                                     ) : null}
-                                    <li>
-                                        <a
-                                            href="https://g.page/EllowayChicoSmiles"
-                                            target="_blank"
-                                        >
-                                            <i className="icofont-google-map"></i>
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
