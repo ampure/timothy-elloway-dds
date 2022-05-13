@@ -484,7 +484,7 @@ button:focus {
     background: linear-gradient(
         to left,
         transparent 40%,
-        rgba(255, 255, 255, 0.55) 60%,
+        rgba(255, 255, 255, 0.75) 60%,
         transparent
     );
     padding: 24px 0;

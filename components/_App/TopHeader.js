@@ -43,38 +43,58 @@ const TopHeader = ({ contactinfo }) => {
                         <div className="header-top-item">
                             <div className="header-top-right">
                                 <ul>
-                                {contactinfo?.facebook && contactinfo?.facebook !='' ? (<li>
+                                    {contactinfo?.facebook &&
+                                    contactinfo?.facebook != '' ? (
+                                        <li>
+                                            <a
+                                                href={contactinfo?.facebook}
+                                                target="_blank"
+                                            >
+                                                <i className="icofont-facebook"></i>
+                                            </a>
+                                        </li>
+                                    ) : null}
+                                    {contactinfo?.twitter &&
+                                    contactinfo?.twitter != '' ? (
+                                        <li>
+                                            <a
+                                                href={contactinfo?.twitter}
+                                                target="_blank"
+                                            >
+                                                <i className="icofont-twitter"></i>
+                                            </a>
+                                        </li>
+                                    ) : null}
+                                    {contactinfo?.linkedin &&
+                                    contactinfo?.linkedin != '' ? (
+                                        <li>
+                                            <a
+                                                href={contactinfo?.linkedin}
+                                                target="_blank"
+                                            >
+                                                <i className="icofont-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    ) : null}
+                                    {contactinfo?.instagram &&
+                                    contactinfo?.instagram != '' ? (
+                                        <li>
+                                            <a
+                                                href={contactinfo?.instagram}
+                                                target="_blank"
+                                            >
+                                                <i className="icofont-instagram"></i>
+                                            </a>
+                                        </li>
+                                    ) : null}
+                                    <li>
                                         <a
-                                            href={contactinfo?.facebook}
+                                            href="https://g.page/EllowayChicoSmiles"
                                             target="_blank"
                                         >
-                                            <i className="icofont-facebook"></i>
+                                            <i className="icofont-google-map"></i>
                                         </a>
-                                    </li>) : null }
-                                    {contactinfo?.twitter && contactinfo?.twitter !='' ? ( <li>
-                                        <a
-                                            href={contactinfo?.twitter}
-                                            target="_blank"
-                                        >
-                                            <i className="icofont-twitter"></i>
-                                        </a>
-                                    </li>):null}
-                                    {contactinfo?.linkedin && contactinfo?.linkedin !='' ? (<li>
-                                        <a
-                                            href={contactinfo?.linkedin}
-                                            target="_blank"
-                                        >
-                                            <i className="icofont-linkedin"></i>
-                                        </a>
-                                    </li>) :null}
-                                    {contactinfo?.instagram && contactinfo?.instagram !='' ? (<li>
-                                        <a
-                                            href={contactinfo?.instagram}
-                                            target="_blank"
-                                        >
-                                            <i className="icofont-instagram"></i>
-                                        </a>
-                                    </li>) : null}
+                                    </li>
                                 </ul>
                             </div>
                         </div>

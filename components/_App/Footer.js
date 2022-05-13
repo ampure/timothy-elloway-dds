@@ -88,6 +88,11 @@ const Footer = ({ contactinfo }) => {
                                     <h3>Our Services</h3>
                                     <ul>
                                         <li>
+                                            <Link href="/smile-rehabilitation">
+                                                <a>Smile Rehabilitation</a>
+                                            </Link>
+                                        </li>
+                                        <li>
                                             <Link href="/dental-implants">
                                                 <a>Dental Implants</a>
                                             </Link>
@@ -113,8 +118,8 @@ const Footer = ({ contactinfo }) => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/root-canals">
-                                                <a>Root Canals</a>
+                                            <Link href="/endodontics">
+                                                <a>Endodontics</a>
                                             </Link>
                                         </li>
                                     </ul>
