@@ -481,6 +481,13 @@ button:focus {
 }
 
 .slider-item .slider-text {
+    background: linear-gradient(
+        to left,
+        transparent 40%,
+        rgba(255, 255, 255, 0.55) 60%,
+        transparent
+    );
+    padding: 24px 0;
     position: relative;
     margin-top: -160px;
     z-index: 5;

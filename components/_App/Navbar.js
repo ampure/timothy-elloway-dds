@@ -72,7 +72,7 @@ const Navbar = ({ servicesNav }) => {
                                 <li className="nav-item">
                                     <Link href="/services">
                                         <a
-                                            // onClick={(e) => e.preventDefault()}
+                                            onClick={(e) => e.preventDefault()}
                                             className="nav-link dropdown-toggle"
                                         >
                                             Services

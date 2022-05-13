@@ -82,6 +82,13 @@
         opacity: 0.8;
     }
     .slider-item .slider-text {
+        background: linear-gradient(
+            to left,
+            transparent 40%,
+            rgba(255, 255, 255, 0.55) 60%,
+            transparent
+        );
+        padding: 24px 0;
         margin-top: 0px;
     }
     .slider-item .slider-text h1 {

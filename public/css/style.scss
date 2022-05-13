@@ -451,6 +451,13 @@ button {
         position: relative;
         margin-top: -160px;
         z-index: 5;
+        background: linear-gradient(
+            to left,
+            transparent 40%,
+            rgba(255, 255, 255, 0.55) 60%,
+            transparent
+        );
+        padding: 24px 0;
 
         h1 {
             font-weight: 700;
