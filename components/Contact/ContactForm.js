@@ -199,14 +199,14 @@ const ContactForm = ({ minimal }) => {
                         <div className="speciality-item speciality-right speciality-right-two speciality-right-three">
                             <img src="/images/about4.jpg" alt="Contact" />
 
-                            <div className="speciality-emergency">
+                            {/* <div className="speciality-emergency">
                                 <div className="speciality-icon">
                                     <i className="icofont-ui-call"></i>
                                 </div>
 
                                 <h3>Emergency Call</h3>
                                 <p>911</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

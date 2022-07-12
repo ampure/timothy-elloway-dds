@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AppointmentFormTwo = ({services}) => {
+const AppointmentFormTwo = ({ services }) => {
     return (
         <div className="appointment-area-three">
             <div className="container-fluid p-0">
@@ -64,9 +64,20 @@ const AppointmentFormTwo = ({services}) => {
                                                     <option>Diagnosis</option>
                                                     <option>Neurology</option>
                                                     <option>Cardiology</option> */}
-                                                    {services?.map((item,index)=>{
-                                                        return (<option value={item.title} key={index}>{item.title}</option>)
-                                                    })}
+                                                    {services?.map(
+                                                        (item, index) => {
+                                                            return (
+                                                                <option
+                                                                    value={
+                                                                        item.title
+                                                                    }
+                                                                    key={index}
+                                                                >
+                                                                    {item.title}
+                                                                </option>
+                                                            );
+                                                        }
+                                                    )}
                                                 </select>
                                             </div>
                                         </div>
@@ -116,13 +127,13 @@ const AppointmentFormTwo = ({services}) => {
                                 alt="Dentist"
                             />
 
-                            <div className="speciality-emergency">
+                            {/* <div className="speciality-emergency">
                                 <div className="speciality-icon">
                                     <i className="icofont-ui-call"></i>
                                 </div>
                                 <h3>For emergencies</h3>
                                 <p>call 911</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

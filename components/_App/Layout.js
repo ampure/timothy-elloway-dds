@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
                 <meta name="twitter:card" content="TimothyElloway"></meta>
                 <link
                     rel="canonical"
-                    href="https://www.timothyellowaydds.com"
+                    href="https://www.timothyellowayddsinc.com"
                 ></link>
             </Head>
 
