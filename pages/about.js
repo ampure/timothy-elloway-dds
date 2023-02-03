@@ -5,7 +5,7 @@ import PageBanner from '../components/Common/PageBanner';
 import AppointmentFormTwo from '../components/Common/AppointmentFormTwo';
 
 // data
-import { getPage, getChildren, getAllPosts } from '../lib/api';
+import { getPage, getChildren /*, getAllPosts*/ } from '../lib/api';
 // import image from 'next/image';
 // import BreadCrumbJsonLd from 'next-seo/lib/jsonld/breadcrumb';
 
@@ -30,20 +30,31 @@ const About = ({ about, contact, services }) => {
                         <div className="col-lg-5">
                             <div className="Dentist-details-item Dentist-details-left">
                                 <div className="text-center mt-2">
-                                    {about?.customFields?.headerimage?.sourceUrl ? (<Image
-                                    src={about?.customFields?.headerimage?.sourceUrl}
-                                    title={about?.customFields?.headerimage?.title}
-                                    width={
-                                        about?.customFields?.headerimage?.mediaDetails?.width
-                                    }
-                                    height={
-                                        about?.customFields?.headerimage?.mediaDetails?.height
-                                    }
-                                    alt={
-                                        about?.customFields?.headerimage?.mediaDetails
-                                            ?.altText
-                                    }
-                                />):null}
+                                    {about?.customFields?.headerimage
+                                        ?.sourceUrl ? (
+                                        <Image
+                                            src={
+                                                about?.customFields?.headerimage
+                                                    ?.sourceUrl
+                                            }
+                                            title={
+                                                about?.customFields?.headerimage
+                                                    ?.title
+                                            }
+                                            width={
+                                                about?.customFields?.headerimage
+                                                    ?.mediaDetails?.width
+                                            }
+                                            height={
+                                                about?.customFields?.headerimage
+                                                    ?.mediaDetails?.height
+                                            }
+                                            alt={
+                                                about?.customFields?.headerimage
+                                                    ?.mediaDetails?.altText
+                                            }
+                                        />
+                                    ) : null}
                                 </div>
 
                                 <div className="Dentist-details-contact">
@@ -78,13 +89,20 @@ const About = ({ about, contact, services }) => {
                                     <div className="appointment-item-two-right">
                                         <div className="appointment-item-content">
                                             <ul>
-                                                {contact?.hours?.map((hours,idx)=>{
-                                                    return (<li key={idx}>{hours.day}{' '}
-                                                    <span>
-                                                        {hours.hours}
-                                                    </span></li>)
-                                                })}
-                                                
+                                                {contact?.hours?.map(
+                                                    (hours, idx) => {
+                                                        return (
+                                                            <li key={idx}>
+                                                                {hours.day}{' '}
+                                                                <span>
+                                                                    {
+                                                                        hours.hours
+                                                                    }
+                                                                </span>
+                                                            </li>
+                                                        );
+                                                    }
+                                                )}
                                             </ul>
                                         </div>
                                     </div>
@@ -100,9 +118,7 @@ const About = ({ about, contact, services }) => {
                                             __html: about?.content,
                                         }}
                                         className="Dentist-details-biography"
-                                    /> 
-
-                                    
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -113,8 +129,7 @@ const About = ({ about, contact, services }) => {
             <div className="pb-100">
                 <AppointmentFormTwo services={services} />
             </div>
-
-            </DefaultTemplate>
+        </DefaultTemplate>
     );
 };
 
@@ -129,7 +144,7 @@ export const getStaticProps = async () => {
         props: {
             about: about?.page ? about.page : {},
             contact: contact?.page ? contact.page?.contact : {},
-            
+
             services: services?.page?.children?.nodes
                 ? services?.page?.children?.nodes
                 : {},

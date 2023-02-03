@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const AboutUs = ({ props }) => {
+    console.warn(props);
     return (
         <div className="welcome-area pb-100">
             <div className="container-fluid p-0">
