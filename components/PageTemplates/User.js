@@ -4,11 +4,11 @@ import DefaultTemplate from '../_App/DefaultTemplate';
 import LatestBlogPost from '..//Blog/LatestBlogPost';
 
 const DefaultPage = ({ page, contact, servicesNav, latestPosts }) => {
-    console.warn(page)
+    // console.warn(page);
     return (
         <DefaultTemplate
             contact={contact}
-            seo={page?.seo}
+            seo={page?.seo ? page.seo : null}
             servicesNav={servicesNav}
         >
             <div className="about-area pt-100 pb-70">

@@ -8,7 +8,7 @@ const DefaultPage = ({ page, contact, servicesNav, latestPosts }) => {
     return (
         <DefaultTemplate
             contact={contact}
-            seo={page?.seo}
+            seo={page?.seo ? page.seo : null}
             servicesNav={servicesNav}
         >
             <div className="about-area pt-100 pb-70">
