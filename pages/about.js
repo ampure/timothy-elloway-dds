@@ -10,6 +10,7 @@ import { getPage, getChildren /*, getAllPosts*/ } from '../lib/api';
 // import BreadCrumbJsonLd from 'next-seo/lib/jsonld/breadcrumb';
 
 const About = ({ about, contact, services }) => {
+    // console.warn(about);
     return (
         <DefaultTemplate
             contact={contact}
