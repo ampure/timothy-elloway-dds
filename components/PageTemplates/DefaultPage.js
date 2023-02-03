@@ -17,7 +17,6 @@ const DefaultPage = ({ page, contact, servicesNav, latestPosts }) => {
                         <div className="col-lg-6">
                             <div className="about-item">
                                 <div className="about-left">
-                                    {/* <img src="/images/about1.jpg" alt="About" /> */}
                                     {page?.customFields?.headerimage ? (
                                         <Image
                                             className="banner-image"
