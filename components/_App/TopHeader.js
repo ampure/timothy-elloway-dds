@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TopHeader = ({ contactinfo }) => {
+    const phonelink = `tel:${contactinfo?.phone}`;
     return (
         <div className="header-top">
             <div className="container">
@@ -10,7 +11,7 @@ const TopHeader = ({ contactinfo }) => {
                             <div className="header-top-left">
                                 <ul>
                                     <li className="">
-                                        <a href="tel:+07554332322">
+                                        <a href={phonelink}>
                                             <i className="icofont-ui-call"></i>
                                             Call : {contactinfo?.phone}
                                         </a>
